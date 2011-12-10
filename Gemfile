@@ -5,6 +5,9 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
+gem 'redcarpet'
+gem 'albino'
+gem 'nokogiri'
 
 
 # Gems used only for assets and not required
@@ -17,10 +20,9 @@ end
 
 group :test do
   # Pretty printed test output
-  gem "ZenTest", "~> 4.5.0"
-  gem "autotest", "~> 4.4.6"
+  gem "ZenTest", "~> 4.6.2"
   gem "autotest-growl", "~> 0.2.16"
-  gem "autotest-rails", "~> 4.1.1"
+  gem "autotest-rails-pure", "~> 4.1.2"
 end
 
 group :development do

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  published: true
+  author: Pete
+  title: Lorem
+
+two:
+  content: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  published: false
+  author: Laura
+  title: Ipsum
