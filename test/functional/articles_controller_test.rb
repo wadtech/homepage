@@ -3,12 +3,6 @@ require 'test_helper'
 class ArticlesControllerTest < ActionController::TestCase
   setup do
     @article = articles(:one)
-
-    @unique_article = {:title => "Unique",
-                       :content => "Nonsense",
-                       :author => "Pete",
-                       :published => false
-    }
   end
 
   test "should get index" do
@@ -24,7 +18,7 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "should create article" do
     assert_difference('Article.count') do
-      post :create, article: @unique_article
+      post :create, article: @article.attributes
     end
 
     assert_redirected_to article_path(assigns(:article))
@@ -52,14 +46,6 @@ class ArticlesControllerTest < ActionController::TestCase
     assert article.errors[:author].any?
     assert article.errors[:published].any?
     assert article.errors[:title].any?
-  end
-
-  test "article should have a unique title" do
-    Article.create(@article.attributes)
-    assert_no_difference 'Article.count' do
-      article = Article.create(:title => @article.title)
-      assert !article.valid?
-    end
   end
 
   test "should destroy article" do
