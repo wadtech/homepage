@@ -5,7 +5,7 @@ gem 'sqlite3'
 gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
-gem 'redcarpet'
+gem 'redcarpet', '1.17.2'
 gem 'albino'
 gem 'nokogiri'
 
