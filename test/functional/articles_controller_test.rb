@@ -41,11 +41,11 @@ class ArticlesControllerTest < ActionController::TestCase
 
   test "article attributes must not be empty" do
     article = Article.new
-    assert article.invalid?
-    assert article.errors[:content].any?
-    assert article.errors[:author].any?
-    assert article.errors[:published].any?
-    assert article.errors[:title].any?
+    assert article.invalid?, 'article is invalid'
+    assert article.errors[:content].any?, ':content has errors'
+    assert article.errors[:author].any?, ':author has errors'
+    assert article.errors[:published].any?, ':published has errors'
+    assert article.errors[:title].any?, ':title has errors'
   end
 
   test "should destroy article" do
