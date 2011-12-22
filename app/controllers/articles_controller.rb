@@ -80,4 +80,5 @@ class ArticlesController < ApplicationController
       format.json { head :ok }
     end
   end
+  
 end
