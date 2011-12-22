@@ -4,8 +4,8 @@
   <tr>
     <th>Title</th>
     <th>Author</th>
-    <th>Published</th>
     <th>Created<br />(Last Modified)</th>
+    <th>Published</th>
     <th></th>
     <th></th>
     <th></th>
@@ -15,15 +15,19 @@
   <tr>
     <td><%= article.title %></td>
     <td><%= article.author %></td>
-    <td><%= article.published %></td>
     <td>
       <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %><br />
+      <% if article.created_at != article.updated_at %>
       (<%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
+      <% end %>
     </td>
     <td>
-      <%= link_to 'Show Article', article %><br />
-      <%= link_to 'Edit Article', edit_article_path(article) %><br />
-      <%= link_to 'Delete Article', article, confirm: 'Are you sure? This is final!', method: :delete %>
+    <%= render :partial => "publish_toggle", :locals => { :article => article } %>
+    </td>
+    <td>
+      <%= link_to 'View', article %><br />
+      <%= link_to 'Edit', edit_article_path(article) %><br />
+      <%= link_to 'Delete', article, confirm: 'Are you sure? This is final!', method: :delete %>
     </td>
   </tr>
 <% end %>

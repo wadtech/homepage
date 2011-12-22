@@ -4,5 +4,4 @@ class Article < ActiveRecord::Base
   validates :content, :author, :title, :presence => true
   validates :published, :inclusion => {:in => [true, false]}
 
-
 end

@@ -1,0 +1,11 @@
+<div id="publish_toggle">
+  <% if article.published %>
+    <%= link_to(image_tag('published.png', :alt => "Published", :border => 0),
+                :url => {:action => "publish_toggle!", :id => article.id},
+                :update => {:success => "publish_toggle", :failure => "Error"}, :remote => true ) %>
+  <% else %> 
+    <%= link_to(image_tag('unpublished.png', :alt => "Unpublished", :border => 0),
+                :url => {:action => "publish_toggle!", :id => article.id},
+                :update => {:success => "publish_toggle", :failure => "Error"}, :remote => true ) %>
+  <% end %>
+</div>
