@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # Markdown helpers
   def markdown(text)
     options = [:hard_wrap, :filter_html, :autolink, :no_intraemphasis, :fenced_code, :gh_blockcode]
     syntax_highlighter(Redcarpet.new(text, *options).to_html).html_safe
@@ -11,4 +12,15 @@ module ApplicationHelper
     end
     doc.to_s
   end
+
+  def smart_truncate(s, opts = {})
+    opts = {:words => 12}.merge(opts)
+    if opts[:sentences]
+      return s.split(/\./)[0, opts[:sentences]].map{|s| s.strip}.join('. ') + '.'
+    end
+    a = s.split(/\s/) # or /[ ]+/ to only split on spaces
+    n = opts[:words]
+    a[0...n].join(' ') + (a.size > n ? '...' : '')
+  end
+
 end

@@ -1,21 +1,19 @@
-<h1>Listing articles</h1>
+<h1>All Articles</h1>
 
-<table>
+<table id="article_table">
   <tr>
     <th>Title</th>
     <th>Content</th>
     <th>Created<br />(Last Modified)</th>
     <th>Author</th>
     <th>Published</th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <th>Actions</th>
   </tr>
 
 <% @articles.each do |article| %>
-  <tr>
-    <td><%= article.title %></td>
-    <td><%= markdown(truncate(article.content, length: 80)) %></td>
+  <tr class="<%= cycle("even", "odd") %>">
+    <td><b><%= article.title %></b></td>
+    <td><%= markdown(smart_truncate(article.content, :sentences => 1)) %></td>
 
     <td>
       <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %><br />
@@ -28,7 +26,7 @@
     <%= render :partial => "publish_toggle", :locals => { :article => article } %>
     </td>
     <td>
-      <%= link_to 'View', article %><br />
+      <%= link_to 'View', article %> | 
       <%= link_to 'Edit', edit_article_path(article) %><br />
       <%= link_to 'Delete', article, confirm: 'Are you sure? This is final!', method: :delete %>
     </td>
