@@ -4,12 +4,17 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
+
+#markdown and snippets
 gem 'redcarpet', '1.17.2'
 gem 'albino'
 gem 'nokogiri'
 
 # jquery related
 gem 'jquery-rails'
+
+#static content
+gem "high_voltage"
 
 # Gems used only for assets and not required
 # in production environments by default.
