@@ -7,16 +7,40 @@
 */
 
 $bg-colour : #F58711;
+$content-bg: #F5F2F0;
 
 html, body {
   background-color: $bg-colour;
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
   padding: 1em;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
 }
 
+#main {
+  padding: 10px;
+  background-color: $content-bg;
+  -moz-border-radius-bottomright: 15px;
+  -moz-border-radius-bottomleft: 15px;
+  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+}
+#footer {
+  margin-top:10px;
+  padding: 1em;
+  background-color: $content-bg;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+  overflow: hidden;
+}
+#header {
+  overflow: hidden;
+}
 a img {
   border: none;
 }
@@ -88,10 +112,7 @@ pre {
   border: solid 1px #CCC;
   padding: 5px 10px;
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
+  margin:10px;
 }
 
-.footer .header {
-  display: inline;
-  padding: 0px;
-  margin: 0px;
-}
+

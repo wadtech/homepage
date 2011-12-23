@@ -2,7 +2,6 @@ $link-vis : #ED9242;
 $link : #F58711;
 
 body {
-  background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
   }
@@ -27,7 +26,21 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; } 
+
+    #copyright {
+      float: left;
+      display: inline;
+    }
+    #aboutlinks {
+      float: right;
+      display: inline;
+    }
+    #logo {
+      float: left;
+      padding: 5px;
+    }
+  }
 
 #notice {
   color: green; }
