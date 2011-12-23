@@ -81,13 +81,12 @@ class ArticlesController < ApplicationController
     end
   end
 
-  def publish_toggle!
+ def toggle_publish
     @article = Article.find(params[:id])
-    @article.toggle :published
-    @article.save
-
+    @article.toggle!(:published)
+    
     respond_to do |format|
-      format.html { redirect_to articles_url }
+      format.js
     end
   end
 end

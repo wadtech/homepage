@@ -2,13 +2,14 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.1'
 gem 'sqlite3'
-gem 'jquery-rails'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 gem 'redcarpet', '1.17.2'
 gem 'albino'
 gem 'nokogiri'
 
+# jquery related
+gem 'jquery-rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
