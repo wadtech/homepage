@@ -9,15 +9,20 @@
 <body>
 <!-- Start Header -->
 <div id="header">
+  <div id="logo">
+  <%= image_tag "logo.png" %>
+  </div>
+  <div id="sitetitle">
   <h1>Pete's Site</h1>
-  <hr />
+  </div>
 </div>
 <!-- End Header -->
 <%= yield %>
 <!-- Start Footer -->
 <div id="footer">
-<hr />
-<p id="copyright">Copyright Peter Mellett 2011</p>
+  <div id="copyright">
+  <p>Copyright Peter Mellett 2011</p>
+  </div>
 </div>
 <!-- End Header -->
 </body>
