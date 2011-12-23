@@ -3,8 +3,9 @@
 <table>
   <tr>
     <th>Title</th>
-    <th>Author</th>
+    <th>Content</th>
     <th>Created<br />(Last Modified)</th>
+    <th>Author</th>
     <th>Published</th>
     <th></th>
     <th></th>
@@ -14,13 +15,15 @@
 <% @articles.each do |article| %>
   <tr>
     <td><%= article.title %></td>
-    <td><%= article.author %></td>
+    <td><%= markdown(truncate(article.content, length: 80)) %></td>
+
     <td>
       <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %><br />
       <% if article.created_at != article.updated_at %>
       (<%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
       <% end %>
     </td>
+    <td><%= article.author %></td>
     <td>
     <%= render :partial => "publish_toggle", :locals => { :article => article } %>
     </td>

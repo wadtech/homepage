@@ -1,18 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<h1><%= @article.title %></h1>
+<p>Written by <%= @article.author %> on <%= @article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+      <% if @article.created_at != @article.updated_at %>
+      (<i>Last Modified: <%= @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %></i>)
+      <% end %></p>
 <p>
-  <b>Content:</b>
   <%= markdown(@article.content) %>
 </p>
 
 <p>
-  <b>Published:</b>
-  <%= @article.published %>
-</p>
-
-<p>
-  <b>Author:</b>
-  <%= @article.author %>
+  <b>Published?</b>
+  <%= render :partial => "publish_toggle", :locals => { :article => @article } %>
 </p>
 
 
