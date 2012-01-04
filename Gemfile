@@ -4,6 +4,7 @@ gem 'rails', '3.1.1'
 gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
+gem 'devise'
 
 # markdown and snippets
 gem 'redcarpet', '1.17.2'
