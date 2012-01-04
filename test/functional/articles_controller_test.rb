@@ -29,7 +29,7 @@ class ArticlesControllerTest < ActionController::TestCase
     assert_response :success
   end
 
-  test "should get edit" do
+  test "shoulinclude Devise::TestHelpersd get edit" do
     get :edit, id: @article.to_param
     assert_response :success
   end
