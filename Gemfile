@@ -5,7 +5,7 @@ gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 
-#markdown and snippets
+# markdown and snippets
 gem 'redcarpet', '1.17.2'
 gem 'albino'
 gem 'nokogiri'
@@ -33,4 +33,8 @@ end
 
 group :development do
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
+end
+
+group :production do
+  gem 'mysql2'
 end
