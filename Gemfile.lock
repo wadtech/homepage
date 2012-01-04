@@ -67,6 +67,8 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.0.4)
+    mysql2 (0.3.11)
+    mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.0)
     nokogiri (1.5.0-x86-mingw32)
     polyglot (0.3.3)
@@ -136,6 +138,7 @@ DEPENDENCIES
   coffee-rails (~> 3.1.1)
   high_voltage
   jquery-rails
+  mysql2
   nokogiri
   rails (= 3.1.1)
   redcarpet (= 1.17.2)
