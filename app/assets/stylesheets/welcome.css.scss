@@ -14,17 +14,10 @@
 
 }
 .title_span {
-  padding:5px;	
-  padding-top:10px;
-  border: 1px solid #ccc;
-  border-bottom: none;
-  border-right:none;
-  -moz-border-top-left-radius: 15px;
-  border-top-left-radius: 15px;
+  padding:5px;
 }
 .article_body {
   padding: 5px;
-  border-left: 1px solid #ccc;
 }
 .published_time {
   display:inline;  	
@@ -34,12 +27,15 @@
 }
 
 .publish_info {
-  border: 1px solid #ccc;
-  border-top: none;
-  border-right:none;
-  -moz-border-bottomr-left-radius: 15px;
-  border-bottom-left-radius: 15px;
   padding: 5px;
   width: 20%;
   font-size: smaller;
+}
+
+.mission {
+  margin:2px;
+  .mission-text {
+    font-style:italic;
+    font-size:smaller;
+  }
 }

@@ -4,7 +4,8 @@
 <% @articles.each do |article| %>
   <div class="display_article">
     <span class="title_span"><h2 class="article_title"><%= article.title %></h2><p class="author">&nbsp;&nbsp;&nbsp;&nbsp;<i><%= article.author %></i></p></span>
-    <div class="article_body"><%= markdown(smart_truncate(article.content, :sentences => 10)) %><%= link_to "...full article", @article %>
+    <div class="article_body"><%= markdown(smart_truncate(article.content, :sentences => 10)) %><%= link_to "...full article", article %>
+    </div>
     <div class="publish_info">
       <p class="published_time">
         Article posted: <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
