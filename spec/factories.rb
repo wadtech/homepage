@@ -1,7 +1,8 @@
 require 'factory_girl'
 
 Factory.define :admin do |u|
-  u.email 'test@test.com'
-  u.password 'test'
-  u.password_confirmation 'test'
+  u.email 'user@test.com'
+  u.password 'please'
+  u.password_confirmation 'please'
 end
+
