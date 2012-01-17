@@ -33,7 +33,7 @@ group :test do
   gem 'database_cleaner'
   gem 'factory_girl_rails'
   gem 'rspec-rails'
-  gem 'cucumber-rails'
+  gem "cucumber-rails", "~> 1.0", require: false
   gem 'capybara'
 end
 

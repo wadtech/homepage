@@ -197,7 +197,7 @@ DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 3.1.1)
-  cucumber-rails
+  cucumber-rails (~> 1.0)
   database_cleaner
   devise
   factory_girl_rails
