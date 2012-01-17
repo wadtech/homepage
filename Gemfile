@@ -30,10 +30,14 @@ group :test do
   gem "ZenTest", "~> 4.6.2"
   gem "autotest-growl", "~> 0.2.16"
   gem "autotest-rails-pure", "~> 4.1.2"
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem 'rspec-rails'
 end
 
 group :development do
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
+  gem 'rspec-rails'
 end
 
 group :production do
