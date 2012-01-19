@@ -2,7 +2,8 @@
 
 Continuing my mission to learn Rails.
 
-Technical Specs
+##Technical Specs
+
 * Rails 3.1.1
 * Devise
 * redcarpet
@@ -10,7 +11,8 @@ Technical Specs
 * nokogiri
 * high_voltage for static content
 
-Testing
+##Testing
+
 * ZenTest
 * autotest-rails-pure
 * factory_girl
