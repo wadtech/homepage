@@ -1,6 +1,6 @@
 require 'factory_girl'
 
-Factory.define do
+FactoryGirl.define do
   factory :admin do
     email 'user@test.com'
     password 'please'
