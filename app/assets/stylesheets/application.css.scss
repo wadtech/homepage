@@ -14,24 +14,48 @@ html, body {
   font-family: Verdana, Helvetica, Arial;
   font-size: 14px;
 }
-body {
-  padding: 1em;
-}
 
 #main {
+  overflow:hidden;
+  padding:20px;
+  width:90%;
+}
+
+.main_content {
+  width: 75%;
+  float:left;
   padding: 10px;
   background-color: $content-bg;
--moz-border-radius: 15px;
--moz-border-radius-topleft: 0;
-border-radius: 15px;
-border-top-left-radius: 0;
+  -moz-border-radius: 15px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 15px;
+  border-top-left-radius: 0;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
 }
+
+
+.info {
+  width: 20%;
+  float:right;
+  padding: 10px;
+  margin-right:10px;
+  background-color: $content-bg;
+  -moz-border-radius: 15px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+}
+
 #footer {
-  margin-top:10px;
+  clear:both;
   padding: 1em;
+  margin-top:10px;
+  width:80%;
   background-color: $content-bg;
   -moz-border-radius: 15px;
   border-radius: 15px;
