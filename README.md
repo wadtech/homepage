@@ -4,7 +4,7 @@ Continuing my mission to learn Rails.
 
 ##Technical Specs
 
-* Rails 3.1.1
+* Rails 3.2
 * Devise
 * redcarpet
 * albino
@@ -20,4 +20,4 @@ Continuing my mission to learn Rails.
 * cucumber
 * capybara
 
-Current working branch is rspec, where I do what I should have done on day one and written proper tests!
+I really still need to write some tests.
