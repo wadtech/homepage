@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.0'
+gem 'rails', '3.2.1'
 gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
-gem 'devise'
+gem 'devise', '>= 2.0.0'
 
 # markdown and snippets
 gem 'redcarpet', '1.17.2'
