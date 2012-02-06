@@ -96,12 +96,14 @@ a img {
   margin: 10px 0;
 }
 
-#flash_notice {
+.notice {
+  padding: 4px;
   background-color: #CFC;
   border: solid 1px #6C6;
 }
 
-#flash_error, #flash_alert {
+.alert {
+  padding: 4px;
   background-color: #FCC;
   border: solid 1px #C66;
 }
