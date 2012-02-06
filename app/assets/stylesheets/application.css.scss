@@ -9,10 +9,15 @@
 $bg-colour : #F58711;
 $content-bg: #F5F2F0;
 
+$Ubuntu-Orange: #DD4814;
+$Warm-Grey    : #F7F6F5;
+$Cool-Grey    : #333333;
+
 html, body {
-  background-color: $bg-colour;
-  font-family: Verdana, Helvetica, Arial;
+  background-color: $Ubuntu-Orange;
+  font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
   font-size: 14px;
+  font-color: $Cool-Grey;
 }
 body {
   padding: 1em;
@@ -20,11 +25,11 @@ body {
 
 #main {
   padding: 10px;
-  background-color: $content-bg;
--moz-border-radius: 15px;
--moz-border-radius-topleft: 0;
-border-radius: 15px;
-border-top-left-radius: 0;
+  background-color: $Warm-Grey;
+  -moz-border-radius: 15px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 15px; 
+  border-top-left-radius: 0;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
@@ -32,7 +37,7 @@ border-top-left-radius: 0;
 #footer {
   margin-top:10px;
   padding: 1em;
-  background-color: $content-bg;
+  background-color: $Warm-Grey;
   -moz-border-radius: 15px;
   border-radius: 15px;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
