@@ -4,8 +4,8 @@ Continuing my mission to learn Rails.
 
 ##Technical Specs
 
-* Rails 3.2
-* Devise
+* Rails 3.2.1
+* Devise 2.0.0
 * redcarpet
 * albino
 * nokogiri
