@@ -19,25 +19,49 @@ html, body {
   font-size: 14px;
   font-color: $Cool-Grey;
 }
-body {
-  padding: 1em;
-}
 
 #main {
+  overflow:hidden;
+  padding-bottom:20px;
+}
+
+.main_content {
+  width: 75%;
+  float:left;
   padding: 10px;
-  background-color: $Warm-Grey;
+  background-color: $content-bg;
   -moz-border-radius: 15px;
   -moz-border-radius-topleft: 0;
-  border-radius: 15px; 
+  border-radius: 15px;
   border-top-left-radius: 0;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
 }
+
+
+.info {
+  font-size:10px;
+  width: 20%;
+  min-width:100px;
+  float:right;
+  padding: 10px;
+  margin-right:10px;
+  background-color: $content-bg;
+  -moz-border-radius: 15px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+}
+
 #footer {
-  margin-top:10px;
+  clear:both;
   padding: 1em;
-  background-color: $Warm-Grey;
+  margin-top:10px;
+  background-color: $content-bg;
   -moz-border-radius: 15px;
   border-radius: 15px;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
@@ -120,6 +144,12 @@ pre {
   padding: 5px 10px;
   font-family: 'Menlo', 'Courier New', 'Terminal', monospace;
   margin:10px;
+}
+
+.avatar {
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
 }
 
 

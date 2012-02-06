@@ -23,4 +23,8 @@ module ApplicationHelper
     a[0...n].join(' ') + (a.size > n ? '...' : '')
   end
 
+  def avatar
+    gravatar_id = Digest::MD5::hexdigest("bulletraven@gmail.com").downcase
+    "http://gravatar.com/avatar/#{gravatar_id}.png"
+  end
 end
