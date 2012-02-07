@@ -1,0 +1,19 @@
+<h1>Messages</h1>
+<% if @messages.empty? %>
+<p>No messages</p>
+<% else %>
+<table class="contact">
+  <tr>
+    <th>Subject</th>
+    <th>Content</th>
+    <th>Source IP</th>
+  </tr>
+  <% @messages.each do |message| %>
+    <tr class="<%= cycle("even", "odd") %>">
+      <td><%= message.subject %></td>
+      <td><%= message.content %></td>
+      <td><%= message.source_ip %></td>
+    </tr>
+  <% end %>
+</table>
+<% end %>

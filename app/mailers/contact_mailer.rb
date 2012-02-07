@@ -1,6 +1,6 @@
 class ContactMailer < ActionMailer::Base
   default from: "contact@example.com"
-  default to: "destination@wherever.com"
+  default to: "bulletraven@gmail.com"
 
   def contact_us(subject, content)
     @subject = subject

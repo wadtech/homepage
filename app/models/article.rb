@@ -11,6 +11,7 @@
 #  title      :string(255)
 #
 
+
 class Article < ActiveRecord::Base
   # eventually has_one author
 
