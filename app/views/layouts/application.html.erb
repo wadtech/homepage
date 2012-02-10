@@ -15,17 +15,19 @@
   </div>
 </div>
 <!-- End Header -->
-<div id="main">
-<% if notice %>
-<p class="notice"><%= notice %></p>
-<% end %>
-<% if alert %>
-<p class="alert"><%= alert %></p>
-<% end %>
-<div class="main_content">
-<%= yield %>
-</div>
-<%= render :partial => 'welcome/info' %>
+<div id="main"> 
+  <% if notice %>
+  <p class="notice"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p class="alert"><%= alert %></p>
+  <% end %>
+  <div class="main_content">
+  <%= yield %>
+  </div>
+  <%= render :partial => 'welcome/info' %>
+  <div class="clear"><!-- -->
+  </div>
 </div>
 <!-- Start Footer -->
 <div id="footer">
@@ -33,7 +35,7 @@
   <p>Copyright &copy; Peter Mellett 2011</p>
   </div>
   <div id="aboutlinks">
-  <p><%= link_to "About", page_path("about") %> | contact link <% if admin_signed_in? %>| <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %><% else %>| <%= link_to "Sign in", new_admin_session_path %><% end %></p>
+  <p><%= link_to "About", page_path("about") %> | contact link <% if admin_signed_in? %>| <%= link_to "New Article", new_article_path %> | <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %><% else %>| <%= link_to "Sign in", new_admin_session_path %><% end %></p>
   </div>
 </div>
 <!-- End Footer -->

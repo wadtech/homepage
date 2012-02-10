@@ -18,6 +18,7 @@ html, body {
   font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-color: $Cool-Grey;
+  min-width:800px;
 }
 
 #main {
@@ -26,7 +27,30 @@ html, body {
 }
 
 .main_content {
-  width: 75%;
+  width: 68%;
+  min-width:550px;
+  float:left;
+  padding: 10px;
+  margin-right:1%;
+  background-color: $content-bg;
+  -moz-border-radius: 15px;
+  -moz-border-radius-topleft: 0;
+  border-radius: 15px;
+  border-top-left-radius: 0;
+  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
+  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
+  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+}
+
+.clear {
+  clear:both;
+}
+
+
+.info {
+  font-size:10px;
+  width: 25%;
+  min-width:100px;
   float:left;
   padding: 10px;
   background-color: $content-bg;
@@ -39,23 +63,6 @@ html, body {
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
 }
 
-
-.info {
-  font-size:10px;
-  width: 20%;
-  min-width:100px;
-  float:right;
-  padding: 10px;
-  margin-right:10px;
-  background-color: $content-bg;
-  -moz-border-radius: 15px;
-  -moz-border-radius-topleft: 0;
-  border-radius: 15px;
-  border-top-left-radius: 0;
-  -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
-  -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
-  box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
-}
 
 #footer {
   clear:both;
