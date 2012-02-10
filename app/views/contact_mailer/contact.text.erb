@@ -1,5 +1,7 @@
 Message from yoursite
 ---------------------
 
-<%= @subject.html_safe %>
-<%= @message.html_safe %>
+Subject: <%= raw @subject %>
+Source IP: <%= raw @ip %>
+
+<%= raw @message %>

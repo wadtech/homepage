@@ -32,7 +32,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        ContactMailer.contact(@contact.subject, @contact.content).deliver
+        ContactMailer.contact(@contact.subject, @contact.content, @contact.source_ip).deliver
         format.html { redirect_to root_url, notice: 'Thank you for your email.' }
         format.json { render json: @contact, status: :created, location: root_url }
       else

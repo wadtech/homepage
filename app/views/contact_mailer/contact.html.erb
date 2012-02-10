@@ -1,4 +1,24 @@
-<h3>Message from yoursite</h3>
+<html>
+<head>
+</head>
+<body>
+<div class="email_body">
+  <h2>Message from yoursite</h2>
 
-<p><em><%= @subject.html_safe %></em></p>
-<p><%= @message.html_safe %></p>
+  <div class="email_header">
+    <div class="subject">
+      <h3>Subject</h3>
+      <p><%= @subject.html_safe %></p>
+    </div>
+    <div class="source_ip">
+      <h3>Source IP</h3>
+      <p><%= @ip %></p>
+    </div>
+    <div class="message">
+      <h3>Message</h3>
+      <p><%= @message.html_safe %></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
