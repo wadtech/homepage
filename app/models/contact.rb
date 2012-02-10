@@ -11,6 +11,7 @@
 #
 
 class Contact < ActiveRecord::Base
-  #validates :subject, :content, :presence => true
+  attr_accessible :subject, :content, :source_ip
+  validates :subject, :content, :presence => true
 
 end

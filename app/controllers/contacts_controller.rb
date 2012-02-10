@@ -28,13 +28,13 @@ class ContactsController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @contact = Contact.new(params[:content])
+    @contact = Contact.new(params[:contact])
 
     respond_to do |format|
       if @contact.save
         ContactMailer.contact(@contact.subject, @contact.content).deliver
-        format.html { redirect_to site_url, notice: 'Thank you for your email.' }
-        format.json { render json: @contact, status: :created, location: site_url }
+        format.html { redirect_to root_url, notice: 'Thank you for your email.' }
+        format.json { render json: @contact, status: :created, location: root_url }
       else
         format.html { render action: "new" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
