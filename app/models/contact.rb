@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: contact_us
+# Table name: contact
 #
 #  id         :integer         not null, primary key
 #  subject    :text
@@ -10,7 +10,7 @@
 #  updated_at :datetime        not null
 #
 
-class ContactUs < ActiveRecord::Base
-  validates :subject, :content, :presence => true
+class Contact < ActiveRecord::Base
+  #validates :subject, :content, :presence => true
 
 end

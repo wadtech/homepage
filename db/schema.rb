@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(:version => 20120206213653) do
     t.string   "title"
   end
 
-  create_table "contact_us", :force => true do |t|
+  create_table "contacts", :force => true do |t|
     t.text     "subject"
     t.text     "content"
     t.string   "source_ip"
