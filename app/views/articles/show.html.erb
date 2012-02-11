@@ -1,11 +1,17 @@
-<h1><%= @article.title %></h1>
-<p>Written by <%= @article.author %> on <%= @article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
-      <% if @article.created_at != @article.updated_at %>
-      (<i>Last Modified: <%= @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %></i>)
-      <% end %></p>
-<p>
-  <%= markdown(@article.content) %>
-</p>
+<div class="display_article">
+<h2 class="article_title"><%= @article.title %></h2> <span class="permalink"><%= link_to "permalink", article_url(@article) %></span><br />
+    <p class="author"><i>by <%= @article.author %></i></p>
+    <div class="publish_info">
+      <p class="published_time">
+        <i>published: <%= @article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+        <% if @article.created_at != @article.updated_at %></i>
+        <br />(Modified: <%= @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
+        <% end %>
+      </p>
+    </div>
+    <div class="article_body">
+      <%= markdown(@article.content) %>
+    </div>
 
 <% if admin_signed_in? %>
 <p>
@@ -14,5 +20,6 @@
 </p>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
-<% end %>
-<%= link_to 'Back', root_url %>
+<% end %><br />
+<%= link_to 'Home', root_url %>
+</div>
