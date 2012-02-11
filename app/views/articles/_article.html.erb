@@ -3,16 +3,17 @@
 <div id="latest_articles">
 <% @articles.each do |article| %>
   <div class="display_article">
-    <span class="title_span"><h2 class="article_title"><%= article.title %></h2><p class="author">&nbsp;&nbsp;&nbsp;&nbsp;<i><%= article.author %></i></p></span>
-    <div class="article_body"><%= markdown(article.content) %>
-    </div>
+    <h2 class="article_title"><%= article.title %></h2><% if admin_signed_in? %> <%= link_to "edit", edit_article_path(article) %><% end %><br />
+    <p class="author"><i>by <%= article.author %></i></p>
     <div class="publish_info">
       <p class="published_time">
-        Article posted: <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
-        <% if article.created_at != article.updated_at %>
+        <i>published: <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+        <% if article.created_at != article.updated_at %></i>
         <br />(Modified: <%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
         <% end %>
       </p>
+    </div>
+    <div class="article_body"><%= markdown(article.content) %>
     </div>
   </div>
 <% end %>

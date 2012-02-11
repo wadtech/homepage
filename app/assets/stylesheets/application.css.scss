@@ -6,6 +6,7 @@
  *= require_tree . 
 */
 
+$html-bg   : #555555;
 $bg-colour : #F58711;
 $content-bg: #F5F2F0;
 
@@ -14,7 +15,9 @@ $Warm-Grey    : #F7F6F5;
 $Cool-Grey    : #333333;
 
 html, body {
-  background-color: $Ubuntu-Orange;
+  background-color: $html-bg;
+  background-image:url('bg.png');
+  background-repeat:repeat;
   font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-color: $Cool-Grey;

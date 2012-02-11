@@ -1,4 +1,5 @@
 <%= render :partial => 'articles/article' %>
 
 <hr />
-<%= will_paginate @articles %>
+
+<%= will_paginate @articles, :page_links => false %>

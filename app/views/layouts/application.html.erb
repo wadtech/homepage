@@ -35,7 +35,7 @@
   <p>Copyright &copy; Peter Mellett 2011</p>
   </div>
   <div id="aboutlinks">
-  <p><%= link_to "About", page_path("about") %> | <%= link_to "Contact", contact_path %> <% if admin_signed_in? %>| <%= link_to "New Article", new_article_path %> | <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %><% else %>| <%= link_to "Sign in", new_admin_session_path %><% end %></p>
+  <p><%= link_to "About", page_path("about") %> | <%= link_to "Contact", contact_path %> <% if admin_signed_in? %>| <%= link_to "New Article", new_article_path %> | <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %><% end %></p>
   </div>
 </div>
 <!-- End Footer -->
