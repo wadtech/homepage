@@ -17,6 +17,9 @@ gem 'jquery-rails'
 #static content
 gem "high_voltage"
 
+#HTML email styles
+gem 'roadie'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
