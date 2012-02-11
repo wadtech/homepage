@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     # get latest 5 articles in summary form
     # only if they're published though!
-    @articles = Article.limit(5).order('created_at desc').where(:published => true)
+    @articles = Article.paginate(:per_page => 5, :page => params[:page]).order('created_at desc').where(:published => true)
 
     respond_to do |format|
       format.html # index.html.erb
