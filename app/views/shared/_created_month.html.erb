@@ -1,0 +1,14 @@
+<div id="facets">
+  <h3>Published</h3>
+  <ul>
+    <% for row in @search.facet(:created_month).rows %>
+      <li>
+        <% if params[:month].blank? %>
+          <%= link_to row.value, :month => row.value %> (<%= row.count %>)
+        <% else %>
+          <strong><%= row.value %></strong> (<%= link_to "remove", :month => nil %>)
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+</div>
