@@ -29,6 +29,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'uglifier', '>= 1.0.3'
+  gem 'twitter-bootstrap-rails'
 end
 
 group :test do
@@ -48,6 +49,7 @@ group :development do
   gem "letter_opener"
   gem 'sunspot_solr'
   gem 'progress_bar'
+  gem 'thin'
 end
 
 group :production do

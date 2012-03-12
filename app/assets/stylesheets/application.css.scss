@@ -21,20 +21,13 @@ html, body {
   font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
   font-size: 14px;
   font-color: $Cool-Grey;
-  min-width:800px;
 }
 
 #main {
-  overflow:hidden;
-  padding-bottom:20px;
 }
 
 .main_content {
-  width: 68%;
-  min-width:550px;
-  float:left;
   padding: 10px;
-  margin-right:1%;
   background-color: $content-bg;
   -moz-border-radius: 15px;
   -moz-border-radius-topleft: 0;
@@ -45,16 +38,9 @@ html, body {
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
 }
 
-.clear {
-  clear:both;
-}
-
 
 .info {
   font-size:10px;
-  width: 25%;
-  min-width:100px;
-  float:left;
   padding: 10px;
   background-color: $content-bg;
   -moz-border-radius: 15px;
@@ -68,7 +54,6 @@ html, body {
 
 
 #footer {
-  clear:both;
   padding: 1em;
   margin-top:10px;
   background-color: $content-bg;
@@ -80,25 +65,9 @@ html, body {
   overflow: hidden;
 }
 #header {
-  overflow: hidden;
 }
 a img {
   border: none;
-}
-
-.clear {
-  clear: both;
-  height: 0;
-  overflow: hidden;
-}
-
-#container {
-  width: 75%;
-  margin: 0 auto;
-  background-color: #FFF;
-  padding: 20px 40px;
-  border: solid 1px black;
-  margin-top: 20px;
 }
 
 #flash_notice, #flash_error, #flash_alert {
@@ -165,3 +134,75 @@ pre {
 }
 
 
+$link-vis : #ED9242;
+$link : #F58711;
+
+body {
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  }
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  }
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px; }
+
+a {
+  color: $link;
+  &:visited {
+    color: $link-vis; }
+  &:hover {
+    color: $link;
+    } 
+  }
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px; } 
+
+    #copyright {
+      float: left;
+      display: inline;
+    }
+    #aboutlinks {
+      float: right;
+      display: inline;
+      font-size:larger;
+    }
+    #logo {
+      float: left;
+      padding: 5px;
+    }
+  }
+
+#notice {
+  color: green; }
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table; }
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff; }
+  ul li {
+    font-size: 12px;
+    list-style: square; } }

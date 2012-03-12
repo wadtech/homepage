@@ -6,30 +6,42 @@
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
   <%= favicon_link_tag %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+  <div class="container">
 <!-- Start Header -->
-<div id="header">
-  <div id="logo">
-  <%= link_to image_tag("logo.png"), root_url %>
+<div class="row">
+  <div class="span12">
+    <div id="header">
+      <div id="logo">
+      <%= link_to image_tag("logo.png"), root_url %>
+      </div>
+    </div>
   </div>
 </div>
 <!-- End Header -->
-<div id="main"> 
-  <% if notice %>
-  <p class="notice"><%= notice %></p>
-  <% end %>
-  <% if alert %>
-  <p class="alert"><%= alert %></p>
-  <% end %>
-  <div class="main_content">
-  <%= yield %>
+<div class="row">
+  <div class="span9">
+    <div id="main"> 
+      <% if notice %>
+      <p class="notice"><%= notice %></p>
+      <% end %>
+      <% if alert %>
+      <p class="alert"><%= alert %></p>
+      <% end %>
+      <div class="main_content">
+      <%= yield %>
+      </div>
+    </div>
   </div>
-  <%= render :partial => 'welcome/info' %>
-  <div class="clear"><!-- -->
+  <div class="span3">
+    <%= render :partial => 'welcome/info' %>
   </div>
 </div>
 <!-- Start Footer -->
+<div class="row">
+  <div class="span12">
 <div id="footer">
   <div id="copyright">
   <p>Copyright &copy; Peter Mellett 2011</p>
@@ -38,6 +50,9 @@
   <p><%= link_to "About", page_path("about") %> | <%= link_to "Contact", contact_path %> <% if admin_signed_in? %>| <%= link_to "New Article", new_article_path %> | <%= link_to "Sign out", destroy_admin_session_path, :method => :delete %><% end %></p>
   </div>
 </div>
+</div>
+</div>
 <!-- End Footer -->
+</div>
 </body>
 </html>
