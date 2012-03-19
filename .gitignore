@@ -4,3 +4,5 @@ log/*.log
 tmp/
 .sass-cache/
 .idea/
+Capfile
+config/deploy.rb
