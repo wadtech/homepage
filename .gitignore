@@ -6,4 +6,4 @@ tmp/
 .idea/
 Capfile
 config/deploy.rb
-config/capistrano_database_yml.rb
+capistrano_database_yml.rb
