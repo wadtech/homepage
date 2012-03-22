@@ -7,6 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 #First user!
-if Admin.first.empty?
+if Admin.first.nil?
   puts "Creating first user! admin/access"
   Admin.create(:name => "admin", :password => "access", :password_confirmation => "access")
+end
