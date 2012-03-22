@@ -9,5 +9,9 @@
 #First user!
 if Admin.first.nil?
   puts "Creating first user! admin/access"
-  Admin.create(:name => "admin", :password => "access", :password_confirmation => "access")
+  Admin.create! do |a|
+    a.email = "admin@petermellett.co.uk"
+    a.password = "access"
+    a.password_confirmation = "access"
+  end
 end

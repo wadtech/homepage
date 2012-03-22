@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.2.1'
-gem 'sqlite3'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.0.0'
@@ -41,6 +40,7 @@ group :test do
   gem 'rspec-rails'
   gem "cucumber-rails", "~> 1.0", require: false
   gem 'capybara'
+  gem 'sqlite3'
 end
 
 group :development do
@@ -50,6 +50,7 @@ group :development do
   gem 'sunspot_solr'
   gem 'progress_bar'
   gem 'thin'
+  gem 'sqlite3'
 end
 
 group :production do

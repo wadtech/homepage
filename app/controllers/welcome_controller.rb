@@ -7,9 +7,6 @@ class WelcomeController < ApplicationController
     # else
 
     # this is a bit broken, default welcome page shouldn't have a load of results on it.
-    if params[:search].nil? 
-      @articles = Article.where(:published => true).limit(10)
-    else
       @search = Article.search do
         fulltext params[:search]
         with(:is_published, true)
@@ -18,7 +15,6 @@ class WelcomeController < ApplicationController
       end
       @search
       @articles = @search.results
-    end
     # end
     respond_to do |format|
       format.html # index.html.erb
