@@ -30,13 +30,11 @@ html, body {
 .main_content {
   padding: 10px;
   background-color: $content-bg;
-  -moz-border-radius: 15px;
-  -moz-border-radius-topleft: 0;
-  border-radius: 15px;
-  border-top-left-radius: 0;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+
+  margin-bottom:10px;
 }
 
 
@@ -45,12 +43,12 @@ html, body {
   padding: 10px;
   background-color: $content-bg;
   -moz-border-radius: 15px;
-  -moz-border-radius-topleft: 0;
   border-radius: 15px;
-  border-top-left-radius: 0;
   -webkit-box-shadow: 10px 10px 10px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    10px 10px 10px rgba(50, 50, 50, 0.55);
   box-shadow:         10px 10px 10px rgba(50, 50, 50, 0.55);
+
+  margin-bottom:10px;
 
   .info_avatar {
     margin: 0 auto;
