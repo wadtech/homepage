@@ -18,17 +18,17 @@ class Article < ActiveRecord::Base
   validates :content, :author, :title, :presence => true
   validates :published, :inclusion => {:in => [true, false]}
 
-  def to_param
-    "#{id} #{title}".parameterize
-  end
+  # def to_param
+  #   "#{id} #{title}".parameterize
+  # end
 
-  searchable do
-    text :title, :boost => 5
-    text :content, :created_month
-    boolean :is_published, :using => :published?
-    time :created_at
-    string :created_month
-  end
+  # searchable do
+  #   text :title, :boost => 5
+  #   text :content, :created_month
+  #   boolean :is_published, :using => :published?
+  #   time :created_at
+  #   string :created_month
+  # end
 
   def created_month
     created_at.strftime("%B %Y")
