@@ -1,10 +1,6 @@
 <% #partial to display a selection of articles formatted for frontpage display %>
 
 <div id="latest_articles">
-  <% if params[:search] || params[:month] %>
-  <h2>Search results</h2>
-  <p><% if params[:search] %><b><%= "'#{params[:search].html_safe}'" %></b> found in the following articles:</p><% end %><% if params[:month] %>Articles from <b><%= "'#{params[:month].html_safe}'" %><% end %></b></p>
-  <% end %>
 <% @articles.each do |article| %>
   <div class="display_article">
     <h2 class="article_title"><%= link_to article.title, article_url(article) %></h2><% if admin_signed_in? %> - <%= link_to "edit", edit_article_path(article) %><% end %><br />
@@ -17,11 +13,8 @@
         <% end %></i>
       </p>
     </div>
-    <% if params[:search] || params[:month] %>
-    <% else %>
     <div class="article_body"><%= markdown(article.content) %>
     </div>
-    <% end %>
   </div>
 <% end %>
 </div>
