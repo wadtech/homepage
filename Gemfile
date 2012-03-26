@@ -20,7 +20,7 @@ gem "high_voltage"
 gem 'roadie'
 
 #Search
-gem 'sunspot_rails'
+# gem 'sunspot_rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -47,7 +47,7 @@ group :development do
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
   gem 'rspec-rails'
   gem "letter_opener"
-  gem 'sunspot_solr'
+  # gem 'sunspot_solr'
   gem 'progress_bar'
   gem 'thin'
   gem 'sqlite3'
