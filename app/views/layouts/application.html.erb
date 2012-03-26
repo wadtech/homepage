@@ -24,11 +24,11 @@
 <div class="row">
   <div class="span9">
     <div id="main"> 
-      <% if notice %>
-      <p class="notice"><%= notice %></p>
-      <% end %>
-      <% if alert %>
-      <p class="alert"><%= alert %></p>
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          <%= msg  %>
+        </div>
       <% end %>
       <div class="main_content">
       <%= yield %>
