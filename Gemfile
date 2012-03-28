@@ -19,6 +19,8 @@ gem "high_voltage"
 #HTML email styles
 gem 'roadie'
 
+#Twitter integration
+gem 'twitter'
 #Search
 # gem 'sunspot_rails'
 

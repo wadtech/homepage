@@ -92,6 +92,10 @@ GEM
     factory_girl_rails (1.7.0)
       factory_girl (~> 2.6.0)
       railties (>= 3.0.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
     fattr (2.2.1)
     ffi (1.0.11)
     gherkin (2.9.0)
@@ -125,6 +129,7 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.17.2)
     multi_json (1.1.0)
+    multipart-post (1.1.5)
     mysql2 (0.3.11)
     mysql2 (0.3.11-x86-mingw32)
     nokogiri (1.5.0)
@@ -191,6 +196,7 @@ GEM
       ffi (~> 1.0.9)
       json_pure
       rubyzip
+    simple_oauth (0.1.5)
     sprockets (2.1.2)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -209,6 +215,11 @@ GEM
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
+    twitter (2.2.0)
+      activesupport (>= 2.3.9, < 4)
+      faraday (~> 0.7)
+      multi_json (~> 1.0)
+      simple_oauth (~> 0.1)
     twitter-bootstrap-rails (2.0.3)
       actionpack (>= 3.1)
       less-rails (~> 2.1.6)
@@ -253,6 +264,7 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   thin
+  twitter
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
   will_paginate (~> 3.0)
