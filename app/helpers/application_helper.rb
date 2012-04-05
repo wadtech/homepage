@@ -27,4 +27,8 @@ module ApplicationHelper
     gravatar_id = Digest::MD5::hexdigest(email).downcase
     "http://gravatar.com/avatar/#{gravatar_id}.png"
   end
+
+  def latest_tweet(account)
+    Twitter.user_timeline(account.to_s).first.text
+  end
 end

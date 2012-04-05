@@ -6,9 +6,7 @@ Continuing my mission to learn Rails.
 
 * Rails 3.2.1
 * Devise 2.0.0
-* redcarpet
-* albino
-* nokogiri
+* redcarpet with albino and nokogiri for markdown rendering
 * high_voltage for static content
 
 ##Testing

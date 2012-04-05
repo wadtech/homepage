@@ -78,17 +78,8 @@ a img {
   padding: 5px 8px;
   margin: 10px 0;
 }
-
-.notice {
-  padding: 4px;
-  background-color: #CFC;
-  border: solid 1px #6C6;
-}
-
 .alert {
   padding: 4px;
-  background-color: #FCC;
-  border: solid 1px #C66;
 }
 
 .fieldWithErrors {
@@ -183,8 +174,6 @@ div {
     }
   }
 
-#notice {
-  color: green; }
 
 .field_with_errors {
   padding: 2px;
@@ -211,4 +200,55 @@ div {
     font-size: 12px;
     list-style: square; 
   } 
+}
+
+.tweet {
+  .tweet-text {  
+    position: relative;  
+    width: 100%;  
+    height: 50px;  
+    text-align: center;  
+    line-height: 50px;  
+    background-color: #fff;  
+    border: 2px solid #666;  
+    -webkit-border-radius: 10px;  
+    -moz-border-radius: 10px;  
+    border-radius: 5px;  
+    -webkit-box-shadow: 2px 2px 4px #888;  
+    -moz-box-shadow: 2px 2px 4px #888;  
+    box-shadow: 2px 2px 4px #888;  
+
+    &:before  
+      {  
+        content: ' ';  
+        position: absolute;  
+        width: 0;  
+        height: 0;  
+        left: 30px; 
+        top: 50px; 
+        border: 8px solid;  
+        border-color: #666 transparent transparent #666;  
+      }
+    &:after  
+      {  
+        content: ' ';  
+        position: absolute;  
+        width: 0;  
+        height: 0;  
+        left: 34px;  
+        top: 50px;
+        border: 5px solid;  
+        border-color: #fff transparent transparent #fff;  
+      } 
+    .quotes {
+      font-size:large;
+      font-weight:bold;
+    }
+  }   
+
+  .tweet-user {
+    margin-top:5px;
+    padding:2px;
+    vertical-align:baseline;
+  }
 }
