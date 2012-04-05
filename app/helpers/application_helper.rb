@@ -29,6 +29,7 @@ module ApplicationHelper
   end
 
   def latest_tweet(account)
-    Twitter.user_timeline(account.to_s).first.text
+    tweet = Twitter.search("#pm from:#{account.to_s}").first
+    tweet.nil? ? "No relevant tweets yet!" : tweet.text
   end
 end
