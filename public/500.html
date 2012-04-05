@@ -1,26 +1,51 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>We're sorry, but something went wrong (500)</title>
+  <title>Internal Server Error (500)</title>
   <style type="text/css">
     body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
     div.dialog {
       width: 25em;
       padding: 0 4em;
       margin: 4em auto 0 auto;
-      border: 1px solid #ccc;
       border-right-color: #999;
       border-bottom-color: #999;
     }
     h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+      .speech-bubble 
+  /* http://acidmartin.wordpress.com/2010/11/25/creating-a-speech-bubble-with-css3-and-without-additional-markup/ */
+  {
+   padding: 10px;
+   border: 2px solid #ccc;
+   -moz-border-radius: 10px;
+   -webkit-border-radius: 10px;
+   border-radius: 10px;
+  }
+
+  .speech-bubble:after
+  {
+   content: "";
+   border: solid 10px transparent; /* set all borders to 10 pixels width */
+   border-top-color: #ccc; /* the callout */
+   border-bottom: 0; /* we do not need the bottom border in this case */
+   width: 0;
+   height: 0;
+   overflow: hidden;
+   display: block;
+   position: relative;
+   bottom: -20px; /* border-width of the :after element + padding of the root element */
+   margin:auto;
+  }
   </style>
 </head>
 
 <body>
-  <!-- This file lives in public/500.html -->
+  <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <h1>We're sorry, but something went wrong.</h1>
-    <p>We've been notified about this issue and we'll take a look at it shortly.</p>
+    <h1 class="speech-bubble">I unplugged that noisy computer, is that ok?</h1>
+    <img src="grim.png" alt="Even the image is missing?" />
+    <p>There has been a technical fault, thanks for noticing! The administrator has been sacked.</p>
+    <p>If you're feeling brave, head <a href="http://www.petermellett.co.uk">home</a>.</p>
   </div>
 </body>
 </html>
