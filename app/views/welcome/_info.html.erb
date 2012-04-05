@@ -1,18 +1,6 @@
 <div class="info">
-<% # render :partial => 'shared/search' %>
-<p>Welcome to petermellett.co.uk. This site is designed as both a portfolio and a place for me to keep odd code snippets and troubleshooting steps for future reference. Feel free to contact me using the contact link at the footer of each page.</p><br />
-<div class="info_avatar">
-<%= image_tag 'avatar.png', :size => "120x267", :class => "avatar"%>
-</div>
-<% # render :partial => 'shared/created_month' %>
-<% cache("mytweet") do %>
-<div class="tweet">
-  <div class="tweet-text">
-    <span class="quotes">&quot;</span><%= latest_tweet("mellett68") %><span class="quotes">&quot;</span>
+  <p>Welcome to petermellett.co.uk. This site is designed as both a portfolio and a place for me to keep odd code snippets and troubleshooting steps for future reference. Feel free to contact me using the contact link at the footer of each page.</p><br />
+  <div class="info_avatar">
+    <%= image_tag 'avatar.png', :size => "120x267", :class => "avatar"%>
   </div>
-  <div class="tweet-user">
-    <%= image_tag 'twitter.png', :size => "30x30" %> <%= link_to "@Mellett68", "https://twitter.com/Mellett68" %> on Twitter
-  </div>
-</div>
-<% end %>
 </div>

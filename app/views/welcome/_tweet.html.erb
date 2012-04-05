@@ -1,0 +1,10 @@
+<% cache("mytweet") do %>
+<div class="tweet">
+  <div class="speech-bubble">
+    <span class="quotes">&quot;</span><%= latest_tweet("mellett68") %><span class="quotes">&quot;</span>
+  </div>
+  <div class="tweet-user">
+    <%= image_tag 'twitter.png', :size => "30x30" %> Follow <%= link_to "@Mellett68", "https://twitter.com/Mellett68" %> on Twitter
+  </div>
+</div>
+<% end %>
