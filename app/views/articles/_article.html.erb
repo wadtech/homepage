@@ -7,9 +7,9 @@
     <p class="author"><i>by <%= article.author %></i></p>
     <div class="publish_info">
       <p class="published_time">
-        <i>published: <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+        <i><%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
         <% if article.created_at != article.updated_at %>
-        <br />(Modified: <%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
+        <br />(Updated: <%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
         <% end %></i>
       </p>
     </div>
