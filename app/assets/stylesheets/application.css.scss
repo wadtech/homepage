@@ -14,8 +14,8 @@ $content-bg: #F5F2F0;
 $Warm-Grey    : #F7F6F5;
 $Cool-Grey    : #333333;
 
-$link-vis : #000000;
-$link : #000000;
+/*$link-vis : #FFA500;
+$link : #FF8C00;*/
 
 html, body {
   background-color: $html-bg;
@@ -160,7 +160,7 @@ pre {
   padding: 10px;
   font-size: 11px; }
 
-a {
+/*a {
   color: $link;
   &:visited {
     color: $link-vis; }
@@ -168,7 +168,7 @@ a {
     color: $link;
     } 
   }
-
+*/
 div {
   &.field, &.actions {
     margin-bottom: 10px; } 
