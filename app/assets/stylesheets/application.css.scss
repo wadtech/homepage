@@ -11,9 +11,11 @@ $html-bg   : #555555;
 $bg-colour : #F58711;
 $content-bg: #F5F2F0;
 
-$Ubuntu-Orange: #DD4814;
 $Warm-Grey    : #F7F6F5;
 $Cool-Grey    : #333333;
+
+$link-vis : #4E4E4E;
+$link : #4E4E4E;
 
 html, body {
   background-color: $html-bg;
@@ -147,13 +149,7 @@ pre {
 }
 
 
-$link-vis : #ED9242;
-$link : #F58711;
 
-body {
-  color: #333;
-  font-family: verdana, arial, helvetica, sans-serif;
-  }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
