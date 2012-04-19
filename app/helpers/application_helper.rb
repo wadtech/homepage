@@ -29,7 +29,7 @@ module ApplicationHelper
   end
 
   def latest_tweet(account)
-    tweet = Twitter.search("#pm from:#{account.to_s}").first
+    tweet = Twitter.search("from:#{account.to_s}").first
     tweet.nil? ? "No relevant tweets yet!" : tweet.text
   end
 end
