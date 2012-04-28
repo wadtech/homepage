@@ -117,14 +117,12 @@ Capistrano::Configuration.instance.load do
       task :setup, :except => { :no_release => true } do
 
         default_template = <<-EOF
-        base: &base
-        production:
-          adapter: mysql
-          database: wadtech_homepage
-          host: localhost
-          username: wadtech_homepage
-          password: #{Capistrano::CLI.ui.ask("Enter MySQL database password: ")}
-          <<: *base
+production:
+  adapter: mysql2
+  database: wadtech_homepage
+  host: localhost
+  username: wadtech_homepage
+  password: #{Capistrano::CLI.ui.ask("Enter MySQL database password: ")}
         EOF
 
         location = fetch(:template_dir, "config/deploy") + '/database.yml.erb'
