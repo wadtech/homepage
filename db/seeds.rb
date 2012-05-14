@@ -18,7 +18,9 @@ end
 
 Article.delete_all
 
-25.times do | count |
+number = 25
+
+number.times do | count |
   Article.create! do | article |
     article.title = "Article#{count}"
     article.author = "Pete"
@@ -27,7 +29,8 @@ Article.delete_all
                       Nullam vel sapien ut sapien sagittis accumsan. Ut dictum volutpat mauris, ac varius magna laoreet vel. Curabitur adipiscing malesuada convallis. Cras placerat faucibus ante vel malesuada. Maecenas eget ligula ut eros fermentum elementum vel et mauris. Suspendisse sit amet felis ac justo bibendum suscipit. Phasellus feugiat elit non tellus mattis scelerisque. Suspendisse eu purus ante. Aliquam non elit enim. Proin imperdiet ornare diam id semper. Fusce imperdiet aliquet sagittis. Vestibulum non urna massa, id commodo neque. Proin scelerisque, enim vel dignissim consequat, lacus nibh viverra odio, viverra viverra lacus ante nec ante. Vestibulum risus nibh, lobortis sed sollicitudin in, hendrerit ac sapien.\n\n
                       Suspendisse feugiat auctor mauris in varius. In hac habitasse platea dictumst. Ut eu felis eu elit consequat fringilla vitae eu velit. Nulla facilisi. Mauris varius, sapien non commodo accumsan, lacus sem scelerisque enim, vitae tempor sapien neque ac lectus. Nullam egestas mattis lectus vel laoreet. Morbi iaculis est quis enim scelerisque dictum. Fusce convallis scelerisque gravida. In hac habitasse platea dictumst. Morbi gravida erat et erat scelerisque facilisis. Duis molestie rhoncus arcu, et ultricies dui elementum id. Aliquam erat volutpat. Phasellus lobortis ornare vulputate. Donec vel lectus ac risus convallis rutrum. Nulla facilisi.\n\n
                       Duis ipsum orci, varius et tempus quis, tempor ut turpis. In dolor est, molestie eget vehicula vitae, laoreet in orci. Proin pulvinar, mauris at ultricies semper, justo nibh sagittis leo, a dapibus odio sem ut mi. Pellentesque ac justo at lorem consectetur ornare id nec enim. Aliquam volutpat erat vel nibh porta in rhoncus erat laoreet. Nunc porttitor consequat dignissim. Aliquam lectus eros, tempor eu aliquam sit amet, porttitor quis dui. Maecenas suscipit imperdiet pharetra. Nam euismod urna in libero volutpat eu euismod nunc bibendum. Praesent dapibus pharetra euismod. In posuere tempus condimentum. Fusce at gravida elit. Mauris erat nulla, vehicula a lobortis aliquam, rhoncus eu justo. Donec dignissim tempus iaculis."
-    article.published = (rand(1..2) == 1)
+    article.published = true
   end
-  puts "Created Article #{count}"
+  print "Created Article #{count}\r"
 end
+puts "#{number} Articles Created."
