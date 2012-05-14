@@ -6,9 +6,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.0.0'
 
 # markdown and snippets
-gem 'redcarpet', '1.17.2'
-gem 'albino'
-gem 'nokogiri'
+gem 'pygments.rb'
+gem 'redcarpet'
 
 # jquery related
 gem 'jquery-rails'
@@ -48,7 +47,6 @@ group :development do
   gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
   gem 'rspec-rails'
   gem "letter_opener"
-  # gem 'sunspot_solr'
   gem 'progress_bar'
   gem 'thin'
   gem 'sqlite3'
