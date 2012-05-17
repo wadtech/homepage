@@ -3,7 +3,8 @@ Homepage::Application.routes.draw do
   devise_for :admins
   
   match 'contact', :to => 'contacts#new'
-  resources :contacts
+  resources :contacts, :projects
+  resources :highlights, :except => [:index]
 
   resources :articles do  
     get 'toggle_publish', :on => :member  

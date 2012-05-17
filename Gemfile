@@ -22,6 +22,9 @@ gem 'roadie'
 gem 'twitter'
 gem 'whenever', :require => false
 
+#Image attachments
+gem "paperclip", "~> 3.0"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do

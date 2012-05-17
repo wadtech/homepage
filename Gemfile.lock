@@ -53,6 +53,7 @@ GEM
     childprocess (0.3.2)
       ffi (~> 1.0.6)
     chronic (0.6.7)
+    cocaine (0.2.1)
     coffee-rails (3.2.2)
       coffee-script (>= 2.2.0)
       railties (~> 3.2.0)
@@ -133,6 +134,12 @@ GEM
     options (2.3.0)
       fattr
     orm_adapter (0.0.7)
+    paperclip (3.0.3)
+      activemodel (>= 3.0.0)
+      activerecord (>= 3.0.0)
+      activesupport (>= 3.0.0)
+      cocaine (>= 0.0.2)
+      mime-types
     polyglot (0.3.3)
     progress_bar (0.4.0)
       highline (~> 1.6.1)
@@ -259,6 +266,7 @@ DEPENDENCIES
   jquery-rails
   letter_opener
   mysql2
+  paperclip (~> 3.0)
   progress_bar
   pygments.rb
   rails (= 3.2.1)

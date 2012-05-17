@@ -155,14 +155,6 @@ pre {
   box-shadow:         5px 5px 5px rgba(50, 50, 50, 0.55);
 }
 
-
-
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px; }
-
 div {
   &.field, &.actions {
     margin-bottom: 10px; } 
@@ -234,4 +226,14 @@ div {
     margin-top:5px;
     padding:2px;
     vertical-align:baseline;
+  }
+
+  .project_image {
+    text-align:center;
+    img {
+      border:2px solid lighten($footer-bg, 10);
+      -webkit-box-shadow: 2px 2px 2px 0px #000;
+      box-shadow: 2px 2px 2px 0px #000;
+      margin:10px;
+    }
   }

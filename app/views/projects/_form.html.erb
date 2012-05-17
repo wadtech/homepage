@@ -1,0 +1,32 @@
+<%= form_for(@project) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+  <div class="field">
+    <%= f.label :image, "Project Logo or Screenshot" %><br />
+    <%= f.file_field :image %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br /><i>```lang for code blocks.</i><br />
+    <%= f.text_area :description, :height => "50", :class => "markdown-textarea" %>
+  </div>
+  <div class="field">
+    <%= f.label :source_repository, "Source URL" %><br />
+    <%= f.text_field :source_repository %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
