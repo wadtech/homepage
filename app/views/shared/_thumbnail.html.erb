@@ -1,7 +1,7 @@
-<div class="thumbnail">
-  <%= link_to image_tag(image_url, :alt => image_alt, :size => image_size), link_url %>
+<li class="span4">
+  <%= link_to image_tag(image_url, :alt => image_alt, :size => image_size, :class => "thumbnail_image"), link_url %>
   <div class="caption">
-    <h5><%= link_to link_text, link_url %></h5>
+    <h5 class="thumbnail_caption"><%= link_to link_text, link_url %></h5>
     <% if defined?(caption) %><p><%= caption %></p><% end %>
   </div>
-</div>
+</li>
