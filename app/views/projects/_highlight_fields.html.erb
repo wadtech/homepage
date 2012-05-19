@@ -1,0 +1,11 @@
+<fieldset class="highlight-fields">
+  <legend>Project Highlight</legend>
+    <%= f.hidden_field :_destroy %>
+  <%= link_to "Remove Highlight", '#', class: "remove_fields" %><br /><br />
+  <%= f.label :code_snippet, "Code Snippet (supports Markdown)" %>
+  <%= f.text_area :code_snippet, :height => "10" %>
+  <%= f.label :image, "Highlight Screenshot" %><br />
+  <%= f.file_field :image %>
+  <%= f.label :description, "Highlight Description (supports Markdown)"%>
+  <%= f.text_area :description, :height => "50" %><br />
+</fieldset>

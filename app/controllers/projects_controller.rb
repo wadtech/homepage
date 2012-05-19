@@ -15,6 +15,7 @@ class ProjectsController < ApplicationController
 
   def new
     @project = Project.new
+    @highlight = Highlight.new
   end
 
   def create

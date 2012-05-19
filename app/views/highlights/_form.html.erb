@@ -1,0 +1,29 @@
+<%= f.fields_for :highlights do |h| %>
+  <% if @highlight.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@highlight.errors.count, "error") %> prohibited this highlight from being saved:</h2>
+
+      <ul>
+      <% @highlight.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="field">
+    <%= h.label :code_snippet %><br /><i>Supports Markdown</i>
+    <%= h.text_area :code_snippet, :height => "20" %>
+  </div>
+  <div class="field">
+    <%= h.label :image, "Highlight Screenshot" %><br />
+    <%= h.file_field :image %>
+  </div>
+  <div class="field">
+    <%= h.label :description %><br /><i>Supports Markdown</i><br />
+    <%= h.text_area :description, :height => "50" %>
+  </div>
+  <div class="field">
+    <%= h.check_box :_destroy %>
+    <%= h.label :_destroy, "Remove Highlight" %>
+  </div>
+<% end %>

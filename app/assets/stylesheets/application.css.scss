@@ -237,3 +237,27 @@ div {
       margin:10px;
     }
   }
+
+  .highlight-div {
+    display:none;
+    margin-top:5px;
+    border:2px solid #31C2EB;
+    padding: 10px;
+    -webkit-box-shadow: 2px 2px 2px 0px #000;
+    box-shadow: 2px 2px 2px 0px #000;
+  }
+
+  .highlight-fields {
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  .highlight-image {
+    text-align:center;
+    margin:5px;
+  }
+
+  .project_body {
+    margin-top:5px;
+    padding:2px;
+  }

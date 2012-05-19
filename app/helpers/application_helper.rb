@@ -21,14 +21,6 @@ module ApplicationHelper
     Redcarpet::Markdown.new(renderer, options).render(text).html_safe
   end
 
-  # def syntax_highlighter(html)
-  #   doc = Nokogiri::HTML(html)
-  #   doc.search("//pre[@lang]").each do |pre|
-  #     pre.replace Albino.colorize(pre.text.rstrip, pre[:lang])
-  #   end
-  #   doc.to_s
-  # end
-
   def smart_truncate(s, opts = {})
     opts = {:words => 12}.merge(opts)
     if opts[:sentences]
@@ -47,5 +39,15 @@ module ApplicationHelper
   def latest_tweet(account)
     tweet = Twitter.search("from:#{account.to_s}").first
     tweet.nil? ? "No relevant tweets yet!" : tweet.text
+  end
+
+  # Dynamic fields for projects
+  def link_to_add_fields(name, f, association)
+    new_object = f.object.send(association).klass.new
+    id = new_object.object_id
+    fields = f.fields_for(association, new_object, child_index: id) do | builder |
+      render(association.to_s.singularize + "_fields", f: builder)
+    end
+    link_to(name, '#', class: "add_fields", data: {id: id, fields: fields.gsub("\n", "")})
   end
 end
