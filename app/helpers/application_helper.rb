@@ -1,4 +1,5 @@
 module ApplicationHelper
+  # Markdown helpers
   class HTMLwithPygments < Redcarpet::Render::HTML
     def block_code(code, language)
       sha = Digest::SHA1.hexdigest(code)
@@ -6,8 +7,12 @@ module ApplicationHelper
         Pygments.highlight(code, lexer: language)
       end
     end
+    def block_html(raw_html)
+      if raw_html =~ /^<iframe.*>$/ # You may want to optimize this.
+        raw_html
+      end
+    end
   end
-  # Markdown helpers
   def markdown(text)
     renderer = HTMLwithPygments.new(hard_wrap: true, filter_html: true)
     options = {
