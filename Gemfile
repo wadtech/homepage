@@ -19,7 +19,7 @@ gem "high_voltage"
 gem 'roadie'
 
 #Twitter integration
-gem 'twitter'
+gem 'twitter', "2.3.0"
 gem 'whenever', :require => false
 
 #Image attachments
