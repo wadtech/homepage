@@ -18,8 +18,10 @@ jQuery ->
   ShowOne = (me) =>
     if $("#highlight-div-#{me.currentTarget.id}").is (':visible')
       $('.highlight-div').each ->
-        $(this).hide()
+        $(this).hide('slide')
      else
       $('.highlight-div').each ->
-        $(this).hide()
-      $("#highlight-div-#{me.currentTarget.id}").show()
+        $(this).hide('slide')
+      $("#highlight-div-#{me.currentTarget.id}").show('slide')
+
+  $(".project_title").fitText()

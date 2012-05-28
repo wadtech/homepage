@@ -4,7 +4,7 @@
 <div class="display_project">
   <h2 class="project_title"><%= @project.title %></h2>
   <div class="project_image">
-    <%= image_tag @project.image.url(:medium) %>
+    <%= image_tag @project.image.url(:large) %>
   </div> 
   <div class="highlight_links">
   <% if !@project.source_repository.empty? %>

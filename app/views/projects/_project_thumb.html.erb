@@ -1,7 +1,7 @@
 <% @projects.each do | project | %>
-  <li class="span3">
+  <li>
     <div class="thumbnail">
-      <%= image_tag project.image.url, :alt => project.title %>
+      <%= image_tag project.image.url(:thumb), :alt => project.title %>
       <h5><%= project.title %></h5>
       <%= link_to "Read more", project %>
     </div>

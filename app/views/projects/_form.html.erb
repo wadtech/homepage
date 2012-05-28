@@ -28,8 +28,11 @@
   </div>
   <%= f.fields_for :highlights do |h| %>
     <%= render 'highlight_fields', f: h %>
+    <br />
   <% end %>
+  <div class="field">
   <%= link_to_add_fields "Add Highlight", f, :highlights %>
+  </div>
   <br />
   <div class="actions">
     <%= f.submit %>
