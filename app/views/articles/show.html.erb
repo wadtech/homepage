@@ -1,18 +1,19 @@
 <div class="display_article">
-<h2 class="article_title"><%= @article.title.titleize %></h2> <span class="permalink"><%= link_to "permalink", article_url(@article) %></span><br />
-    <p class="author"><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %><%= @article.created_at == @article.updated_at ? @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") : @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> by <b><%= link_to @article.author, page_path("about") %></b>
-    </p>
-    <div class="article_body">
-      <%= markdown(@article.content) %>
-    </div>
+  <h1 class="article_title"><%= @article.title.titleize %></h1>
+  &nbsp;<span class="permalink"><%= link_to "permalink", article_url(@article) %></span><br />
+  <p class="author"><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %><%= @article.created_at == @article.updated_at ? @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") : @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> by <b><%= link_to @article.author, page_path("about") %></b>
+  </p>
+  <div class="article_body">
+    <%= markdown(@article.content) %>
+  </div>
 
-<% if admin_signed_in? %>
-<p>
-  <b>Published?</b> (Click to toggle.)<br />
-  <%= render :partial => "publish_toggle", :locals => { :article => @article } %>
-</p>
+  <% if admin_signed_in? %>
+  <p>
+    <b>Published?</b> (Click to toggle.)<br />
+    <%= render :partial => "publish_toggle", :locals => { :article => @article } %>
+  </p>
 
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<% end %><br />
-<%= link_to 'Home', root_url %>
+  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <% end %><br />
+  <%= link_to 'Home', root_url %>
 </div>

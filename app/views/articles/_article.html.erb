@@ -3,9 +3,9 @@
 <div id="latest_articles">
 <% @articles.each do |article| %>
   <div class="display_article">
-    <h2 class="article_title">
+    <h1 class="article_title">
       <%= link_to article.title.titleize, article_url(article) %>
-    </h2>
+    </h1>
     <% if admin_signed_in? %>
       &nbsp;<%= link_to "edit", edit_article_path(article) %>
     <% end %><br />
