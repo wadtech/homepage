@@ -6,6 +6,9 @@
 # Learn more: http://github.com/javan/whenever
 
 set :output, "$RAILS_HOME/shared/log/cron_log.log"
+set :path, "$RAILS_HOME/current/"
+
+job_type :runner,  "cd :path && script/rails runner -e :environment ':task' :output"
 
 every 10.minutes do
   runner 'ActionController::Base.new.expire_fragment("mytweet")'
