@@ -1,21 +1,14 @@
 <div class="display_article">
-<h2 class="article_title"><%= @article.title %></h2> <span class="permalink"><%= link_to "permalink", article_url(@article) %></span><br />
-    <p class="author"><i>by <%= @article.author %></i></p>
-    <div class="publish_info">
-      <p class="published_time">
-        <i>published: <%= @article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
-        <% if @article.created_at != @article.updated_at %></i>
-        <br />(Modified: <%= @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)
-        <% end %>
-      </p>
-    </div>
+<h2 class="article_title"><%= @article.title.titleize %></h2> <span class="permalink"><%= link_to "permalink", article_url(@article) %></span><br />
+    <p class="author"><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %><%= @article.created_at == @article.updated_at ? @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") : @article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %> by <b><%= link_to @article.author, page_path("about") %></b>
+    </p>
     <div class="article_body">
       <%= markdown(@article.content) %>
     </div>
 
 <% if admin_signed_in? %>
 <p>
-  <b>Published?</b> (Click to toggle.)
+  <b>Published?</b> (Click to toggle.)<br />
   <%= render :partial => "publish_toggle", :locals => { :article => @article } %>
 </p>
 

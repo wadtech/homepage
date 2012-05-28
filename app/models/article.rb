@@ -21,4 +21,8 @@ class Article < ActiveRecord::Base
   def created_month
     created_at.strftime("%B %Y")
   end
+
+  def to_param
+    "#{self.id}-#{self.class}-#{self.title.parameterize}"
+  end 
 end

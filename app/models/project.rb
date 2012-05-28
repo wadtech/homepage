@@ -7,4 +7,8 @@ class Project < ActiveRecord::Base
   has_attached_file :image, :styles => { :medium => "300x300>" }
 
   validates :title, :description, :presence => true
+
+  def to_param
+    "#{self.id}-#{self.class}-#{self.title.parameterize}"
+  end 
 end
