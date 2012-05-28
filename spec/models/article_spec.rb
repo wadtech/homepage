@@ -11,6 +11,7 @@
 #  title      :string(255)
 #
 
+
 require 'spec_helper'
 
 describe Article do
