@@ -15,6 +15,7 @@
     <%= f.text_field :title %>
   </div>
   <div class="field">
+    <%= image_tag @project.image.url(:thumb) %><br />
     <%= f.label :image, "Project Logo or Screenshot" %><br />
     <%= f.file_field :image %>
   </div>
