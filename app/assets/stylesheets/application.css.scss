@@ -7,14 +7,14 @@
  ^= require bootstrap_and_overrides
 */
 
-$html-bg   :#BCBCBC;
-$bg-colour : #F58711;
-$content-bg: #F5F2F0;
-$Warm-Grey    : #F7F6F5;
+$html-bg      : #BCBCBC;
+$bg-colour    : #F58711;
+$content-bg   : #F5F2F0;
+$Warm-Grey    :  #F7F6F5;
 $Cool-Grey    : #333333;
 
-$footer-bg : darken($html-bg, 50);
-$footer-text : lighten($Cool-Grey, 50);
+$footer-bg    : darken($html-bg, 50);
+$footer-text  : lighten($Cool-Grey, 50);
 
 /*$link-vis : #FFA500;
 $link : #FF8C00;*/
@@ -32,18 +32,27 @@ body {
 }
 
 #main {
-  /*background-color: $content-bg;*/
 }
 
 .main_content {
   padding: 10px;
-
 }
 
 
 .info {
-  font-size:10px;
+  .info-text {
+    font-size:larger;
+  }
   padding: 10px;
+  background-color:$footer-bg !important;
+
+  color:#ddd !important;
+  text-shadow: 1px 1px 1px #000;
+  filter: dropshadow(color=#000, offx=1, offy=1);
+  b {
+    color: #fff !important;
+  }
+
 }
 
 .tweet {
@@ -227,39 +236,29 @@ div {
   text-align:center;
 }
 
-.project_image {
-  text-align:center;
-  img {
-    border:2px solid lighten($footer-bg, 10);
-    -webkit-box-shadow: 2px 2px 2px 0px #000;
-    box-shadow: 2px 2px 2px 0px #000;
-    margin-top:10px;
-    margin-bottom:10px;
-  }
-}
 .project_body {
   margin-top:5px;
   padding:2px;
 }
 
-  .highlight-div {
-    display:none;
-    margin-top:5px;
-    border:2px solid #31C2EB;
-    padding: 10px;
-    -webkit-box-shadow: 2px 2px 2px 0px #000;
-    box-shadow: 2px 2px 2px 0px #000;
-  }
+.highlight-div {
+  display:none;
+  margin-top:5px;
+  border:2px solid #31C2EB;
+  padding: 10px;
+  -webkit-box-shadow: 2px 2px 2px 0px #000;
+  box-shadow: 2px 2px 2px 0px #000;
+}
 
-  .highlight-fields {
-    border: 1px solid #ccc;
-    padding: 10px;
-  }
+.highlight-fields {
+  border: 1px solid #ccc;
+  padding: 10px;
+}
 
-  .highlight-image {
-    text-align:center;
-    margin:5px;
-  }
+.highlight-image {
+  text-align:center;
+  margin:5px;
+}
 
 .project_title {
   margin-top:10px;
@@ -267,15 +266,13 @@ div {
   text-align:center;
 }
 
-.project_image {
+.project_image_wrapper {
   text-align:center;
-  img {
-    border:2px solid lighten($footer-bg, 10);
-    -webkit-box-shadow: 2px 2px 2px 0px #000;
-    box-shadow: 2px 2px 2px 0px #000;
-    margin-top:20px;
-    margin-bottom:10px;
-  }
+  margin-top:30px;
+  margin-bottom:10px;
+}
+.project_image {
+  margin:5px;
 }
 .project_body {
   margin-top:5px;
@@ -284,4 +281,8 @@ div {
 
 .title {
   margin-bottom:20px;
+}
+
+.spotlight {
+  text-align:center;
 }

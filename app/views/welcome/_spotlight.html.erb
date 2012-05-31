@@ -1,0 +1,11 @@
+<div class="spotlight well">
+  <div class="highlight-wrapper">
+    <%= link_to  @project do %>
+      <div class="highlight-box">
+        <h3><%= @project.title %></h3>
+        <%= image_tag @project.image.url(:thumb), :class => "project_image" %>
+        <p>Read More...</p>
+      </div>
+    <% end %>
+  </div>
+</div>
