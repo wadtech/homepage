@@ -19,7 +19,7 @@ gem "high_voltage"
 gem 'roadie'
 
 #Twitter integration
-gem 'twitter', "2.3.0"
+gem 'twitter', ">= 3.0.0.rc.1"
 gem 'whenever', :require => false
 
 #Image attachments
@@ -47,7 +47,7 @@ group :test do
 end
 
 group :development do
-  gem 'annotate', :git => 'https://github.com/ctran/annotate_models.git'
+  gem 'annotate', :github => 'ctran/annotate_models'
   gem 'rspec-rails'
   gem "letter_opener"
   gem 'progress_bar'
