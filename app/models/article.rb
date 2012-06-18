@@ -14,7 +14,7 @@
 
 
 class Article < ActiveRecord::Base
-  # eventually has_one author
+  attr_accessible :content, :author, :title, :published
 
   validates :content, :author, :title, :presence => true
   validates :published, :inclusion => {:in => [true, false]}
