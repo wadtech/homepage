@@ -10,6 +10,6 @@ set :path, "$RAILS_HOME/current/"
 
 job_type :runner,  "cd :path && script/rails runner -e :environment ':task' :output"
 
-every 1.hour do
+every 10.minutes do
   rake 'tweet:update'
 end
