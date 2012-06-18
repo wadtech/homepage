@@ -42,8 +42,8 @@ module ApplicationHelper
   end
 
   def latest_tweet(account)
-    tweet = Twitter.search("from:#{account.to_s}").first
-    tweet.nil? ? "No relevant tweets yet!" : tweet.text
+    tweet = TwitterFeed.order("tweet_id desc").first
+    tweet.nil? ? "No relevant tweets yet!" : tweet.content
   end
 
   # Dynamic fields for projects

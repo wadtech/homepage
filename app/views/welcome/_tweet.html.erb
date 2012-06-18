@@ -1,10 +1,8 @@
-<% cache("mytweet") do %>
 <div class="tweet well">
   <div class="speech-bubble">
-    <span class="quotes">&quot;</span><%= latest_tweet("mellett68") unless Rails.env.development? %><span class="quotes">&quot;</span>
+    <p class="tweet-text"><span class="quotes">&quot;</span><%= latest_tweet("mellett68") %><span class="quotes">&quot;</span></p>
   </div>
   <div class="tweet-user">
     <%= image_tag 'twitter.png', :size => "30x30" %> Follow <%= link_to "@Mellett68", "https://twitter.com/Mellett68" %> on Twitter
   </div>
 </div>
-<% end %>
