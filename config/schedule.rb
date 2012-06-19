@@ -5,10 +5,8 @@
 #
 # Learn more: http://github.com/javan/whenever
 
-set :output, { :standard => "$RAILS_HOME/shared/log/cron_log.log", :error => "$RAILS_HOME/shared/log/cron_error.log" }
-set :path, "$RAILS_HOME/current/"
-
-job_type :runner,  "cd :path && script/rails runner -e :environment ':task' :output"
+set :output, { :standard => "/home/wadtech/webapps/rails/shared/log/cron_log.log", :error => "/home/wadtech/webapps/rails//shared/log/cron_error.log" }
+set :path, '/home/wadtech/webapps/rails/current/'
 
 every 10.minutes do
   rake 'tweet:update'
