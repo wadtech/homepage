@@ -10,8 +10,9 @@
 $html-bg      : #BCBCBC;
 $bg-colour    : #F58711;
 $content-bg   : #F5F2F0;
-$Warm-Grey    :  #F7F6F5;
+$Warm-Grey    : #F7F6F5;
 $Cool-Grey    : #333333;
+$chrome-orange: #ba4110;
 
 $footer-bg    : darken($html-bg, 50);
 $footer-text  : lighten($Cool-Grey, 50);
@@ -42,18 +43,26 @@ body {
 .info {
   .info-text {
     font-size:larger;
+    color:#ddd !important;
   }
   padding: 10px;
   background-color:$footer-bg !important;
-
-  color:#ddd !important;
   text-shadow: 1px 1px 1px #000;
   filter: dropshadow(color=#000, offx=1, offy=1);
   b {
     color: #fff !important;
   }
-
+  .links {
+    text-align:center; 
+    padding:5px;
+    font-size:larger;
+    color:#ddd !important;
+    a {
+      color: #FFF !important;
+    }
+  }
 }
+
 
 .tweet {
   font-size:10px;
