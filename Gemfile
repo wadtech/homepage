@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.2.1'
+gem 'rails', '3.2.6'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.0.0'
