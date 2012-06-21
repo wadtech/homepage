@@ -18,6 +18,12 @@
 .article_body {
   margin-top:10px;
   margin-bottom:10px;
+
+  img {
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 .published_time {
   display:inline;  	
