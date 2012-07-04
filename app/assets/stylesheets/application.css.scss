@@ -248,6 +248,8 @@ div {
 .project_title {
   margin:20px;
   text-align:center;
+  text-shadow: 2px 2px 2px #b0b0b0;
+  filter: dropshadow(color=#b0b0b0, offx=2, offy=2);
 }
 
 .project_body {
