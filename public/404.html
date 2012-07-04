@@ -3,20 +3,22 @@
 <head>
   <title>The page you were looking for doesn't exist (404)</title>
   <style type="text/css">
-    body { background-color: #fff; color: #666; text-align: center; font-family: arial, sans-serif; }
+    body { background-image: url('/bg.png'); background-color: #fff; color: #333; text-align: center; font-family: arial, sans-serif; }
     div.dialog {
       width: 25em;
-      padding: 0 4em;
+      padding: 2em;
       margin: 4em auto 0 auto;
-      border-right-color: #999;
-      border-bottom-color: #999;
+      border: 2px solid #222;
+      box-shadow:2px 2px 2px 0px #444;
+      -webkit-box-shadow: 2px 2px 2px 0px #444;
+      background-image: url('/bg-light.png');
     }
-    h1 { font-size: 100%; color: #f00; line-height: 1.5em; }
+    h1 { font-size: 200%; color: #333; line-height: 1.5em; }
       .speech-bubble 
   /* http://acidmartin.wordpress.com/2010/11/25/creating-a-speech-bubble-with-css3-and-without-additional-markup/ */
   {
    padding: 10px;
-   border: 2px solid #ccc;
+   border: 2px solid #222;
    -moz-border-radius: 10px;
    -webkit-border-radius: 10px;
    border-radius: 10px;
@@ -26,7 +28,7 @@
   {
    content: "";
    border: solid 10px transparent; /* set all borders to 10 pixels width */
-   border-top-color: #ccc; /* the callout */
+   border-top-color: #222; /* the callout */
    border-bottom: 0; /* we do not need the bottom border in this case */
    width: 0;
    height: 0;
@@ -38,14 +40,15 @@
   }
   </style>
 </head>
-
 <body>
   <!-- This file lives in public/404.html -->
   <div class="dialog">
-    <h1 class="speech-bubble">Four, oh Four.</h1>
-    <img src="grim.png" alt="Even the image is missing?" />
-    <p>This page doesn't exist. Whoops!</p>
-    <p><a href="http://www.petermellett.co.uk">Home</a></p>
+    <div class="wrapper">
+      <h1 class="speech-bubble">Four, oh Four.</h1>
+      <img src="/grim.png" alt="Even the image is missing?" />
+      <p>This page doesn't exist. Whoops!</p>
+      <p><a href="http://www.petermellett.co.uk">Home</a></p>
+    </div>
   </div>
 </body>
 </html>
