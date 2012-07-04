@@ -2,7 +2,7 @@
 #
 # Table name: articles
 #
-#  id         :integer         not null, primary key
+#  id         :integer          not null, primary key
 #  content    :text
 #  published  :boolean
 #  author     :string(255)

@@ -1,5 +1,5 @@
 <div class="project_nav">
-  <%= link_to "<< Back", projects_path %>
+  <%= link_to "Projects", projects_path %>
 </div>
 <div class="display_project">
   <h2 class="project_title"><%= @project.title %></h2>
@@ -11,7 +11,7 @@
   <small><%= link_to "Source Code", @project.source_repository, :class => "btn btn-primary" %></small>
   <% end %>
   <% @project.highlights.each_with_index do | highlight, count | %>
-    <%= link_to "Highlight #{count+1}", '#', :class => "highlight-link btn btn-success", :id => "#{highlight.id}" %>
+    <%= link_to "#{highlight.title}", '#', :class => "highlight-link btn btn-success", :id => "#{highlight.id}" %>
   <% end unless @project.highlights.empty? %>
   </div>
   <% @project.highlights.each_with_index do | highlight, count | %>
@@ -51,7 +51,7 @@
   </div>
 
 
-<%= link_to "<< Back", projects_path %>
+<%= link_to "Projects", projects_path %>
 <% if admin_signed_in? %> | 
 <%= link_to 'Edit', edit_project_path(@project) %>
 <% end %>

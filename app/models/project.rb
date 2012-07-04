@@ -2,7 +2,7 @@
 #
 # Table name: projects
 #
-#  id                 :integer         not null, primary key
+#  id                 :integer          not null, primary key
 #  title              :string(255)
 #  description        :text
 #  source_repository  :string(255)

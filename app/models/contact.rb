@@ -2,12 +2,12 @@
 #
 # Table name: contacts
 #
-#  id         :integer         not null, primary key
+#  id         :integer          not null, primary key
 #  subject    :text
 #  content    :text
 #  source_ip  :string(255)
-#  created_at :datetime        not null
-#  updated_at :datetime        not null
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 
