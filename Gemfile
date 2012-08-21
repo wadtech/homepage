@@ -53,6 +53,7 @@ group :development do
   gem 'progress_bar'
   gem 'thin'
   gem 'sqlite3'
+  gem 'rack-mini-profiler'
 end
 
 group :production do
