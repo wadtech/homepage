@@ -53,9 +53,12 @@ group :development do
   gem 'progress_bar'
   gem 'thin'
   gem 'sqlite3'
-  gem 'rack-mini-profiler'
 end
 
 group :production do
   gem 'mysql2'
+end
+
+group :performance do
+  gem 'rack-mini-profiler'
 end
