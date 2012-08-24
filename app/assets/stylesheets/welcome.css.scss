@@ -1,55 +1,35 @@
-// Place all the styles related to the Welcome controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
-
 // needed: latest_articles article_title article_body published_time author
-.latest_articles {
-
-}
 .display_article {
-  
+
+  .article_title {
+    display:inline;
+  }
+
+  .published_time {
+    display:inline;   
+  }
+
+  .author {
+    display: inline;
+    font-size:smaller;
+  }
+
+  .article_body {
+    margin-top:10px;
+    margin-bottom:10px;
+
+    img {
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
 .display_project {
-  
   img {
     display:block;
     margin-left:auto;
     margin-right:auto;
-  }
-}
-.article_title {
-  display:inline;
-
-}
-.title_span {
-}
-.article_body {
-  margin-top:10px;
-  margin-bottom:10px;
-
-  img {
-    display:block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-.published_time {
-  display:inline;  	
-}
-.author {
-  display: inline;
-  font-size:smaller;
-}
-
-.publish_info {
-  font-size: small;
-}
-
-.mission {
-  margin:2px;
-  .mission-text {
-    font-style:italic;
-    font-size:smaller;
   }
 }
