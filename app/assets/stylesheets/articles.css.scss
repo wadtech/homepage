@@ -31,9 +31,10 @@
   table a {
     color: #333333;
     text-decoration:none;
-  }
-  table a:hover {
-    text-decoration:underline;
+  
+    &:hover {
+     text-decoration:underline;
+    }
   }
   tr.odd {
     background: #f1f1f1;
