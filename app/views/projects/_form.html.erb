@@ -11,12 +11,12 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= image_tag @project.image.url(:thumb) %><br />
-    <%= f.label :image, "Project Logo or Screenshot" %><br />
+    <%= image_tag @project.image.url(:thumb) unless !@project.image.exists? %><br />
+    <%= f.label :image, "Project Logo or Screenshot" %>
     <%= f.file_field :image %>
   </div>
     <div class="field">

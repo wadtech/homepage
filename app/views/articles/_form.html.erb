@@ -11,19 +11,19 @@
     </div>
   <% end %>
   <div class="field">
-    <%= f.label :title %><br />
+    <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
   <div class="field">
-    <%= f.label :author %><br />
+    <%= f.label :author %>
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :content %><br /><i>````lang for code blocks, first 12 words should be markdown-free to avoid badly-rendered articles</i><br />
+    <%= f.label :content %><i>````lang for code blocks, first 12 words should be markdown-free to avoid badly-rendered articles</i><br />
     <%= f.text_area :content, :size => "66x50" %>
   </div>
   <div class="field">
-    <%= f.label :published %><br />
+    <%= f.label :published %>
     <%= f.check_box :published %>
   </div>
   <div class="actions">
