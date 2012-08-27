@@ -14,7 +14,7 @@
 #
 
 class Project < ActiveRecord::Base
-  attr_accessible :title, :image, :description, :source_repository, :highlights_attributes
+  attr_accessible :title, :image, :description, :summary, :source_repository, :highlights_attributes
 
   has_many :highlights
   accepts_nested_attributes_for :highlights, allow_destroy: true

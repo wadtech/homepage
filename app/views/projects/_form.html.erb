@@ -19,7 +19,12 @@
     <%= f.label :image, "Project Logo or Screenshot" %>
     <%= f.file_field :image %>
   </div>
-    <div class="field">
+  <div class="field">
+    <%= f.label :summary, "Project Summary" %>
+    <p>Projects should have a short summary for the 'My Projects' page, it should introduce the project and outline its purpose.</p>
+    <%= f.text_area :summary, :height => "15" %>
+  </div>
+  <div class="field">
     <%= f.label :source_repository, "Source URL" %><br />
     <%= f.text_field :source_repository %>
   </div>
