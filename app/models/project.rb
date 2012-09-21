@@ -24,6 +24,10 @@ class Project < ActiveRecord::Base
   validates :title, :description, :presence => true
 
   def to_param
-    "#{self.id}-#{self.class}-#{self.title.parameterize}"
+    self.title.parameterize
   end 
+
+  def self.find(input)
+    input.to_i == 0 ? find_by_title(input.gsub("-", " ")) : super
+  end
 end
