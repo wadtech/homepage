@@ -49,7 +49,7 @@ group :test do
 end
 
 group :development do
-  gem 'annotate', :github => 'ctran/annotate_models'
+  # gem 'annotate', :github => 'ctran/annotate_models'
   gem 'rspec-rails'
   gem "letter_opener"
   gem 'progress_bar'
