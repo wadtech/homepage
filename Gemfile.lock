@@ -242,7 +242,7 @@ DEPENDENCIES
   autotest-rails-pure (~> 4.1.2)
   bcrypt-ruby (~> 3.0.0)
   capybara
-  coffee-rails (~> 3.2.1)
+  coffee-rails (~> 3.2.2)
   cucumber-rails (~> 1.0)
   database_cleaner
   devise (>= 2.0.0)
@@ -259,7 +259,7 @@ DEPENDENCIES
   redcarpet
   roadie
   rspec-rails
-  sass-rails (~> 3.2.3)
+  sass-rails (~> 3.2.5)
   sqlite3
   thin
   twitter (>= 3.0.0.rc.1)
