@@ -12,7 +12,7 @@
     <div class="container-fluid" id="main">
       <!-- Start Header -->
       <div class="row-fluid">
-        <div class="span9">
+        <div class="span8">
           <div id="header">
             <div id="logo">
             <%= link_to image_tag("logo.png"), root_url %>
@@ -20,10 +20,11 @@
           </div>
         </div>
         <% if admin_signed_in? %>
-        <div class="span3">
+        <div class="span4">
           <div id="aboutlinks">
             <%= link_to "New Article", new_article_path, :class => "btn btn-success" %>
             <%= link_to "New Project", new_project_path, :class => "btn btn-success" %>
+            <%= link_to "New Page", new_page_path, :class => "btn btn-success" %>
             &nbsp;&nbsp;&nbsp;<%= link_to "Sign out", destroy_admin_session_path, :method => :delete, :class => "btn btn-danger" %>
           </div>
         </div>
