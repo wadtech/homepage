@@ -14,9 +14,6 @@ gem 'redcarpet'
 # jquery related
 gem 'jquery-rails'
 
-#static content
-gem "high_voltage"
-
 #HTML email styles
 gem 'roadie'
 
@@ -59,8 +56,4 @@ end
 
 group :production, :staging do
   gem 'mysql2'
-end
-
-group :performance do
-  gem 'rack-mini-profiler'
 end

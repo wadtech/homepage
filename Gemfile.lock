@@ -89,7 +89,6 @@ GEM
     ffi (1.0.11)
     gherkin (2.11.2)
       json (>= 1.4.6)
-    high_voltage (1.1.1)
     highline (1.6.13)
     hike (1.2.1)
     i18n (0.6.0)
@@ -137,8 +136,6 @@ GEM
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
-    rack-mini-profiler (0.1.10)
-      rack (>= 1.1.3)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
@@ -247,14 +244,12 @@ DEPENDENCIES
   database_cleaner
   devise (>= 2.0.0)
   factory_girl_rails
-  high_voltage
   jquery-rails
   letter_opener
   mysql2
   paperclip (~> 3.0)
   progress_bar
   pygments.rb
-  rack-mini-profiler
   rails (= 3.2.8)
   redcarpet
   roadie
