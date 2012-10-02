@@ -1,17 +1,12 @@
 // needed: latest_articles article_title article_body published_time author
 .display_article {
-
+  margin-bottom:2em;
   .article_title {
     display:inline;
   }
 
   .published_time {
     display:inline;   
-  }
-
-  .author {
-    display: inline;
-    font-size:smaller;
   }
 
   .article_body {
