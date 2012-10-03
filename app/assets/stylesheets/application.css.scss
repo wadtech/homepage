@@ -27,8 +27,6 @@ End variables
 
 html {
   background-color: $footer-bg;
-  font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 1em;
   font-color: $Cool-Grey;
 }
 body {
@@ -38,15 +36,13 @@ body {
 
   .info {
     .info-text {
-      font-size:1em;
       color:#ddd !important;
-      line-height:1.1em;
     }
     padding: 10px;
     background-color:$footer-bg !important;
     text-shadow: 1px 1px 1px #000;
     filter: dropshadow(color=#000, offx=1, offy=1);
-    b {
+    strong {
       color: #fff !important;
     }
     .links {

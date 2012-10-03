@@ -24,6 +24,12 @@
 @baseLineHeight: 1.3em;
 @baseFontSize: 1em;
 
+body {
+  font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height:1.25;
+}
+
 .thumbnails {
   text-align:center;
 }
@@ -53,4 +59,11 @@ textarea {
   h4{ font-size:1.2em; }
   h5{ font-size:1em; }
   h6{ font-size:0.9em; }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
