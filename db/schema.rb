@@ -78,14 +78,14 @@ ActiveRecord::Schema.define(:version => 20121001185259) do
     t.text     "summary"
   end
 
-  create_table "static", :force => true do |t|
+  create_table "page", :force => true do |t|
     t.string   "permalink"
     t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "static", ["permalink"], :name => "index_static_on_permalink"
+  add_index "page", ["permalink"], :name => "index_page_on_permalink"
 
   create_table "twitter_feeds", :force => true do |t|
     t.string   "tweet_id"

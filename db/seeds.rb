@@ -10,7 +10,7 @@
 if Admin.first.nil?
   puts "Creating first user! admin/access"
   Admin.create! do |a|
-    a.email = "admin@petermellett.co.uk"
+    a.email = "admin@changeme.com"
     a.password = "access"
     a.password_confirmation = "access"
   end
@@ -52,3 +52,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus mi diam, cons
     project.image = nil
   end
 end
+
+puts "Projects created"
+
+Page.delete_all
+
+2.times do
+  Page.create! do | page |
+    page.permalink = "Static#{rand(2..20)}"
+    page.content = <<-CONTENT
+Lorem ipsum amet Excepteur voluptate commodo eiusmod id in enim magna nostrud pariatur id ex proident dolor consequat. Lorem ipsum Duis in esse irure ex laborum commodo in in cillum Ut esse nisi velit nisi dolore in est qui aute. 
+    CONTENT
+  end
+end
+
+puts "Pages created"

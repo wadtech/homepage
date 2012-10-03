@@ -6,6 +6,6 @@ class CreateTablePages < ActiveRecord::Migration
 
       t.timestamps
     end
-    add_index :static, [:permalink]
+    add_index :pages, [:permalink]
   end
 end
