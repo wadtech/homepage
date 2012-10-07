@@ -1,4 +1,4 @@
-# source 'http://rubygems.org'
+source 'http://rubygems.org'
 
 ruby "1.9.3"
 
@@ -37,6 +37,7 @@ group :test do
   gem "ZenTest"
   gem "autotest-growl"
   gem "autotest-rails-pure"
+  gem 'simplecov', :require => false
 end
 
 group :development, :test do

@@ -11,3 +11,4 @@ database.yml
 public/system/*
 public/assets/*
 .vagrant
+coverage
