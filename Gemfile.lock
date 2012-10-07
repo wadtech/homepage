@@ -234,9 +234,9 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ZenTest (~> 4.6.2)
-  autotest-growl (~> 0.2.16)
-  autotest-rails-pure (~> 4.1.2)
+  ZenTest
+  autotest-growl
+  autotest-rails-pure
   bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 3.2.2)
@@ -245,6 +245,7 @@ DEPENDENCIES
   devise (>= 2.0.0)
   factory_girl_rails
   jquery-rails
+  launchy
   letter_opener
   mysql2
   paperclip (~> 3.0)

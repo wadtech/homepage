@@ -34,20 +34,19 @@ group :assets do
 end
 
 group :test do
-  gem "ZenTest", "~> 4.6.2"
-  gem "autotest-growl", "~> 0.2.16"
-  gem "autotest-rails-pure", "~> 4.1.2"
-  gem 'database_cleaner'
-  gem 'factory_girl_rails'
-  gem 'rspec-rails'
-  gem "cucumber-rails", "~> 1.0", require: false
-  gem 'capybara'
-  gem 'sqlite3'
+  gem "ZenTest"
+  gem "autotest-growl"
+  gem "autotest-rails-pure"
 end
 
-group :development do
+group :development, :test do
   # gem 'annotate', :github => 'ctran/annotate_models'
+  gem 'capybara'
+  gem 'launchy'
   gem 'rspec-rails'
+  gem 'database_cleaner'
+  gem 'factory_girl_rails'
+  gem "cucumber-rails", "~> 1.0", require: false
   gem "letter_opener"
   gem 'progress_bar'
   gem 'thin'
