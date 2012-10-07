@@ -3,8 +3,9 @@ require 'factory_girl'
 FactoryGirl.define do
 
   factory :admin do
-    email 'user@test.com'
-    password 'please'
+    sequence(:email) { |n| "admin#{n}@changeme.com" }
+    password 'access'
+    password_confirmation 'access'
   end
 
   factory :article do
