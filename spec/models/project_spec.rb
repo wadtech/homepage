@@ -13,7 +13,14 @@ describe Project do
 
   it "has the correct to_param value" do
     project = FactoryGirl.build(:project)
-
     project.to_param.should eq project.title.parameterize
+  end
+
+  it "database record can be found by title" do
+    %w[Todo Blog].each do |title|
+      FactoryGirl.create(:project, :title => title)
+    end
+    Project.find("todo").should_not be_nil
+    Project.find("blog").title.should eq "Blog"
   end
 end
