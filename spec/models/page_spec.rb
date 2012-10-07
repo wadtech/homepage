@@ -10,4 +10,16 @@ describe Page do
   it "is invalid without content" do
     page = FactoryGirl.build(:page, :content => nil).should_not be_valid
   end
+
+  it "must have a unique permalink" do
+    FactoryGirl.create(:page, :permalink => "Duplicate")
+    FactoryGirl.build(:page, :permalink => "Duplicate").should_not be_valid
+  end
+
+  context "URL" do
+    it "should match the permalink" do
+      page = FactoryGirl.build(:page)
+      page.to_param.should eq page.permalink
+    end
+  end
 end
