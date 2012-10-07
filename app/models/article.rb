@@ -27,7 +27,8 @@
 
 
 class Article < ActiveRecord::Base
-  attr_accessible :content, :author, :title, :published
+  acts_as_taggable
+  attr_accessible :content, :author, :title, :published, :tag_list
 
   validates :content, :author, :title, :presence => true
   validates :published, :inclusion => {:in => [true, false]}

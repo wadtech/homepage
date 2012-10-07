@@ -7,13 +7,15 @@ Homepage::Application.routes.draw do
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] 
 
+  get 'tags/:tag', :to => 'welcome#index', :as => :tag
+
   resources :articles do  
-    get 'toggle_publish', :on => :member  
+    get 'toggle_publish', :on => :member
   end
 
   root :to => "welcome#index"
 
-  get ':id', to: 'pages#show', as: :page
+  get ':id', to: 'pages#show', :as => :page
   put ':id', to: 'pages#update'
   delete ':id', to: 'pages#destroy'
 

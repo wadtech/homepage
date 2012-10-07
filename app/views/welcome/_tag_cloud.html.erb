@@ -1,0 +1,6 @@
+<div class="well" id="tag_cloud">
+  <p>Tag cloud</p>
+  <% tag_cloud Article.tag_counts, %w[small medium large] do |tag, css| %>
+    <%= link_to tag.name, tag_path(tag.name), :class => css %>
+  <% end %>
+</div>

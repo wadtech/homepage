@@ -19,6 +19,10 @@
     <%= f.text_field :author %>
   </div>
   <div class="field">
+    <%= f.label :tag_list, "Tags (separated by commas)" %>
+    <%= f.text_field :tag_list %>
+  </div>
+  <div class="field">
     <%= f.label :content %><i>````lang for code blocks, first 12 words should be markdown-free to avoid badly-rendered articles</i><br />
     <%= f.text_area :content, :size => "66x50" %>
   </div>

@@ -1,0 +1,9 @@
+<div class="author well">
+  <p><% if article.created_at == article.updated_at %>
+      <%= article.updated_at.strftime("%d/%m/%Y") %>
+    <% else %>
+      <%= "Updated #{article.updated_at.strftime("%d/%m/%Y")}" %> 
+    <% end %>
+    by <b><%= link_to article.author, page_path("about") %></b><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %></p>
+  <%= list_tags(article) %>
+</div>

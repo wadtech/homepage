@@ -6,11 +6,9 @@
     <div class="article_title_wrapper">
       <h1 class="article_title"><%= link_to article.title.titleize, article_url(article) %></h1>
       <% if admin_signed_in? %>
-        &nbsp;<%= link_to "edit", edit_article_path(article) %><br />
+        &nbsp;<%= link_to "edit", edit_article_path(article) %>
       <% end %>
-      <div class="author well">
-        <p><%= article.created_at == article.updated_at ? article.updated_at.strftime("%d/%m/%Y") : "Updated #{article.updated_at.strftime("%d/%m/%Y")}" %> by <b><%= link_to article.author, page_path("about") %></b><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %></p>
-      </div>
+      <%= render :partial => 'articles/author_card', :locals => {:article => article} %>
     </div>
     <div class="article_body">
       <%= markdown(article.content) %>

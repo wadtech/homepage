@@ -24,6 +24,9 @@ gem 'whenever', :require => false
 #Image attachments
 gem "paperclip", "~> 3.0"
 
+# Tagging
+gem "acts-as-taggable-on"
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
