@@ -1,4 +1,5 @@
 #My homepage blog thing
+[![Build Status](https://secure.travis-ci.org/wadtech/homepage.png)](http://travis-ci.org/wadtech/homepage)
 
 Continuing my mission to learn Rails.
 
