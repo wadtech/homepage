@@ -10,4 +10,10 @@ describe Project do
   it "is invalid without a description" do
     FactoryGirl.build(:project, :description => nil).should_not be_valid
   end
+
+  it "has the correct to_param value" do
+    project = FactoryGirl.build(:project)
+
+    project.to_param.should eq project.title.parameterize
+  end
 end
