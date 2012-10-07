@@ -7,7 +7,6 @@ tmp/
 Capfile
 config/deploy.rb
 capistrano_database_yml.rb
-database.yml
 public/system/*
 public/assets/*
 .vagrant
