@@ -4,3 +4,5 @@ rvm:
   - "1.9.3"
 before_script:
   - mysql -e 'create database homepage_test;'
+  - bundle exec rake db:migrate
+script: bundle exec rspec spec
