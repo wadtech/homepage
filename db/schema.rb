@@ -14,29 +14,26 @@
 ActiveRecord::Schema.define(:version => 20121007201149) do
 
   create_table "admins", :force => true do |t|
-    t.string   "email",                                 :default => "", :null => false
-    t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
-    t.string   "reset_password_token"
-    t.datetime "reset_password_sent_at"
+    t.string   "email",               :default => "", :null => false
+    t.string   "encrypted_password",  :default => "", :null => false
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                         :default => 0
+    t.integer  "sign_in_count",       :default => 0
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                          :null => false
+    t.datetime "updated_at",                          :null => false
   end
 
   add_index "admins", ["email"], :name => "index_admins_on_email", :unique => true
-  add_index "admins", ["reset_password_token"], :name => "index_admins_on_reset_password_token", :unique => true
 
   create_table "articles", :force => true do |t|
     t.text     "content"
     t.boolean  "published"
     t.string   "author"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
     t.string   "title"
   end
 
@@ -66,6 +63,8 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
     t.datetime "updated_at", :null => false
   end
 
+  add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
+
   create_table "projects", :force => true do |t|
     t.string   "title"
     t.text     "description"
@@ -77,15 +76,6 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
     t.datetime "image_updated_at"
     t.text     "summary"
   end
-
-  create_table "static", :force => true do |t|
-    t.string   "permalink"
-    t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "static", ["permalink"], :name => "index_static_on_permalink"
 
   create_table "taggings", :force => true do |t|
     t.integer  "tag_id"
