@@ -3,7 +3,7 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree . 
+ *= require_tree .
  ^= require bootstrap_and_overrides
 */
 
@@ -47,7 +47,7 @@ body {
       color: #fff !important;
     }
     .links {
-      text-align:center; 
+      text-align:center;
       padding:5px;
       font-size:1em;
       color:#ddd !important;
@@ -58,9 +58,9 @@ body {
   }
 }
 
-#main { 
+#main {
   .main_content {
-    padding: 4em;
+    padding: 3em;
     padding-top: 2em;
     padding-bottom: 2em;
 
@@ -83,7 +83,7 @@ body {
     margin:0px;
     padding-top:15px;
     background-color: $footer-bg;
-    color: $footer-text;  
+    color: $footer-text;
 
     .thumbnail_image {
       border:2px solid lighten($footer-bg, 10);
@@ -104,7 +104,7 @@ body {
     }
 
     .footer-contents {
-      margin-top:15px;  
+      margin-top:15px;
     }
   }
 }
@@ -125,13 +125,13 @@ a img {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px; 
-  } 
+    margin-bottom: 10px;
+  }
 
   #logo {
     padding: 5px;
   }
-} 
+}
 
 #flash_notice, #flash_error, #flash_alert {
   padding: 5px 8px;
@@ -145,7 +145,7 @@ div {
 .field_with_errors {
   padding: 2px;
   background-color: red;
-  display: table; 
+  display: table;
 
   #error_explanation {
     width: 450px;
@@ -163,13 +163,13 @@ div {
       margin: -7px;
       margin-bottom: 0px;
       background-color: #c00;
-      color: #fff; 
+      color: #fff;
     }
 
     ul li {
       font-size: 1.2em;
-      list-style: square; 
-    } 
+      list-style: square;
+    }
   }
 }
 
@@ -218,6 +218,6 @@ div {
     .quotes {
       font-size:1.2em;
       font-weight:bold;
-    }  
+    }
   }
 }

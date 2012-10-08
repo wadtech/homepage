@@ -1,4 +1,4 @@
-/* 
+/*
 	Web20 Table Style
 	written by Netway Media, http://www.netway-media.com
 */
@@ -31,7 +31,7 @@
   table a {
     color: #333333;
     text-decoration:none;
-  
+
     &:hover {
      text-decoration:underline;
     }
@@ -48,7 +48,7 @@
  border: 1px solid #ccc;
   -webkit-box-shadow: 1px 1px 1px rgba(50, 50, 50, 0.55);
   -moz-box-shadow:    1px 1px 1px rgba(50, 50, 50, 0.55);
-  box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.55); 
+  box-shadow:         1px 1px 1px rgba(50, 50, 50, 0.55);
   margin-left:5px;
   vertical-align:text-top;
 }
@@ -62,5 +62,5 @@
 }
 
 .article_title {
-  float:left;
+  //float:left;
 }

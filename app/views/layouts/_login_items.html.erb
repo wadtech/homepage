@@ -1,10 +1,8 @@
-<div class="btn-group">
-  <% if admin_signed_in? %>
-    <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete, :class => "btn btn-danger" %>
-    <%= link_to "New Article", new_article_path, :class => "btn btn-success" %>
-    <%= link_to "New Project", new_project_path, :class => "btn btn-success" %>
-    <%= link_to "New Page", new_page_path, :class => "btn btn-success" %>
-  <% else %>
-    <%= link_to 'Sign in', new_admin_session_path, :class => "btn btn-success"  %> 
-  <% end %>
-</div>
+<% if admin_signed_in? %>
+  <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete, :class => "btn btn-danger" %>
+  <%= link_to "New Article", new_article_path, :class => "btn btn-success" %>
+  <%= link_to "New Project", new_project_path, :class => "btn btn-success" %>
+  <%= link_to "New Page", new_page_path, :class => "btn btn-success" %>
+<% else %>
+  <%= link_to 'Sign in', new_admin_session_path, :class => "btn btn-success"  %>
+<% end %>
