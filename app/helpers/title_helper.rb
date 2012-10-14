@@ -6,7 +6,7 @@ module TitleHelper
     else
       extra = " - #{current_controller_title} - #{current_id_title}"
     end
-    "Pete's Development Blog" + extra + " - www.petermellett.co.uk"
+    "Pete's Development Blog" + extra
   end
 
   def current_controller_title
