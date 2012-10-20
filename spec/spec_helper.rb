@@ -39,10 +39,13 @@ RSpec.configure do |config|
   # the seed, which is printed after each run.
   #     --seed 1234
   config.order = "random"
+
+  # ignore tests marked as broken
+  config.filter_run_excluding :broken => true
 end
 
 def login_admin
-  @user = FactoryGirl.create(:admin) 
+  @user = FactoryGirl.create(:admin)
 
   visit new_admin_session_path
 
