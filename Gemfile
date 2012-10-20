@@ -8,8 +8,8 @@ gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.0.0'
 
 # markdown and snippets
-gem 'pygments.rb'
-gem 'redcarpet'
+gem 'pygments.rb', '~> 0.3.2'
+gem 'redcarpet', '~> 2.2.2'
 
 # jquery related
 gem 'jquery-rails'
@@ -18,7 +18,7 @@ gem 'jquery-rails'
 gem 'roadie'
 
 #Twitter integration
-gem 'twitter', ">= 3.0.0.rc.1"
+gem 'twitter', ">= 4.1.1"
 gem 'whenever', :require => false
 
 #Image attachments
@@ -33,7 +33,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '2.1.1'
+  gem 'twitter-bootstrap-rails', '2.1.4'
 end
 
 group :test do
@@ -41,18 +41,18 @@ group :test do
   gem "autotest-notification"
   gem "autotest-growl"
   gem "autotest-rails-pure"
-  gem 'simplecov', :require => false
+  gem 'simplecov', '~> 0.7.1', :require => false
 end
 
 group :development, :test do
   # gem 'annotate', :github => 'ctran/annotate_models'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails'
-  gem 'database_cleaner'
+  gem 'rspec-rails', '~> 2.11.4'
+  gem 'database_cleaner', '~> 0.9.1'
   gem 'factory_girl_rails'
   gem "cucumber-rails", "~> 1.0", require: false
-  gem "letter_opener"
+  gem "letter_opener", '~> 1.0.0'
   gem 'progress_bar'
   gem 'thin'
   gem 'sqlite3'
