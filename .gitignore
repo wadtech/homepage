@@ -11,3 +11,4 @@ public/system/*
 public/assets/*
 .vagrant
 coverage
+config/application.yml
