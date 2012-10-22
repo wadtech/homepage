@@ -33,7 +33,6 @@ GEM
       rails (~> 3.0)
     addressable (2.3.2)
     arel (3.0.2)
-    autotest-growl (0.2.16)
     autotest-notification (2.3.4)
       autotest-standalone (~> 4.5)
     autotest-rails-pure (4.1.2)
@@ -245,7 +244,6 @@ PLATFORMS
 DEPENDENCIES
   ZenTest
   acts-as-taggable-on
-  autotest-growl
   autotest-notification
   autotest-rails-pure
   bcrypt-ruby (~> 3.0.0)

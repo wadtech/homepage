@@ -39,7 +39,6 @@ end
 group :test do
   gem "ZenTest"
   gem "autotest-notification"
-  gem "autotest-growl"
   gem "autotest-rails-pure"
   gem 'simplecov', '~> 0.7.1', :require => false
 end
