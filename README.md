@@ -4,9 +4,10 @@
 
 Continuing my mission to learn Rails.
 
+Postgres branch. Switching from MySQL because I want to be able to use fulltext search without having to run Solr.
+
 ##Technical Specs
 
-* Rails 3.2.6
-* Devise 2.1.2
+* Rails 3.2
+* Devise
 * redcarpet 2 for markdown rendering
-* high_voltage for static pages
