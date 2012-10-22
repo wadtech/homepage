@@ -18,14 +18,14 @@ class Project < ActiveRecord::Base
 
   has_many :highlights
   accepts_nested_attributes_for :highlights, allow_destroy: true
-  
+
   has_attached_file :image, :styles => { :large => "400x400>", :medium => "300x300>", :thumb => "200x200>" }
 
   validates :title, :description, :presence => true
 
   def to_param
     self.title.parameterize
-  end 
+  end
 
   def self.find(input)
     input.to_i == 0 ? find_by_title(input.gsub("-", " ")) : super
