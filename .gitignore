@@ -6,7 +6,7 @@ tmp/
 .idea/
 Capfile
 config/deploy.rb
-capistrano_database_yml.rb
+config/deploy/*
 public/system/*
 public/assets/*
 .vagrant
