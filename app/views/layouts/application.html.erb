@@ -9,13 +9,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="container" id="main">
+    <div class="container-fluid" id="main">
       <!-- Start Header -->
       <div class="row-fluid">
         <div class="span8">
           <div id="header">
             <div id="logo">
-            <%= link_to image_tag("logo.png"), root_url %>
+            <%= link_to image_tag("logo.png", alt: "puts 'petedev'"), root_url %>
             </div>
           </div>
         </div>
@@ -23,7 +23,7 @@
       <!-- End Header -->
       <div class="row-fluid">
         <div class="span9">
-          <div id="main"> 
+          <div id="main">
             <% flash.each do |name, msg| %>
               <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
                 <a class="close" data-dismiss="alert" href="#">&times;</a>
@@ -38,7 +38,6 @@
         <div class="span3">
           <%= render :partial => 'welcome/info' %>
           <%= render :partial => 'welcome/tag_cloud'%>
-          <%= render :partial => 'welcome/spotlight' unless @project.nil?%>
           <%= render :partial => 'welcome/tweet' %>
         </div>
       </div>
@@ -47,4 +46,4 @@
       <%= render :partial => 'shared/footer' %>
     </div>
   </body>
-</html> 
+</html>
