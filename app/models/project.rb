@@ -28,6 +28,6 @@ class Project < ActiveRecord::Base
   end
 
   def self.find(input)
-    input.to_i == 0 ? find_by_title(input.gsub("-", " ")) : super
+    input.to_i == 0 ? first(:conditions => ["title ILIKE ?", input.gsub("-", " ")]) : super
   end
 end
