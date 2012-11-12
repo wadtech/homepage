@@ -1,7 +1,7 @@
 defaults: &defaults
   about:
-    welcome: Welcome: Changeme in config/application.yml
-    mission: Mission: Changeme in config/application.yml
+    welcome: Welcome- Changeme in config/application.yml
+    mission: Mission- Changeme in config/application.yml
   contact:
     email: changeme@nowhere.com
     full_name: Fred Bloggs
