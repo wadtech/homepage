@@ -18,7 +18,7 @@ gem 'jquery-rails'
 gem 'roadie'
 
 #Twitter integration
-gem 'twitter', ">= 4.1.1"
+gem 'twitter', ">= 4.2.0"
 gem 'whenever', :require => false
 
 #Image attachments
