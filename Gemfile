@@ -57,7 +57,6 @@ group :development, :test do
   gem "letter_opener", '~> 1.0.0'
   gem 'progress_bar'
   gem 'thin'
-  gem 'sqlite3'
 end
 
 group :production, :staging do
