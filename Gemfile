@@ -63,3 +63,7 @@ end
 group :production, :staging do
   gem "pg"
 end
+
+#deployment
+gem 'capistrano'
+gem 'rvm-capistrano'
