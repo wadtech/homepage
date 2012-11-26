@@ -1,4 +1,5 @@
 require 'spec_helper'
+include AdminHelper
 
 describe "Signing in links" do
   context "logged out" do

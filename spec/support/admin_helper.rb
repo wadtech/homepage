@@ -1,3 +1,5 @@
+require "capybara/rspec"
+
 module AdminHelper
   def login_admin
     @user = FactoryGirl.create(:admin)
