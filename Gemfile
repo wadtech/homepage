@@ -36,7 +36,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '2.1.4'
+  gem 'twitter-bootstrap-rails', '2.1.6'
 end
 
 group :test do
@@ -50,7 +50,7 @@ group :development, :test do
   # gem 'annotate', :github => 'ctran/annotate_models'
   gem 'capybara'
   gem 'launchy'
-  gem 'rspec-rails', '~> 2.11.4'
+  gem 'rspec-rails', '~> 2.12.0'
   gem 'database_cleaner', '~> 0.9.1'
   gem 'factory_girl_rails'
   gem "cucumber-rails", "~> 1.0", require: false
