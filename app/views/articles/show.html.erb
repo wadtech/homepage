@@ -1,6 +1,6 @@
 <div class="display_article">
   <div class="article_title_wrapper">
-    <h1 class="article_title"><%= @article.title.titleize %></h1>
+    <h1 class="article_title"><%= @article.title %></h1>
     <% if admin_signed_in? %>
       &nbsp;<%= link_to "edit", edit_article_path(@article) %>
     <% end %>
