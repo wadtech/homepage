@@ -11,6 +11,7 @@ defaults: &defaults
     name: Change me in config/application.yml
   mailer:
     from: changeme-from@nowhere.com
+    domain: nowhere.com
 
 development:
   <<: *defaults
