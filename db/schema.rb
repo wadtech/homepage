@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007201149) do
+ActiveRecord::Schema.define(:version => 20121202134248) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -95,10 +95,10 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
   end
 
   create_table "twitter_feeds", :force => true do |t|
-    t.string   "tweet_id"
+    t.integer  "tweet_id",   :limit => 8
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
 end
