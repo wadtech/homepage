@@ -1,1 +1,2 @@
-rvm use '1.9.3-p327@homepage'
+rvm use '1.9.3-p327@homepage' --create
+
