@@ -11,3 +11,4 @@ Postgres branch. Switching from MySQL because I want to be able to use fulltext 
 * Rails 3.2
 * Devise
 * redcarpet 2 for markdown rendering
+* PostgreSQL
