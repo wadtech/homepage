@@ -145,6 +145,9 @@ GEM
       cocaine (~> 0.4.0)
       mime-types
     pg (0.14.1)
+    pg_search (0.5.7)
+      activerecord (>= 3)
+      activesupport (>= 3)
     polyglot (0.3.3)
     posix-spawn (0.3.6)
     progress_bar (0.4.0)
@@ -280,6 +283,7 @@ DEPENDENCIES
   letter_opener (~> 1.0.0)
   paperclip (~> 3.0)
   pg
+  pg_search (= 0.5.7)
   progress_bar
   pygments.rb (~> 0.3.2)
   rails (= 3.2.9)

@@ -14,6 +14,12 @@
 #
 
 class Project < ActiveRecord::Base
+  include PgSearch
+  multisearchable :against => [:title, :description, :summary]
+  pg_search_scope :search, :against => [:title, :description, :summary]
+  pg_search_scope :search_by_title, :against => :title
+  pg_search_scope :search_by_content, :against => [:description, :summary]
+
   attr_accessible :title, :image, :description, :summary, :source_repository, :highlights_attributes
 
   has_many :highlights

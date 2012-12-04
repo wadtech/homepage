@@ -1,9 +1,9 @@
-<!-- <div class="search">
+<div class="search">
   <%= form_tag root_path, :method => :get do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
+  <div>
+    <%= text_field_tag :search, params[:search], :class => "search_field" %>
+    <%= submit_tag "Search", :name => nil, :class => "search_button" %>
+  </div>
   <% end %>
   <hr />
-</div> -->
+</div>

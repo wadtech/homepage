@@ -30,6 +30,9 @@ gem "acts-as-taggable-on"
 # Settings management
 gem 'settingslogic', '~> 2.0.8'
 
+# Search
+gem 'pg_search', '0.5.7'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
