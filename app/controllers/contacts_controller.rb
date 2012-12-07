@@ -32,9 +32,14 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        ContactMailer.contact(@contact.subject, @contact.content, @contact.source_ip).deliver
-        format.html { redirect_to root_url, notice: 'Thank you for your email.' }
-        format.json { render json: @contact, status: :created, location: root_url }
+        begin
+          ContactMailer.contact(@contact.subject, @contact.content, @contact.source_ip).deliver
+          format.html { redirect_to root_url, notice: 'Thank you for your email.' }
+          format.json { render json: @contact, status: :created, location: root_url }
+        rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+          format.html { redirect_to root_url, alert: 'An error has occurred while sending your email, but your message has been stored.' }
+          format.json { render json: @contact, status: :failed, location: root_url }
+        end
       else
         format.html { render action: "new" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }

@@ -15,5 +15,7 @@ describe ContactMailer do
     it 'contains the IP of the sender' do
       mail.body.encoded.should have_content '127.0.0.1'
     end
+
+    it 'gracefully handles Net::SMTP exceptions'
   end
 end
