@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 
-  before_filter :authenticate_admin!, :only => [:index]
+  before_filter :authenticate_admin!, :only => [:index, :show]
 
   # GET /articles
   # GET /articles.json
