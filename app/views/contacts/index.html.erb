@@ -1,19 +1,19 @@
 <h1>Messages</h1>
-<table class="contact">
+<table class="contact table table-condensed">
   <tr>
     <th>Subject</th>
     <th>Content</th>
     <th>Source IP</th>
   </tr>
-  <% if @messages.nil? %>
+  <% if @contacts.nil? %>
     <tr>
       <td>No messages</td>
     </tr>
   <% else %>
-    <% @messages.each do |message| %>
+    <% @contacts.each do |message| %>
       <tr class="<%= cycle("even", "odd") %>">
-        <td><%= message.subject %></td>
-        <td><%= message.content %></td>
+        <td><%= link_to message.subject, message %></td>
+        <td><%= smart_truncate(message.content, :sentences => 3) %></td>
         <td><%= message.source_ip %></td>
       </tr>
     <% end %>

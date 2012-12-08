@@ -2,8 +2,8 @@ Homepage::Application.routes.draw do
 
   devise_for :admins
   
-  match 'contact', :to => 'contacts#new'
-  resources :contacts, :projects
+  resources :contacts, :except => [:edit]
+  resources :projects
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] 
 

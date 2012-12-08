@@ -9,7 +9,16 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @articles }
+      format.json { render json: @contacts }
+    end
+  end
+
+  def show
+    @message = Contact.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.json {render json: @message }
     end
   end
 

@@ -1,0 +1,5 @@
+<h1>Message: <%= @message.subject %></h1>
+(<%= link_to "back", contacts_path %>)<br>
+<br>
+<p><%= @message.content %></p>
+<p>Sent from: <%= @message.source_ip %></p>
