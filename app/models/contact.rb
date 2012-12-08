@@ -12,7 +12,14 @@
 
 
 class Contact < ActiveRecord::Base
-  attr_accessible :subject, :content, :source_ip
+  attr_accessible :subject, :content, :source_ip, :archived
   validates :subject, :content, :presence => true
 
+  def archive!
+    if self.archived == false
+      self.archived = true
+    else 
+      self.archived = false
+    end
+  end
 end

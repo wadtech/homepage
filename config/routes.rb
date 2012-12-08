@@ -2,7 +2,10 @@ Homepage::Application.routes.draw do
 
   devise_for :admins
   
-  resources :contacts, :except => [:edit]
+  resources :contacts, :except => [:edit] do
+    get 'archive', on: :member
+  end
+
   resources :projects
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] 

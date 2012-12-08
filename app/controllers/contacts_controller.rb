@@ -5,7 +5,7 @@ class ContactsController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @contacts = Contact.all
+    @contacts = Contact.where(archived: false)
 
     respond_to do |format|
       format.html # index.html.erb
@@ -53,6 +53,15 @@ class ContactsController < ApplicationController
         format.html { render action: "new" }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
+    end
+  end
+
+  def archive
+    @contact = Contact.find(params[:id])
+    @contact.archive!
+
+    respond_to do |format|
+      format.html { redirect_to contacts_path, notice: "#{@contact.subject} archived."}
     end
   end
 end

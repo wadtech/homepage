@@ -4,6 +4,7 @@
     <th>Subject</th>
     <th>Content</th>
     <th>Source IP</th>
+    <th></th>
   </tr>
   <% if @contacts.nil? %>
     <tr>
@@ -15,6 +16,7 @@
         <td><%= link_to message.subject, message %></td>
         <td><%= smart_truncate(message.content, :sentences => 3) %></td>
         <td><%= message.source_ip %></td>
+        <td><%= link_to "Archive", archive_contact(message), method: :post, class: message_archive %></td>
       </tr>
     <% end %>
   <% end %>
