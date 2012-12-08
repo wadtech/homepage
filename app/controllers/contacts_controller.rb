@@ -1,11 +1,23 @@
 class ContactsController < ApplicationController
 
-  before_filter :authenticate_admin!, :only => [:index, :show]
+  before_filter :authenticate_admin!, :only => [:index, :show, :archive]
+
+  SMTP_ERRORS = [
+    Net::SMTPAuthenticationError,
+    Net::SMTPServerBusy,
+    Net::SMTPSyntaxError,
+    Net::SMTPFatalError,
+    Net::SMTPUnknownError
+  ]
 
   # GET /articles
   # GET /articles.json
   def index
-    @contacts = Contact.where(archived: false)
+    if params[:archived]
+      @contacts = Contact.all
+    else
+      @contacts = Contact.where(archived: false)
+    end
 
     respond_to do |format|
       format.html # index.html.erb
@@ -45,7 +57,7 @@ class ContactsController < ApplicationController
           ContactMailer.contact(@contact.subject, @contact.content, @contact.source_ip).deliver
           format.html { redirect_to root_url, notice: 'Thank you for your email.' }
           format.json { render json: @contact, status: :created, location: root_url }
-        rescue Net::SMTPAuthenticationError, Net::SMTPServerBusy, Net::SMTPSyntaxError, Net::SMTPFatalError, Net::SMTPUnknownError => e
+        rescue *SMTP_ERRORS => e
           format.html { redirect_to root_url, alert: 'An error has occurred while sending your email, but your message has been stored.' }
           format.json { render json: @contact, status: :failed, location: root_url }
         end
@@ -60,8 +72,14 @@ class ContactsController < ApplicationController
     @contact = Contact.find(params[:id])
     @contact.archive!
 
+    if @contact.archived?
+      flash[:notice] = "#{@contact.subject} archived."
+    else
+      flash[:notice] = "#{@contact.subject} restored."
+    end
+
     respond_to do |format|
-      format.html { redirect_to contacts_path, notice: "#{@contact.subject} archived."}
+      format.html { redirect_to contacts_path }
     end
   end
 end

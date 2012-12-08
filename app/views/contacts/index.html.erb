@@ -1,10 +1,16 @@
 <h1>Messages</h1>
+<p><% if params[:archived] %>
+  <%= link_to "Hide archived messages.", contacts_path %></p>
+  <% else %>
+  <%= link_to "Show archived messages.", contacts_path(archived: true) %></p>
+  <% end %>
 <table class="contact table table-condensed">
   <tr>
     <th>Subject</th>
     <th>Content</th>
     <th>Source IP</th>
-    <th></th>
+    <th>Received</th>
+    <th>Actions</th>
   </tr>
   <% if @contacts.nil? %>
     <tr>
@@ -12,11 +18,18 @@
     </tr>
   <% else %>
     <% @contacts.each do |message| %>
-      <tr class="<%= cycle("even", "odd") %>">
+      <tr class="<%= cycle("even", "odd") %><%= message.archived? ? " archived_message" : '' %>">
         <td><%= link_to message.subject, message %></td>
         <td><%= smart_truncate(message.content, :sentences => 3) %></td>
         <td><%= message.source_ip %></td>
-        <td><%= link_to "Archive", archive_contact(message), method: :post, class: message_archive %></td>
+        <td><%= message.created_at %></td>
+        <td>
+          <% if message.archived? %>
+            <%= link_to "Restore", archive_path(message), method: :post, confirm: "Are you sure?", class: 'message_archive btn btn-warning' %>
+          <% else %>
+            <%= link_to "Archive", archive_path(message), method: :post, confirm: "Are you sure?", class: 'message_archive btn btn-success' %>
+          <% end %>
+        </td>
       </tr>
     <% end %>
   <% end %>

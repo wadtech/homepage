@@ -16,10 +16,10 @@ class Contact < ActiveRecord::Base
   validates :subject, :content, :presence => true
 
   def archive!
-    if self.archived == false
-      self.archived = true
-    else 
-      self.archived = false
-    end
+    self.toggle!(:archived)
+  end
+
+  def archived?
+    archived
   end
 end

@@ -16,6 +16,6 @@ describe ContactMailer do
       mail.body.encoded.should have_content '127.0.0.1'
     end
 
-    it 'gracefully handles Net::SMTP exceptions'
+    it 'gracefully handles Net exceptions' #TODO: implemenent test for exception handling.
   end
 end
