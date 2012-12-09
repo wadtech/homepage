@@ -15,14 +15,14 @@ gem 'redcarpet', '~> 2.2.2'
 gem 'jquery-rails'
 
 #HTML email styles
-gem 'roadie'
+gem 'roadie', '2.3.4'
 
 #Twitter integration
-gem 'twitter', ">= 4.2.0"
-gem 'whenever', :require => false
+gem 'twitter', "4.4.1"
+gem 'whenever', '0.8.0', :require => false
 
 #Image attachments
-gem "paperclip", "~> 3.0"
+gem "paperclip", "3.3.1"
 
 # Tagging
 gem "acts-as-taggable-on"
@@ -39,11 +39,12 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '2.1.6'
+  gem 'twitter-bootstrap-rails', '2.1.7'
 end
 
 #to make twitter-bootstrap-rails work properly... sigh.
 gem 'therubyracer'
+gem 'libv8', '~> 3.11.8'
 gem 'less-rails'
 
 group :test do
@@ -55,9 +56,9 @@ end
 
 group :development, :test do
   # gem 'annotate', :github => 'ctran/annotate_models'
-  gem 'capybara'
+  gem 'capybara', '2.0.1'
   gem 'launchy'
-  gem 'rspec-rails', '~> 2.12.0'
+  gem 'rspec-rails', '2.12.0'
   gem 'database_cleaner', '~> 0.9.1'
   gem 'factory_girl_rails'
   gem "cucumber-rails", "~> 1.0", require: false
