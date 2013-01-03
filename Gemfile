@@ -43,8 +43,9 @@ group :assets do
 end
 
 #to make twitter-bootstrap-rails work properly... sigh.
-gem 'therubyracer'
-gem 'libv8'
+gem "execjs", "1.4.0"
+gem "therubyracer", "0.10.2"
+gem 'libv8', '~> 3.3.10'
 gem 'less-rails'
 
 group :test do
