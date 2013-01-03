@@ -283,7 +283,7 @@ DEPENDENCIES
   launchy
   less-rails
   letter_opener (~> 1.0.0)
-  libv8 (~> 3.11.8)
+  libv8
   paperclip (= 3.3.1)
   pg
   pg_search (= 0.5.7)

@@ -44,7 +44,7 @@ end
 
 #to make twitter-bootstrap-rails work properly... sigh.
 gem 'therubyracer'
-gem 'libv8', '~> 3.11.8'
+gem 'libv8'
 gem 'less-rails'
 
 group :test do
