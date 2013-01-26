@@ -3,21 +3,69 @@
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
- *= require_tree .
- ^= require bootstrap_and_overrides
 */
 
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+
 /* variables */
+
 $html-bg      : #BCBCBC;
 $bg-colour    : #F58711;
 $content-bg   : #F5F2F0;
 $Warm-Grey    : #F7F6F5;
 $Cool-Grey    : #333333;
 $chrome-orange: #ba4110;
-
 $footer-bg    : darken($html-bg, 50);
 $footer-text  : lighten($Cool-Grey, 50);
+$gridGutterWidth: 35px;
+$sansFontFamily: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
+$baseLineHeight: 1.25;
+$baseFontSize: 1em;
+
 /* End variables */
+
+pre {
+  font-size:0.75em;
+}
+
+body {
+  font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
+  font-size: 100%;
+  line-height:1.25;
+}
+
+.thumbnails {
+  text-align:center;
+}
+textarea {
+  width: 90%;
+}
+
+.main_content {
+  p {
+    line-height:1.5em;
+    margin-top:0.75em;
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+  font-weight:normal;
+  color:#111;
+  line-height:1em;
+  }
+  h2,h3,h4,h5,h6 {
+    margin-top: 1em;
+  }
+
+  h4,h5,h6{ font-weight: bold; }
+  h1{ font-size:2em; }
+  h2{ font-size:1.5em; border-bottom:1px solid #ccc; padding-bottom: 5px; }
+  h3{ font-size:1.33em; }
+  h4{ font-size:1em; font-weight:bold; }
+  h5{ font-size:1em;}
+  h6{ font-size:0.9em; }
+}
 
 html {
   background-color: $footer-bg;
@@ -212,9 +260,16 @@ div {
   }
 }
 
-
-
 .spotlight {
   text-align:center;
 }
 
+@import 'articles';
+@import 'contacts';
+@import 'paginator';
+@import 'projects';
+@import 'pygments';
+@import 'search';
+@import 'tagcloud';
+@import 'welcome';
+@import "mobile";

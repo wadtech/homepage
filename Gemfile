@@ -39,17 +39,11 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.5'
   gem 'coffee-rails', '~> 3.2.2'
   gem 'uglifier', '>= 1.0.3'
-  gem 'twitter-bootstrap-rails', '2.1.7'
+  gem 'bootstrap-sass', '~> 2.2.2.0'
 end
 
-#to make twitter-bootstrap-rails work properly... sigh.
-gem "execjs", "1.4.0"
-gem "therubyracer", "0.10.2"
-gem 'libv8', '~> 3.3.10'
-gem 'less-rails'
-
 group :test do
-  gem "ZenTest"
+  gem "ZenTest", '4.8.3'
   gem "autotest-notification"
   gem "autotest-rails-pure"
   gem 'simplecov', '~> 0.7.1', :require => false
@@ -65,6 +59,7 @@ group :development, :test do
   gem "cucumber-rails", "~> 1.0", require: false
   gem "letter_opener", '~> 1.0.0'
   gem 'progress_bar'
+  gem "pg"
   gem 'thin'
 end
 
