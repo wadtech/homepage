@@ -25,9 +25,9 @@
         <td><%= message.created_at %></td>
         <td>
           <% if message.archived? %>
-            <%= link_to "Restore", archive_path(message), method: :post, confirm: "Are you sure?", class: 'message_archive btn btn-warning' %>
+            <%= link_to "Restore", archive_path(message), method: :post, class: 'message_archive btn btn-warning' %>
           <% else %>
-            <%= link_to "Archive", archive_path(message), method: :post, confirm: "Are you sure?", class: 'message_archive btn btn-success' %>
+            <%= link_to "Archive", archive_path(message), method: :post, class: 'message_archive btn btn-success' %>
           <% end %>
         </td>
       </tr>
