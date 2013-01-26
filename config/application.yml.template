@@ -11,13 +11,6 @@ defaults: &defaults
     name: Change me in config/application.yml
   mailer:
     from: changeme-from@nowhere.com
-    address: whatever.smtpdomain.com
-    port: 123465
-    authentication: plain
-    enable_starttls: true
-    username: my_username
-    password: my_password
-    domain: nowhere.com
 
 
 development:
