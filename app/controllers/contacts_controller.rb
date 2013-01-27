@@ -81,6 +81,7 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to contacts_path }
+      format.js   { redirect_to contacts_path }
     end
   end
 end

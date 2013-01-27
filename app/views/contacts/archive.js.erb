@@ -1,0 +1,8 @@
+if $("#message-<%= @contact.id %>").hasClass('archived_message')
+  console.log("I have the class")
+  $("#message-<%= @contact.id %>").removeClass('archived_message')
+  $("#message-<%= @contact.id %>").find('a').text('Archive').removeClass('btn-warning').addClass('btn-success')
+else
+  console.log("I don't have the class")
+  $("#message-<%= @contact.id %>").addClass('archived_message')
+  $("#message-<%= @contact.id %>").find('a').text('Restore').addClass('btn-success').removeClass('btn-warning')
