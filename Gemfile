@@ -43,7 +43,7 @@ group :assets do
 end
 
 group :test do
-  gem "ZenTest", '4.9.0'
+  gem "ZenTest", '4.8.3'
   gem "autotest-notification"
   gem "autotest-rails-pure"
   gem 'simplecov', '~> 0.7.1', :require => false
