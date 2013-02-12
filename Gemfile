@@ -49,6 +49,12 @@ group :test do
   gem 'simplecov', '~> 0.7.1', :require => false
 end
 
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'meta_request'
+end
+
 group :development, :test do
   # gem 'annotate', :github => 'ctran/annotate_models'
   gem 'capybara', '2.0.2'
