@@ -1,0 +1,13 @@
+$row = $("#message-<%= @contact.id %>");
+
+if ($row.hasClass('archived_message')) {
+  $row.removeClass('archived_message');
+  $row.find('a:last').text('Archive').removeClass('btn-warning').addClass('btn-success');
+} else {
+  $row.addClass('archived_message');
+  $row.find('a:last').text('Restore').removeClass('btn-success').addClass('btn-warning');
+
+  if (!getParameterByName('archived')) {
+    $row.hide(1000);
+  }
+}

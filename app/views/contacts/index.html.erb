@@ -18,16 +18,16 @@
     </tr>
   <% else %>
     <% @contacts.each do |message| %>
-      <tr class="<%= cycle("even", "odd") %><%= message.archived? ? " archived_message" : '' %>">
+      <tr id="<%= "message-#{message.id}" %>" class="<%= cycle("even", "odd") %><%= message.archived? ? " archived_message" : '' %>">
         <td><%= link_to message.subject, message %></td>
         <td><%= smart_truncate(message.content, :sentences => 3) %></td>
         <td><%= message.source_ip %></td>
         <td><%= message.created_at %></td>
         <td>
           <% if message.archived? %>
-            <%= link_to "Restore", archive_path(message), method: :post, class: 'message_archive btn btn-warning' %>
+            <%= link_to "Restore", archive_path(message), method: :post, remote: true, class: 'message_archive btn btn-warning' %>
           <% else %>
-            <%= link_to "Archive", archive_path(message), method: :post, class: 'message_archive btn btn-success' %>
+            <%= link_to "Archive", archive_path(message), method: :post, remote: true, class: 'message_archive btn btn-success' %>
           <% end %>
         </td>
       </tr>

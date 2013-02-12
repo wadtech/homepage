@@ -1,0 +1,1 @@
+BetterErrors.editor = :sublime if defined? BetterErrorsBetterErrors.editor = :sublime if defined? BetterErrors
