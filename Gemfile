@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'rails', '3.2.11'
+gem 'rails', '3.2.12'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.2.3'
@@ -12,7 +12,7 @@ gem 'pygments.rb', '~> 0.3.2'
 gem 'redcarpet', '~> 2.2.2'
 
 # jquery related
-gem 'jquery-rails', '2.2.0'
+gem 'jquery-rails', '2.2.1'
 
 #HTML email styles
 gem 'roadie', '2.3.4'
@@ -55,9 +55,9 @@ group :development, :test do
   gem 'launchy'
   gem 'rspec-rails', '2.12.2'
   gem 'database_cleaner', '~> 0.9.1'
-  gem 'factory_girl_rails', '4.2.0'
+  gem 'factory_girl_rails', '4.2.1'
   gem "cucumber-rails", "~> 1.0", require: false
-  gem "letter_opener", '~> 1.0.0'
+  gem "letter_opener", '~> 1.1.0'
   gem 'progress_bar'
   gem "pg"
   gem 'thin'
