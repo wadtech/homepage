@@ -1,7 +1,7 @@
 Homepage::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.action_dispatch.tld_length = 2
-  
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
@@ -10,7 +10,7 @@ Homepage::Application.configure do
   config.action_controller.perform_caching = true
 
   # Disable Rails's static asset server (Apache or nginx will already do this)
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Compress JavaScripts and CSS
   config.assets.compress = true
@@ -61,5 +61,5 @@ Homepage::Application.configure do
   config.active_support.deprecation = :notify
 
   # Update this for real host.
-  # config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+  config.action_mailer.default_url_options = { :host => Settings.mailer.domain }
 end

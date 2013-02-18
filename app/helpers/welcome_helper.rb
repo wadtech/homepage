@@ -9,7 +9,7 @@ module WelcomeHelper
 
     linkto = link_to "Projects", projects_path
     links << linkto.html_safe
-    linkto = link_to "Contact", contact_path
+    linkto = link_to "Contact", new_contact_path
     links << linkto.html_safe
 
     links = safe_join(links, " - ")

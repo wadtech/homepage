@@ -8,6 +8,7 @@ require 'rspec/rails'
 require 'rspec/autorun'
 require 'capybara/rails'
 
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
@@ -42,14 +43,4 @@ RSpec.configure do |config|
 
   # ignore tests marked as broken
   config.filter_run_excluding :broken => true
-end
-
-def login_admin
-  @user = FactoryGirl.create(:admin)
-
-  visit new_admin_session_path
-
-  fill_in 'admin_email', :with => @user.email
-  fill_in 'admin_password', :with => @user.password
-  click_button "Sign in"
 end

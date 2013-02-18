@@ -12,6 +12,7 @@ defaults: &defaults
   mailer:
     from: changeme-from@nowhere.com
 
+
 development:
   <<: *defaults
 

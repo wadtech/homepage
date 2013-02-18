@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121007201149) do
+ActiveRecord::Schema.define(:version => 20121208004210) do
 
   create_table "admins", :force => true do |t|
     t.string   "email",               :default => "", :null => false
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
     t.string   "source_ip"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.boolean  "archived"
   end
 
   create_table "highlights", :force => true do |t|
@@ -64,6 +65,14 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
   end
 
   add_index "pages", ["permalink"], :name => "index_pages_on_permalink"
+
+  create_table "pg_search_documents", :force => true do |t|
+    t.text     "content"
+    t.integer  "searchable_id"
+    t.string   "searchable_type"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "title"
@@ -95,10 +104,10 @@ ActiveRecord::Schema.define(:version => 20121007201149) do
   end
 
   create_table "twitter_feeds", :force => true do |t|
-    t.string   "tweet_id"
+    t.integer  "tweet_id",   :limit => 8
     t.text     "content"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",              :null => false
+    t.datetime "updated_at",              :null => false
   end
 
 end

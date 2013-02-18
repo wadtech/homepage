@@ -20,7 +20,7 @@ describe Project do
     %w[Todo Blog].each do |title|
       FactoryGirl.create(:project, :title => title)
     end
-    Project.find("todo").should_not be_nil
+    Project.find("todo").title.should eq "Todo"
     Project.find("blog").title.should eq "Blog"
   end
 end

@@ -25,6 +25,9 @@
   <div class="field">
   <%= f.hidden_field :source_ip %>
   </div>
+  <div class="field">
+  <%= f.hidden_field :archived, value: false %>
+  </div>
   <div class="actions">
     <%= f.submit "Send Message" %>
   </div>

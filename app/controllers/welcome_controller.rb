@@ -1,18 +1,25 @@
 class WelcomeController < ApplicationController
   def index
-    # get latest 5 articles in summary form
-    # only if they're published though!
-    if params[:tag]
+    if params[:search]
+      @articles = Article.where(:published => true).search(params[:search]).page(params[:page]).order('created_at desc')
+      flash[:notice] = "Search results for '#{params[:search]}'."
+    elsif params[:tag]
       @articles = Article.where(:published => true).tagged_with(params[:tag]).page(params[:page]).order('created_at desc')
+      flash[:notice] = "Articles tagged with '#{params[:tag]}'."
     else
-      @articles = Article.where(:published => true).page(params[:page]).order('created_at desc')
+      @articles = default_article_scope
     end
-    @project = Project.readonly.first(:order => "RAND()", :conditions => [ "image_file_name IS NOT NULL" ])
+
+    if @articles.empty?
+      flash.delete :notice
+      flash[:alert] = "No results for '#{params[:search]}' found."
+      @articles = default_article_scope
+    end
 
     respond_to do |format|
-      format.html # index.html.erb
+      format.html
       format.json { render json: @articles }
-    end    
+    end
   end
 
   def show_article
@@ -22,5 +29,10 @@ class WelcomeController < ApplicationController
       format.html
       format.json { render json: @articles }
     end
+  end
+
+  protected
+  def default_article_scope
+    Article.where(:published => true).page(params[:page]).order('created_at desc')
   end
 end
