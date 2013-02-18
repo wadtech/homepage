@@ -4,8 +4,6 @@
 
 Continuing my mission to learn Rails.
 
-Postgres branch. Switching from MySQL because I want to be able to use fulltext search without having to run Solr.
-
 ##Technical Specs
 
 * Rails 3.2
