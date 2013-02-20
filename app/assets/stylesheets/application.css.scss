@@ -5,35 +5,33 @@
  *= require_self
 */
 
+@import "overrides";
 @import "bootstrap";
+@import "mobile";
 @import "bootstrap-responsive";
 
-
-/* variables */
-
-$html-bg      : #BCBCBC;
-$bg-colour    : #F58711;
-$content-bg   : #F5F2F0;
-$Warm-Grey    : #F7F6F5;
-$Cool-Grey    : #333333;
-$chrome-orange: #ba4110;
-$footer-bg    : darken($html-bg, 50);
-$footer-text  : lighten($Cool-Grey, 50);
-$gridGutterWidth: 35px;
-$sansFontFamily: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
-$baseLineHeight: 1.25;
-$baseFontSize: 1em;
-
-/* End variables */
-
 pre {
-  font-size:0.75em;
+  font-size: 0.75em;
 }
 
-body {
-  font-family: Ubuntu, Verdana, Helvetica, Arial, sans-serif;
-  font-size: 100%;
-  line-height:1.25;
+.searchbox {
+  padding: 1.5em 0 1em 0;
+}
+
+.login-items {
+  white-space: nowrap;
+  padding:1em;
+
+  a {
+    margin-right: 1.5em;
+    &:first {
+      margin-left:0;
+    }
+
+    &:last {
+      margin-right:0;
+    }
+  }
 }
 
 .thumbnails {
@@ -69,11 +67,18 @@ textarea {
 
 html {
   background-color: $footer-bg;
-  font-color: $Cool-Grey;
+  color: $Cool-Grey;
+}
+
+#header {
+  background-color: $header-bg;
 }
 body {
+  font-family: $sansFontFamily;
+  font-size: 100%;
+  line-height:1.25;
   background-color:$html-bg !important;
-  background-image:url('bg.png');
+  background: url(ricepaper2.png);
   background-repeat:repeat;
 
   .info {
@@ -220,50 +225,6 @@ div {
   margin-bottom:20px;
 }
 
-.tweet {
-  font-size: 0.75em;
-  padding: 10px;
-
-  .tweet-text {
-    width:100%;
-    text-align:center;
-  }
-
-  .tweet-user {
-    margin-top:5px;
-    padding:2px;
-    vertical-align:baseline;
-  }
-
-  .speech-bubble   {
-    /* http://acidmartin.wordpress.com/2010/11/25/creating-a-speech-bubble-with-css3-and-without-additional-markup/ */
-    padding: 10px;
-    border: 2px solid #ccc;
-    -moz-border-radius: 10px;
-    -webkit-border-radius: 10px;
-    border-radius: 10px;
-
-    &:after {
-      content: "";
-      border: solid 10px transparent; /* set all borders to 10 pixels width */
-      border-top-color: #ccc; /* the callout */
-      border-bottom: 0; /* we do not need the bottom border in this case */
-      width: 0;
-      height: 0;
-      overflow: hidden;
-      display: block;
-      position: relative;
-      bottom: -20px; /* border-width of the :after element + padding of the root element */
-      margin-left:10px;
-    }
-
-    .quotes {
-      font-size:1.2em;
-      font-weight:bold;
-    }
-  }
-}
-
 .spotlight {
   text-align:center;
 }
@@ -275,5 +236,5 @@ div {
 @import 'pygments';
 @import 'search';
 @import 'tagcloud';
+@import "tweets";
 @import 'welcome';
-@import "mobile";
