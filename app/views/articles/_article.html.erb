@@ -4,10 +4,6 @@
 <% @articles.each do |article| %>
   <div class="display_article">
     <div class="article_title_wrapper">
-      <h1 class="article_title"><%= link_to article.title, article_url(article) %></h1>
-      <% if admin_signed_in? %>
-        &nbsp;<%= link_to "edit", edit_article_path(article) %>
-      <% end %>
       <%= render :partial => 'articles/author_card', :locals => {:article => article} %>
     </div>
     <div class="article_body">

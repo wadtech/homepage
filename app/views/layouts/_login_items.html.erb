@@ -1,9 +1,11 @@
-<% if admin_signed_in? %>
-  <%= link_to "New Article", new_article_path %> - 
-  <%= link_to "New Project", new_project_path %> - 
-  <%= link_to "New Page", new_page_path %> - 
-  <%= link_to "#{messages_text}", contacts_path %> - 
-  <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete %>
-<% else %>
-  <%= link_to 'Sign in', new_admin_session_path  %>
-<% end %>
+<div class="login-items">
+  <% if admin_signed_in? %>
+    <%= link_to "New Article", new_article_path %>
+    <%= link_to "New Project", new_project_path %>
+    <%= link_to "New Page", new_page_path %>
+    <%= link_to "#{messages_text}", contacts_path %>
+    <%= link_to 'Sign out', destroy_admin_session_path, :method => :delete %>
+  <% else %>
+    <%= link_to 'Sign in', new_admin_session_path  %>
+  <% end %>
+</div>

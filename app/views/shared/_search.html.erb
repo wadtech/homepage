@@ -1,9 +1,4 @@
-<div class="search">
-  <%= form_tag root_path, :method => :get do %>
-  <div>
-    <%= text_field_tag :search, params[:search], :class => "search_field" %>
-    <%= submit_tag "Search", :name => nil, :class => "search_button" %>
-  </div>
-  <% end %>
-  <hr />
-</div>
+<%= form_tag root_path, :method => :get, :class => 'form-search pull-right' do %>
+  <%= text_field_tag :search, params[:search], :class => "search_field" %>
+  <%= button_tag "Search", :name => nil, :class => "search_button btn btn-primary" %>
+<% end %>
