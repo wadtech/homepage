@@ -1,9 +1,15 @@
-<div class="author well">
-  <p><% if article.created_at == article.updated_at %>
-      <%= article.updated_at.strftime("%d/%m/%Y") %>
-    <% else %>
-      <%= "Updated #{article.updated_at.strftime("%d/%m/%Y")}" %> 
+<div class="media">
+  <%= link_to page_path("about"), :class => "pull-right" do %>
+    <%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar media-object" %>
+  <% end %>
+  <div class="media-body">
+    <h1 class="article_title media-heading"><%= link_to article.title, article_url(article) %></h1>
+    <% if admin_signed_in? %>
+    &nbsp;<%= link_to "edit", edit_article_path(article) %>
     <% end %>
-    by <b><%= link_to article.author, page_path("about") %></b><%= image_tag 'avatar.png', :size => "40x50", :class => "article-avatar" %></p>
-  <%= list_tags(article) %>
+    <p>
+      By <%= "#{article.author} #{article_publish_text article}" %>
+    </p>
+    <%= list_tags(article) %>
+  </div>
 </div>

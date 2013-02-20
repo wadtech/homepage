@@ -3,3 +3,7 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 jQuery ->
   $(".container-fluid").fitVids()
+
+  $paginator = $('.main_content').find('.paginator')
+  $paginator.remove()
+  $paginator.insertBefore($('.footer-wrapper'))
