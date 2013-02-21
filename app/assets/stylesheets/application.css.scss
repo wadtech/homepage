@@ -7,11 +7,15 @@
 
 @import "overrides";
 @import "bootstrap";
-@import "mobile";
 @import "bootstrap-responsive";
+@import "mobile";
 
 pre {
   font-size: 0.75em;
+}
+
+.low-margin {
+  margin:0;
 }
 
 .searchbox {
