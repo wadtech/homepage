@@ -7,7 +7,7 @@ describe "Signing in links" do
       it "should show the login form when clicked" do
         visit root_url
 
-        click_link 'Sign in'
+        first(:link, 'Sign in').click
 
         page.should have_content 'Email'
         page.should have_content 'Password'
@@ -22,7 +22,7 @@ describe "Signing in links" do
         login_admin
 
         page.should have_content 'Sign out'
-        click_link 'Sign out'
+        first(:link, 'Sign out').click
 
         page.should have_content 'Sign in'
       end
