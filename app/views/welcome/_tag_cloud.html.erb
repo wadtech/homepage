@@ -1,5 +1,5 @@
 <div class="tagcloud" id="tag_cloud">
-  <h4>Tag Cloud</h4>
+  <h4 class="low-margin">Tag Cloud</h4>
   <% tag_cloud Article.tag_counts, %w[small medium large] do |tag, css| %>
     <%= link_to tag.name, tag_path(tag.name), :class => css %>
   <% end %>
