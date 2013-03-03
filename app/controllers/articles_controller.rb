@@ -8,8 +8,7 @@ class ArticlesController < ApplicationController
     @articles = Article.all
 
     respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
+      format.html
     end
   end
 
@@ -19,8 +18,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @article }
+      format.html
     end
   end
 
@@ -30,8 +28,7 @@ class ArticlesController < ApplicationController
     @article = Article.new
 
     respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @article }
+      format.html
     end
   end
 
@@ -48,10 +45,8 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
-        format.json { render json: @article, status: :created, location: @article }
       else
         format.html { render action: "new" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -64,10 +59,8 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       if @article.update_attributes(params[:article])
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { head :ok }
       else
         format.html { render action: "edit" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -80,14 +73,13 @@ class ArticlesController < ApplicationController
 
     respond_to do |format|
       format.html { redirect_to articles_url }
-      format.json { head :ok }
     end
   end
 
  def toggle_publish
     @article = Article.find(params[:id])
     @article.toggle!(:published)
-    
+
     respond_to do |format|
       format.js
     end
