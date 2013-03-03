@@ -55,16 +55,13 @@ class ContactsController < ApplicationController
       if @contact.save
         begin
           ContactMailer.contact(@contact.subject, @contact.content, @contact.source_ip).deliver
-          format.html { redirect_to root_url, notice: 'Thank you for your email.' }
-          format.json { render json: @contact, status: :created, location: root_url }
         rescue *SMTP_ERRORS => e
           logger.error "[#{Time.now}] SMTP Error:\nCaught exception \"#{e}\"Trace:\n#{e.backtrace.join("\n")}"
-          format.html { redirect_to root_url, alert: 'An error has occurred while sending your email, but your message has been stored.' }
-          format.json { render json: @contact, status: :failed, location: root_url }
+        ensure
+          format.html { redirect_to root_url, notice: 'Thank you for your email.' }
         end
       else
         format.html { render action: "new" }
-        format.json { render json: @contact.errors, status: :unprocessable_entity }
       end
     end
   end

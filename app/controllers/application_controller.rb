@@ -5,4 +5,9 @@ class ApplicationController < ActionController::Base
   def delete_timedout_flash
     flash.delete(:timedout)
   end
+
+  def clear_flash
+    flash.delete :notice
+    flash.delete :alert
+  end
 end
