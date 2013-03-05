@@ -113,10 +113,14 @@ body {
 
 #main {
   .main_content {
-    padding: 2em;
+    padding: 2em 2em 0 2em;
     h1 {
       margin-bottom:20px;
     }
+  }
+  .navlinks {
+    padding-left:2em;
+    padding-top:0.5em;
   }
 }
 
@@ -144,7 +148,7 @@ body {
       margin-top:3px;
     }
     .footer_quote {
-      margin-left: 1.5em;
+      margin-right:1em;
       color:#ddd;
       text-shadow: 1px 1px 1px #000;
       filter: dropshadow(color=#000, offx=1, offy=1);
