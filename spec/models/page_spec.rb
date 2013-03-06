@@ -19,7 +19,7 @@ describe Page do
   context "URL" do
     it "should match the permalink" do
       page = FactoryGirl.build(:page)
-      page.to_param.should eq page.permalink
+      page.to_param.should eq page.permalink.downcase
     end
   end
 end

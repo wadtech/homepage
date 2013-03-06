@@ -33,6 +33,9 @@ gem 'settingslogic', '~> 2.0.8'
 # Search
 gem 'pg_search', '0.5.7'
 
+# take that, w3c!
+gem 'route_downcaser', '0.2.0'
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
