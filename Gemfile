@@ -8,7 +8,7 @@ gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.2.3'
 
 # markdown and snippets
-gem 'pygments.rb', '~> 0.3.2'
+gem 'pygments.rb', :github => 'tmm1/pygments.rb'
 gem 'redcarpet', '~> 2.2.2'
 
 # jquery related
@@ -59,13 +59,12 @@ group :development do
 end
 
 group :development, :test do
-  # gem 'annotate', :github => 'ctran/annotate_models'
   gem 'capybara', '2.0.2'
   gem 'launchy'
   gem 'rspec-rails', '2.12.2'
   gem 'database_cleaner', '~> 0.9.1'
   gem 'factory_girl_rails', '4.2.1'
-  gem "cucumber-rails", "~> 1.0", require: false
+  gem "cucumber-rails", "~> 1.0", :require => false
   gem "letter_opener", '~> 1.1.0'
   gem 'progress_bar'
   gem "pg"
