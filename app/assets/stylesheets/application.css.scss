@@ -10,10 +10,6 @@
 @import "bootstrap-responsive";
 @import "mobile";
 
-pre {
-  font-size: 0.75em;
-}
-
 .low-margin {
   margin:0;
 }
@@ -249,3 +245,4 @@ div {
 @import 'tagcloud';
 @import "tweets";
 @import 'welcome';
+@import 'code';
