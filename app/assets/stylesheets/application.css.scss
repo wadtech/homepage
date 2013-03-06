@@ -18,10 +18,6 @@ pre {
   margin:0;
 }
 
-.searchbox {
-  padding: 1.5em 0 1em 0;
-}
-
 .login-items {
   white-space: nowrap;
   padding:1em;
@@ -118,9 +114,14 @@ body {
       margin-bottom:20px;
     }
   }
-  .navlinks {
-    padding-left:2em;
-    padding-top:0.5em;
+  .navigation {
+    @extend .span10;
+    @extend .offset1;
+
+    .navlinks {
+      padding-left:2em;
+      padding-top:0.5em;
+    }
   }
 }
 

@@ -1,1 +1,7 @@
-<p class="info-text links"><%=raw info_links %></p>
+<ul class="nav nav-pills">
+  <% info_links.each do |link_hash| %>
+    <%= content_tag :li, :class=>(current_page?(link_hash[:path].downcase) ? 'active' : nil) do %>
+      <%= link_to link_hash[:link_text], link_hash[:path] %>
+    <% end %>
+  <% end %>
+</ul>

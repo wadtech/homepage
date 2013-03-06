@@ -12,7 +12,13 @@
       .main_content {
         padding:1.5em;
       }
+
     }
+
+    .navigation {
+      @extend .span12;
+    }
+
     .well {
       -moz-border-radius: 0px;
       -webkit-border-radius: 0px;

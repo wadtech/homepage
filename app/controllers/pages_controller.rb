@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   before_filter :authenticate_admin!, :except => :show
 
   def show
-    @page = Page.find_by_permalink! params[:id]
+    @page = Page.find_by_downcased_permalink params[:id]
   end
 
   def new
@@ -11,7 +11,7 @@ class PagesController < ApplicationController
   end
 
   def edit
-    @page = Page.find_by_permalink! params[:id]
+    @page = Page.find_by_downcased_permalink params[:id]
   end
 
   def create
@@ -27,7 +27,7 @@ class PagesController < ApplicationController
   end
 
   def update
-    @page = Page.find_by_permalink! params[:id]
+    @page = Page.find_by_downcased_permalink params[:id]
 
     respond_to do |format|
       if @page.update_attributes(params[:page])
@@ -39,7 +39,7 @@ class PagesController < ApplicationController
   end
 
   def destroy
-    @page = Page.find_by_permalink! params[:id]
+    @page = Page.find_by_downcased_permalink params[:id]
     @page.destroy
 
     respond_to do |format|
