@@ -2,10 +2,7 @@ module MarkdownHelper
   # Markdown helpers
     class HTMLwithPygments < Redcarpet::Render::HTML
       def block_code(code, language)
-        sha = Digest::SHA1.hexdigest(code)
-        Rails.cache.fetch ["code", language, sha].join('-') do
-          Pygments.highlight(code, :lexer => language, :formatter => 'html', :options => { :linenos => 'table' })
-        end
+        Pygments.highlight(code, :lexer => language, :formatter => 'html', :options => { :linenos => 'inline' })
       end
       def block_html(raw_html)
         if raw_html =~ /^<iframe.*>$/

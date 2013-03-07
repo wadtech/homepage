@@ -1,31 +1,24 @@
 $codePadding: 5px;
 
-/* fenced code blocks are in a table. */
-table.highlighttable {
+/* fenced code blocks are inline. */
+div.highlight {
   width: 100%;
-  display:block;
 
-  -webkit-overflow-scrolling: touch;
-  overflow-x: scroll;
+  >pre {
+    -webkit-overflow-scrolling: touch;
+    overflow-x: auto;
 
-  td.linenos {
-    text-align: right;
+    word-wrap: normal;
+    white-space: pre;
+    span.lineno {
+      color: rgba(0,0,0,0.3);
 
-    div.linenodiv {
-      width: 2em;
-
-      pre {
-        background-color: rgba(0,0,0,0.1);
-        padding: $codePadding;
-      }
-    }
-  }
-
-  td.code {
-    width:100%;
-
-    pre {
-      padding: $codePadding;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
     }
   }
 }
@@ -35,4 +28,8 @@ p {
   >code {
     white-space: normal;
   }
+}
+
+pre {
+  font-size: 1em;
 }
