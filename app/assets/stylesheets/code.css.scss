@@ -1,6 +1,7 @@
 $codePadding: 5px;
 
-.highlighttable {
+/* fenced code blocks are in a table. */
+table.highlighttable {
   width: 100%;
   display:block;
 
@@ -26,5 +27,12 @@ $codePadding: 5px;
     pre {
       padding: $codePadding;
     }
+  }
+}
+
+/* Inline code is <p><code>blahblahblah</code> rest of paragraph</p> */
+p {
+  >code {
+    white-space: normal;
   }
 }
