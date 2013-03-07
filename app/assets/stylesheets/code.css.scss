@@ -1,46 +1,38 @@
-div.highlight {
-  pre {
-    font-size: 1em;
-    white-space: pre;
-    overflow-x: auto;
-    word-break: inherit;
-    word-wrap: inherit;
+$codePadding: 5px;
 
-    a:before {
-      content: counter(line-numbering);
-      counter-increment: line-numbering;
-      padding-right: 1em; /* space after numbers */
-      width: 25px;
-      text-align: right;
-      opacity: 0.7;
-      display: inline-block;
-      color: #aaa;
-      background: #eee;
-      margin-right: 16px;
-      padding: 2px 10px;
-      font-size: 13px;
-      -webkit-touch-callout: none;
-      -webkit-user-select: none;
-      -khtml-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
+/* fenced code blocks are in a table. */
+table.highlighttable {
+  width: 100%;
+  display:block;
 
-    a:first-of-type::before {
-      padding-top: 10px;
-    }
+  -webkit-overflow-scrolling: touch;
+  overflow-x: scroll;
 
-    a:last-of-type::before {
-      padding-bottom: 10px;
-    }
+  td.linenos {
+    text-align: right;
 
-    a:only-of-type::before {
-      padding: 10px;
-    }
+    div.linenodiv {
+      width: 2em;
 
-    span {
-      white-space: nowrap;
+      pre {
+        background-color: rgba(0,0,0,0.1);
+        padding: $codePadding;
+      }
     }
+  }
+
+  td.code {
+    width:100%;
+
+    pre {
+      padding: $codePadding;
+    }
+  }
+}
+
+/* Inline code is <p><code>blahblahblah</code> rest of paragraph</p> */
+p {
+  >code {
+    white-space: normal;
   }
 }
