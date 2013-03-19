@@ -15,10 +15,6 @@
 
     }
 
-    .navigation {
-      @extend .span12;
-    }
-
     .well {
       -moz-border-radius: 0px;
       -webkit-border-radius: 0px;
@@ -26,6 +22,7 @@
 
       margin-bottom:0px;
     }
+
     #header {
       background-color: $header-bg ;
       #logo {
@@ -33,6 +30,11 @@
         padding-bottom: 1em;
       }
     }
+
+    .article-avatar {
+      display:none;
+    }
+
     .author {
       float:none;
       padding:5px;
@@ -46,6 +48,7 @@
         display:none;
       }
     }
+
     .spotlight {
       color:#ddd !important;
       background-color: $header-bg  !important;
@@ -53,6 +56,7 @@
        color: #FFF !important;
       }
     }
+
     .tweet.width-85 {
       width: 80%;
     }
