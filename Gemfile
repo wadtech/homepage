@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 ruby "1.9.3"
 
-gem 'rails', '3.2.12'
+gem 'rails', '3.2.13'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
 gem 'devise', '>= 2.2.3'
@@ -46,9 +46,11 @@ group :assets do
 end
 
 group :test do
-  gem "ZenTest", '4.8.3'
-  gem "autotest-notification"
-  gem "autotest-rails-pure"
+  gem "guard"
+  gem "guard-rspec"
+  gem 'guard-bundler'
+  gem "rb-inotify"
+  gem "zeus"
   gem 'simplecov', '~> 0.7.1', :require => false
 end
 
