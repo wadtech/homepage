@@ -36,11 +36,6 @@
       </div>
       <div class="row-fluid">
         <div class="span10 offset1">
-          <%= render :partial => 'welcome/search_box'%>
-        </div>
-      </div>
-      <div class="row-fluid">
-        <div class="span10 offset1">
           <div>
             <% flash.each do |name, msg| %>
               <div class="alert alert-<%= name == :notice ? "success" : "error" %>">

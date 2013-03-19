@@ -76,6 +76,7 @@ end
 group :production, :staging do
   gem "pg"
   gem "unicorn"
+  gem 'google-analytics-rails'
 end
 
 #deployment

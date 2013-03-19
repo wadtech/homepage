@@ -11,6 +11,8 @@ defaults: &defaults
     name: Change me in config/application.yml
   mailer:
     from: changeme-from@nowhere.com
+  analytics:
+    id: google-analytics-tracking-id
 
 
 development:
