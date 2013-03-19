@@ -62,4 +62,7 @@ Homepage::Application.configure do
 
   # Update this for real host.
   config.action_mailer.default_url_options = { :host => Settings.mailer.domain }
+
+  # Google analytics
+  GA.tracker = Settings.analytics.id
 end
