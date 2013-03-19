@@ -46,9 +46,11 @@ group :assets do
 end
 
 group :test do
-  gem "ZenTest", '4.8.3'
-  gem "autotest-notification"
-  gem "autotest-rails-pure"
+  gem "guard"
+  gem "guard-rspec"
+  gem 'guard-bundler'
+  gem "rb-inotify"
+  gem "zeus"
   gem 'simplecov', '~> 0.7.1', :require => false
 end
 
