@@ -115,8 +115,13 @@ body {
     @extend .offset1;
 
     .navlinks {
-      padding-left:2em;
-      padding-top:0.5em;
+      padding-left: 2em;
+      padding-top: 0.5em;
+      text-align :center;
+
+      ul {
+
+      }
     }
   }
 }
@@ -246,3 +251,4 @@ div {
 @import "tweets";
 @import 'welcome';
 @import 'code';
+@import 'authentication';

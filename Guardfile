@@ -21,10 +21,6 @@ guard :rspec do
     "spec"
   end
 
-  watch 'app/controllers/application_controller.rb' do
-    "spec/controllers"
-  end
-
   watch %r{^app/views/(.+)/.*\.(erb|haml)$} do |m|
     "spec/features/#{m[1]}_spec.rb"
   end
