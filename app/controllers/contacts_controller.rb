@@ -71,17 +71,18 @@ class ContactsController < ApplicationController
     @contact.archive!
 
     respond_to do |format|
-      format.html {
+      format.html do
         if @contact.archived?
           flash[:notice] = "#{@contact.subject} archived."
         else
           flash[:notice] = "#{@contact.subject} restored."
         end
         redirect_to contacts_path
-      }
-      format.js {
+      end
+
+      format.js do
         render :content_type => 'text/javascript'
-      }
+      end
     end
   end
 end

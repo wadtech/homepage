@@ -5,6 +5,7 @@
  *= require_self
 */
 
+@import "mixins";
 @import "overrides";
 @import "bootstrap";
 @import "bootstrap-responsive";
@@ -67,14 +68,15 @@ html {
 }
 
 #header {
-  background-color: $header-bg;
+    background-color: $footer-bg;
+    @include header-bg;
+    @include header-links;
 }
 body {
   font-family: $sansFontFamily;
   font-size: 100%;
   line-height:1.25;
   background-color:$html-bg !important;
-  background: url(ricepaper2.png);
   background-repeat:repeat;
 
   .info {
@@ -85,7 +87,7 @@ body {
       color:#ddd !important;
     }
     padding: 10px;
-    background-color:$footer-bg !important;
+
     text-shadow: 1px 1px 1px #000;
     filter: dropshadow(color=#000, offx=1, offy=1);
     strong {
@@ -111,9 +113,6 @@ body {
     }
   }
   .navigation {
-    @extend .span10;
-    @extend .offset1;
-
     .navlinks {
       padding-left: 2em;
       padding-top: 0.5em;
@@ -139,7 +138,10 @@ body {
     margin:0px;
     padding-top:15px;
     background-color: $footer-bg;
+    @include header-bg;
     color: $footer-text;
+
+    @include header-links;
 
     .thumbnail_image {
       border:2px solid lighten($footer-bg, 10);
@@ -247,7 +249,6 @@ div {
 @import 'projects';
 @import 'pygments';
 @import 'search';
-@import 'tagcloud';
 @import "tweets";
 @import 'welcome';
 @import 'code';
