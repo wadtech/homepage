@@ -1,22 +1,18 @@
-/* variables */
-
-$html-bg      : #F7F7F7;
-$bg-colour    : #F58711;
-$content-bg   : #F5F2F0;
-$Warm-Grey    : #F7F6F5;
-$Cool-Grey    : #333333;
-$chrome-orange: #ba4110;
-$footer-bg    : darken($html-bg, 70);
-$header-bg    : darken($html-bg, 70);
-$footer-text  : lighten($Cool-Grey, 50);
+$html-bg       : #F7F7F7;
+$bg-colour     : #F58711;
+$content-bg    : #F5F2F0;
+$Warm-Grey     : #F7F6F5;
+$Cool-Grey     : #333333;
+$chrome-orange : #ba4110;
+$footer-bg     : darken($html-bg, 70);
+$header-bg     : darken($html-bg, 70);
+$footer-text   : lighten($Cool-Grey, 50);
+$footer-links  : lighten($Cool-Grey, 60);
 $sansFontFamily: Ubuntu, Helvetica, Arial, sans-serif;
 $baseLineHeight: 1.25;
-$baseFontSize: 1em;
-
-/* End variables */
+$baseFontSize  : 1em;
 
 /* Unordered List Hanging Point Fix */
-
 ul, ol {
   padding: 0;
   margin: 0 0 10px 0;

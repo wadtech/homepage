@@ -1,5 +1,6 @@
 defaults: &defaults
   about:
+    site_title: Changeme in config/application.yml
     welcome: Welcome- Changeme in config/application.yml
     mission: Mission- Changeme in config/application.yml
   contact:

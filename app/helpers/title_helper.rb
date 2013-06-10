@@ -1,24 +1,28 @@
 module TitleHelper
   #title helper - site name plus current controller or article/project parameter.
   def title_helper
-    if extra = params[:id].nil?
-      extra = " - #{current_controller_title}"
+    if params[:id].nil?
+      extra = " - #{current_controller}"
     else
-      extra = " - #{current_controller_title} - #{current_id_title}"
+      extra = " - #{current_controller} - #{current_id}"
     end
-    "Pete's Development Blog" + extra
+    Settings.about.site_title + extra
   end
 
-  def current_controller_title
+  def current_controller
     current_controller = params[:controller]
     current_controller.gsub!('_',' ')
-    current_controller.gsub!(/\b\w/){$&.upcase}
+    current_controller.gsub!(/\b\w/) do
+      $&.upcase
+    end
   end
 
-  def current_id_title
+  def current_id
     current_id = params[:id]
     current_id.gsub!('-',' ')
     current_id.gsub!(/\d\s\w+\s/,'')
-    current_id.gsub!(/\b\w/){$&.upcase}
+    current_id.gsub!(/\b\w/) do
+      $&.upcase
+    end
   end
 end

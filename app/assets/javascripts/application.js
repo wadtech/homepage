@@ -9,14 +9,16 @@
 //= require_tree .
 //= require bootstrap
 
-function getParameterByName(name)
-{
-  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+function getParameterByName(name) {
+  name = name.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');
+
   var regexS = "[\\?&]" + name + "=([^&#]*)";
   var regex = new RegExp(regexS);
   var results = regex.exec(window.location.search);
-  if(results == null)
+
+  if (!results) {
     return "";
-  else
+  } else {
     return decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
 }

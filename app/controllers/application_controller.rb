@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   before_filter :delete_timedout_flash
   layout :layout_by_resource
 
+  protected
+
   def delete_timedout_flash
     flash.delete(:timedout)
   end
@@ -11,8 +13,6 @@ class ApplicationController < ActionController::Base
     flash.delete :notice
     flash.delete :alert
   end
-
-  protected
 
   def layout_by_resource
     if devise_controller?

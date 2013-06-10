@@ -1,0 +1,14 @@
+@mixin header-bg() {
+  background-image: url(debut_dark.png);
+}
+
+@mixin header-links {
+  a {
+    text-decoration: none;
+    color: lighten($footer-links, 10);
+
+    &:hover {
+      color: $footer-links;
+    }
+  }
+}
