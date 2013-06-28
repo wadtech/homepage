@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_filter :authenticate_admin!, :except => [:show, :index]
+  before_action :authenticate_admin!, :except => [:show, :index]
 
   def index
     @projects = Project.all
@@ -19,7 +19,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(params[:project])
+    @project = Project.new(project_params)
 
     respond_to do |format|
       if @project.save
@@ -34,7 +34,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
 
     respond_to do |format|
-      if @project.update_attributes(params[:project])
+      if @project.update_attributes(project_params)
         format.html { redirect_to @project, notice: 'Project was successfully updated.' }
       else
         format.html { render action: "edit" }
@@ -49,5 +49,10 @@ class ProjectsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to projects_url }
     end
+  end
+
+  private
+  def project_params
+    params.require(:project).permit(:title, :image, :description, :summary, :source_repository, :highlights_attributes)
   end
 end

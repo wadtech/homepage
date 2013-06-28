@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
 
-  before_filter :authenticate_admin!, :only => [:index, :show, :archive]
+  before_action :authenticate_admin!, :only => [:index, :show, :archive]
 
   SMTP_ERRORS = [
     Net::SMTPAuthenticationError,
@@ -49,7 +49,7 @@ class ContactsController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @contact = Contact.new(params[:contact])
+    @contact = Contact.new(message_params)
 
     respond_to do |format|
       if @contact.save
@@ -84,5 +84,11 @@ class ContactsController < ApplicationController
         render :content_type => 'text/javascript'
       end
     end
+  end
+
+  private
+
+  def message_params
+    params.require(:contact).permit(:subject, :content, :source_ip, :archived)
   end
 end

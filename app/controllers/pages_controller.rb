@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :authenticate_admin!, :except => :show
+  before_action :authenticate_admin!, :except => :show
 
   def show
     @page = Page.find_by_downcased_permalink params[:id]
@@ -15,7 +15,7 @@ class PagesController < ApplicationController
   end
 
   def create
-    @page = Page.new(params[:page])
+    @page = Page.new(page_params)
 
     respond_to do |format|
       if @page.save
@@ -30,7 +30,7 @@ class PagesController < ApplicationController
     @page = Page.find_by_downcased_permalink params[:id]
 
     respond_to do |format|
-      if @page.update_attributes(params[:page])
+      if @page.update_attributes(page_params)
         format.html { redirect_to @page, notice: 'Page was successfully updated.' }
       else
         format.html { render action: "edit" }
@@ -45,5 +45,11 @@ class PagesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to root_url }
     end
+  end
+
+  private
+
+  def page_params
+    params.require(:page).permit(:permalink, :content)
   end
 end

@@ -2,30 +2,31 @@ source 'http://rubygems.org'
 
 ruby "2.0.0"
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.0.0'
 gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'will_paginate', '~> 3.0'
-gem 'devise', '>= 2.2.3'
+gem 'devise', '~> 3.0.0.rc'
 
 # markdown and snippets
 gem 'pygments.rb', :github => 'tmm1/pygments.rb'
-gem 'redcarpet', '~> 2.2.2'
+gem 'redcarpet', '~> 2.3.0'
 
-# jquery related
-gem 'jquery-rails', '2.2.1'
+gem 'jquery-rails', '3.0.1'
+gem 'jquery-ui-rails', '4.0.3'
 
-#HTML email styles
-gem 'roadie', '2.3.4'
+# HTML email styles
+# Not compatible with rails4
+gem 'roadie', github: 'dmarkow/roadie'
 
 #Twitter integration
-gem 'twitter', "~> 4.6.0"
+gem 'twitter', "~> 4.8.1"
 gem 'whenever', '~> 0.8.0', :require => false
 
 #Image attachments
 gem "paperclip", "~> 3.4.0"
 
 # Tagging
-gem "acts-as-taggable-on", "~> 2.3.3"
+gem "acts-as-taggable-on", "~> 2.4.1"
 
 # Settings management
 gem 'settingslogic', '~> 2.0.8'
@@ -36,14 +37,11 @@ gem 'pg_search', '~> 0.6.0'
 # take that, w3c!
 gem 'route_downcaser', '0.2.0'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.6'
-  gem 'coffee-rails', '~> 3.2.2'
-  gem 'uglifier', '>= 1.0.3'
-  gem 'bootstrap-sass', '~> 2.3.1.0'
-end
+gem 'sass-rails',   '~> 4.0.0'
+gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier', '>= 1.3.0'
+
+gem 'bootstrap-sass', '~> 2.3.1.0'
 
 group :test do
   gem "guard", "~> 1.8.0"
@@ -77,10 +75,10 @@ group :development, :production, :test do
 end
 
 group :production do
-  gem "unicorn"
+  gem "unicorn", '~> 4.6.3'
   gem 'google-analytics-rails'
 end
 
 #deployment
 gem 'capistrano', '~> 2.15.4'
-gem 'rvm-capistrano', '~> 1.2.7'
+gem 'rvm-capistrano', '~> 1.3.4'
