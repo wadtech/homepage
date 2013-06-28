@@ -1,6 +1,6 @@
 class ArticlesController < ApplicationController
 
-  before_filter :authenticate_admin!, :except => :show
+  before_action :authenticate_admin!, :except => :show
 
   # GET /articles
   # GET /articles.json
@@ -40,7 +40,7 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(params[:article])
+    @article = Article.new(article_params)
 
     respond_to do |format|
       if @article.save
@@ -57,7 +57,7 @@ class ArticlesController < ApplicationController
     @article = Article.find(params[:id])
 
     respond_to do |format|
-      if @article.update_attributes(params[:article])
+      if @article.update_attributes(article_params)
         format.html { redirect_to @article, notice: 'Article was successfully updated.' }
       else
         format.html { render action: "edit" }
@@ -83,5 +83,11 @@ class ArticlesController < ApplicationController
     respond_to do |format|
       format.js
     end
+  end
+
+  private
+
+  def article_params
+    params.require(:article).permit(:content, :author, :title, :published, :tag_list)
   end
 end

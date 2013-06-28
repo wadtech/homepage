@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :delete_timedout_flash
+  before_action :delete_timedout_flash
   layout :layout_by_resource
 
   protected
