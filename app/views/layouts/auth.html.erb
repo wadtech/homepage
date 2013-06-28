@@ -3,10 +3,9 @@
   <head>
     <title><%= title_helper %></title>
     <%= stylesheet_link_tag    "application" %>
-    <%= javascript_include_tag "application" %>
     <%= analytics_init if Rails.env.production? %>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag %>
+    <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -53,5 +52,6 @@
     <div class="footer-wrapper">
       <%= render :partial => 'shared/footer' %>
     </div>
+    <%= javascript_include_tag "application" %>
   </body>
 </html>
