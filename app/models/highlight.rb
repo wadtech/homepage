@@ -1,6 +1,4 @@
 class Highlight < ActiveRecord::Base
-  attr_accessible :code_snippet, :image, :description, :project, :title
-
   has_one :project
   has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>" }
 
