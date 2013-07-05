@@ -9,8 +9,6 @@ Homepage::Application.routes.draw do
   resources :projects
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] do
-    get ':id', to: 'pages#show'
-    put ':id', to: 'pages#update'
     delete ':id', to: 'pages#destroy'
   end
 
@@ -19,6 +17,9 @@ Homepage::Application.routes.draw do
   resources :articles do
     get 'toggle_publish', :on => :member
   end
+
+  get 'pages/:id', to: 'pages#show'
+  put 'pages/:id', to: 'pages#update'
 
   root :to => "welcome#index"
 end
