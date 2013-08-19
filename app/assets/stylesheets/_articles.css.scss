@@ -2,9 +2,8 @@
 	Web20 Table Style
 	written by Netway Media, http://www.netway-media.com
 */
-#article_table {
+.article_table {
   border-collapse: collapse;
-  font: normal 11px verdana, arial, helvetica, sans-serif;
   color: #363636;
   background: #f6f6f6;
   text-align:left;
@@ -12,7 +11,6 @@
 
   caption {
     text-align: center;
-    font: bold 16px arial, helvetica, sans-serif;
     background: transparent;
     padding:6px 4px 8px 0px;
     color: #CC00FF;

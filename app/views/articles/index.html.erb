@@ -1,6 +1,6 @@
 <h1>Index of Articles</h1>
 
-<table id="article_table">
+<table class="article_table">
   <tr>
     <th>Title</th>
     <th>Content</th>
@@ -26,7 +26,7 @@
     <%= render :partial => 'articles/publish_toggle', :locals => { :article => article } %>
     </td>
     <td>
-      <%= link_to 'View', article %> | 
+      <%= link_to 'View', article %> |
       <%= link_to 'Edit', edit_article_path(article) %><br />
       <%= link_to 'Delete', article, confirm: 'Are you sure? This is final!', method: :delete %>
     </td>
