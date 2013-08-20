@@ -1,0 +1,48 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,700);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu);
+
+h4,h5,h6{ font-weight: bold; }
+h1{ font-size:2em; }
+h2{ font-size:1.5em; border-bottom:1px solid #ccc; padding-bottom: 5px; }
+h3{ font-size:1.33em; }
+h4{ font-size:1em; font-weight:bold; }
+h5{ font-size:1em;}
+h6{ font-size:0.9em; }
+
+h2,h3,h4,h5,h6 {
+  margin-top: 1em;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif !important;
+  font-size: 100%;
+  line-height:1.25;
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Ubuntu', sans-serif !important;
+    line-height:1em;
+  }
+}
+
+p {
+  line-height:1.5em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  a {
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+      text-decoration: none;
+      color: #555;
+    }
+    &:active {
+      text-decoration: none;
+      color: #555;
+    }
+    &:visited {
+      color: #333;
+    }
+  }
+}

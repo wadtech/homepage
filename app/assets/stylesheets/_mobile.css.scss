@@ -8,7 +8,7 @@
       -webkit-border-radius: 0px;
       border-radius: 0px;
     }
-    #main {
+    .main {
       .main_content {
         padding:1.5em;
       }
@@ -23,9 +23,9 @@
       margin-bottom:0px;
     }
 
-    #header {
+    .header {
       background-color: $header-bg ;
-      #logo {
+      .logo {
         padding-top: 1em;
         padding-bottom: 1em;
       }

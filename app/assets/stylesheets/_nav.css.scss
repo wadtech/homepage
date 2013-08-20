@@ -1,0 +1,23 @@
+
+.navigation {
+  .navlinks {
+    padding-left: 2em;
+    padding-top: 0.5em;
+    text-align :center;
+
+    ul {
+      a {
+        color: #333;
+
+        &:hover {
+          text-decoration: none;
+          color: #555;
+        }
+
+      }
+      li.active a {
+        background-color: #aaa;
+      }
+    }
+  }
+}
