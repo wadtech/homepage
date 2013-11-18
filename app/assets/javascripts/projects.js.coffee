@@ -19,12 +19,10 @@ jQuery ->
     if $("#highlight-div-#{me.currentTarget.id}").is (':visible')
       $('.highlight-div').each ->
         $(this).slideUp(400)
-        console.log("hiding self")
     else
       $('.highlight-div').each ->
         $(this).slideUp(400)
         console.log("Hiding all")
       $("#highlight-div-#{me.currentTarget.id}").slideDown(400)
-      console.log("showing clicked")
 
   $(".project_title").fitText()
