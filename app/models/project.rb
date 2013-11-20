@@ -1,3 +1,5 @@
+require 'base64'
+
 class Project < ActiveRecord::Base
   include PgSearch
   multisearchable against: [:title, :description, :summary]
@@ -11,6 +13,9 @@ class Project < ActiveRecord::Base
   has_attached_file :image, styles: { large: "400x400>", medium: "300x300>", thumb: "200x200>" }
 
   validates :title, :description, presence: true
+  validates :github, uniqueness: { allow_nil: true, allow_blank: true, message: "repository has already been added." }
+
+  before_validation :fetch_from_github
 
   def to_param
     self.title.parameterize
@@ -19,5 +24,24 @@ class Project < ActiveRecord::Base
   def self.find(input)
     #to_i converts strings that start with a letter to 0
     input.to_i == 0 ? where("title ILIKE ?", input.gsub("-", " ")).first : super
+  end
+
+private
+
+  def fetch_from_github
+    if self.github
+      begin
+        set_parameters_by Octokit.repo self.github
+      rescue *[Octokit::NotFound, Octokit::TooManyRequests] => e
+        errors[:base] << "No such Github repository found."
+        false
+      end
+    end
+  end
+
+  def set_parameters_by(repo)
+    self.title             = repo.name
+    self.short_description = repo.description
+    self.description       = Base64.decode64(Octokit.readme(repo.full_name, :accept => 'application/json').content)
   end
 end
