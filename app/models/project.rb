@@ -40,8 +40,8 @@ private
   end
 
   def set_parameters_by(repo)
-    self.title             = repo.name
-    self.short_description = repo.description
-    self.description       = Base64.decode64(Octokit.readme(repo.full_name, :accept => 'application/json').content)
+    self.title       = repo.name
+    self.summary     = repo.description
+    self.description = Base64.decode64(Octokit.readme(repo.full_name, :accept => 'application/json').content)
   end
 end

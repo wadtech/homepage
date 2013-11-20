@@ -1,0 +1,28 @@
+body {
+  max-width: 600px;
+  margin: auto;
+}
+
+article {
+  padding: 0.5em;
+  margin-bottom: 1em;
+
+  .highlight {
+    width: 100%;
+    overflow-x: scroll;
+  }
+}
+
+header {
+  h1 {
+    text-align: center;
+  }
+
+  a, a:hover, a:visited {
+    text-decoration: none;
+  }
+}
+
+.centre {
+  text-align: center;
+}

@@ -7,7 +7,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-//= require bootstrap
 
 function getParameterByName(name) {
   name = name.replace(/[\[]/, '\\\[').replace(/[\]]/, '\\\]');

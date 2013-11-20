@@ -2,11 +2,12 @@ defaults: &defaults
   about:
     site_title: Changeme in config/application.yml
     welcome: Welcome- Changeme in config/application.yml
-    mission: Mission- Changeme in config/application.yml
   contact:
     email: changeme@nowhere.com
     full_name: Fred Bloggs
   twitter:
+    name: Change me in config/application.yml
+  github:
     name: Change me in config/application.yml
   linkedin:
     name: Change me in config/application.yml

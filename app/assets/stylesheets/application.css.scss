@@ -5,51 +5,10 @@
  *= require_self
 */
 
+@import "_fonts";
+@import "_variables";
 @import "_typography";
-@import "_mixins";
-@import "_overrides";
-@import "bootstrap";
-@import "bootstrap-responsive";
-
-@import "_search";
-@import "_forms";
+@import "_base";
+@import "_colour";
 @import "_nav";
-@import "_welcome";
-@import "_pygments";
-@import "_projects";
-@import "_paginator";
-@import "_mobile";
-@import "_contacts";
-@import "_authentication";
-@import "_articles";
-@import "_tweets";
-@import "_code";
-@import "_footer";
-@import "_header";
-@import "_login";
-
-html {
-  background-color: $footer-bg;
-  color: $Cool-Grey;
-}
-
-body {
-  background-color: $html-bg;
-  background-repeat: repeat;
-}
-
-.thumbnails {
-  text-align:center;
-}
-
-.main_content {
-  padding: 1em 2em 2em 2em;
-
-  p {
-    margin-top:0.75em;
-  }
-
-  h1,h2,h3,h4,h5,h6 {
-    color:#111;
-  }
-}
+@import "pygments";

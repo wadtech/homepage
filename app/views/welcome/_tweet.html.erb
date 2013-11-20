@@ -1,11 +1,9 @@
-<div class="tweet">
-  <%= image_tag 'twitter.png', :size => "30x30", :class => 'twitter-bird' %>
-  <div class="bubble tweet">
-    <p class="tweet-text">
-      <span class="quotes">&quot;</span><%= latest_tweet(Settings.twitter.name) %><span class="quotes">&quot;</span>
-    </p>
-  </div>
-  <div class="follow-text clearfix">
+<aside class="tweet">
+  <p class="tweet-text">
+    <%= image_tag 'twitter.png', :size => "30x30", :class => 'twitter-bird' %>
+    <span class="quotes">&quot;</span><%= latest_tweet(Settings.twitter.name) %><span class="quotes">&quot;</span>
+  </p>
+  <p class="follow-text">
     Follow <%= link_to Settings.twitter.name, "https://twitter.com/#{Settings.twitter.name}" %> on Twitter
-  </div>
-</div>
+  </p>
+</aside>

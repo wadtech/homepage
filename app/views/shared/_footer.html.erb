@@ -1,50 +1,6 @@
 <!-- Start Footer -->
-    <div class="band">
-    </div>
-    <div class="footer">
-      <div class="container-fluid footer-contents">
-        <div class="row-fluid">
-          <div class="span6">
-            <%= render :partial => 'welcome/tweet' %>
-          </div>
-          <div class="span6">
-            <ul class="thumbnails">
-            <%= render :partial => 'shared/thumbnail',
-                       :locals => { :image_url => "avatar-tile.png",
-                                    :image_alt => "About Me",
-                                    :link_text => "About Me",
-                                    :link_url => page_path("About"),
-                                    :image_size => "175x125" }
-            %>
-            <%= render :partial => 'shared/thumbnail',
-                       :locals => { :image_url => "projects.png",
-                                    :image_alt => "My Projects",
-                                    :link_text => "My Projects",
-                                    :link_url => projects_path,
-                                    :image_size => "175x125" }
-          %>
-            <%= render :partial => 'shared/thumbnail',
-                       :locals => { :image_url => "contact.png",
-                                    :image_alt => "Contact",
-                                    :link_text => "Contact Me",
-                                    :link_url => new_contact_path,
-                                    :image_size => "175x125" }
-            %>
-            </ul>
-          </div>
-        </div>
-        <div class="row-fluid">
-          <div class="span12 pull-right">
-            <div id="copyright">
-              <em class="footer_quote pull-right">Copyright &copy; <%= Settings.contact.full_name %> 2011-2012</em>
-            </div>
-          </div>
-        </div>
-        <div class="row-fluid">
-          <div class="span12">
-            <!-- I'm only here for spacing. -->
-          </div>
-        </div>
-      </div>
-    </div>
+<%= render :partial => 'welcome/tweet' %>
+<div id="copyright">
+  <em class="footer_quote pull-right">Copyright &copy; <%= Settings.contact.full_name %> 2011</em>
+</div>
 <!-- End Footer -->

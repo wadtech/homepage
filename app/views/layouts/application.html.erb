@@ -5,60 +5,31 @@
     <%= stylesheet_link_tag    "application" %>
     <%= analytics_init if Rails.env.production? %>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag %>
+    <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
     <!-- Start Header -->
-    <div class="header">
-      <div class-"container-fluid">
-        <div class="row-fluid">
-          <div class="span6">
-            <div class="info">
-              <%= render :partial => 'welcome/info' %>
-            </div>
-          </div>
-          <div class="span6">
-            <%= render :partial => 'layouts/login_items' %>
-          </div>
-        </div>
-      </div>
-    </div>
+    <header>
+      <%= render :partial => 'welcome/info' %>
+      <%= render :partial => 'layouts/login_items' %>
+    </header>
     <!-- End Header -->
-    <div class="container-fluid" class="main">
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <div class="navigation">
-            <div class="navlinks">
-              <%= render :partial => 'welcome/links' %>
-            </div>
-          </div>
-        </div>
+    <nav>
+      <%= render :partial => 'welcome/links' %>
+    </nav>
+    <% flash.each do |name, msg| %>
+      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+        <a class="close" data-dismiss="alert" href="#">&times;</a>
+        <%= msg  %>
       </div>
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <%= render :partial => 'welcome/search_box'%>
-        </div>
-      </div>
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <div>
-            <% flash.each do |name, msg| %>
-              <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-                <a class="close" data-dismiss="alert" href="#">&times;</a>
-                <%= msg  %>
-              </div>
-            <% end %>
-            <div class="main_content">
-              <%= yield %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-wrapper">
+    <% end %>
+
+    <%= yield %>
+
+    <footer>
       <%= render :partial => 'shared/footer' %>
-    </div>
+    </footer>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

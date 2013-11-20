@@ -1,0 +1,31 @@
+
+body {
+  background-color: $body-bg;
+  color: $body-colour;
+}
+
+article {
+  background-color: $article-bg;
+
+  header {
+    a, a:hover, a:visited {
+      color: $article-heading;
+    }
+  }
+}
+
+footer {
+  background-color: $footer-bg;
+}
+
+a, a:hover, a:visited {
+  color: $link-colour;
+}
+
+nav li {
+  background-color: $nav-button;
+
+  &.active {
+    background-color: $nav-button-active;
+  }
+}
