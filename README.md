@@ -1,17 +1,10 @@
 # Homepage
 
-A simple cms-y thing in Rails.
-
 [![Build Status](https://secure.travis-ci.org/wadtech/homepage.png)](http://travis-ci.org/wadtech/homepage)
 [![Dependency Status](https://gemnasium.com/wadtech/homepage.png)](https://gemnasium.com/wadtech/homepage)
 [![Code Climate](https://codeclimate.com/github/wadtech/homepage.png)](https://codeclimate.com/github/wadtech/homepage)
 
-##Technical Specs
-
-* Rails 3.2
-* Devise
-* redcarpet 2 for markdown rendering
-* PostgreSQL
+A simple cms-y thing in Rails.
 
 ## License
 

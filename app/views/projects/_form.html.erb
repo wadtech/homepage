@@ -10,6 +10,14 @@
       </ul>
     </div>
   <% end %>
+  <h4>Auto-fill from Github repository</h4>
+  <div class="field">
+    <%= f.label :github %>
+    <%= f.text_field :github %>
+    <%= button_tag "Find Project", class: 'fetch' %>
+  </div>
+
+  <h4>Enter Manually</h4>
   <div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>

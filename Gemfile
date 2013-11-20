@@ -8,22 +8,15 @@ group :test do
   gem "rb-inotify", "~> 0.9.0"
   gem "zeus", "~> 0.13.3"
   gem "simplecov", "~> 0.7.1", {:require=>false}
-  gem "capybara", "~> 2.1.0"
-  gem "launchy", "~> 2.3.0"
-  gem "rspec-rails", "~> 2.13.2"
-  gem "database_cleaner", "~> 1.0.1"
-  gem "factory_girl_rails", "~> 4.2.1"
-  gem "cucumber-rails", "~> 1.3.0", {:require=>false}
-  gem "letter_opener", "~> 1.1.1"
-  gem "progress_bar", "~> 1.0.0"
-  gem "thin", "~> 1.5.1"
-  gem "pg", "~> 0.15.1"
 end
 
 group :development do
   gem "better_errors", "~> 0.8.0"
   gem "binding_of_caller", "~> 0.7.2"
   gem "meta_request", "~> 0.2.7"
+end
+
+group :test, :development do
   gem "capybara", "~> 2.1.0"
   gem "launchy", "~> 2.3.0"
   gem "rspec-rails", "~> 2.13.2"
@@ -33,13 +26,16 @@ group :development do
   gem "letter_opener", "~> 1.1.1"
   gem "progress_bar", "~> 1.0.0"
   gem "thin", "~> 1.5.1"
-  gem "pg", "~> 0.15.1"
 end
 
+
 group :production do
-  gem "pg", "~> 0.15.1"
   gem "unicorn", "~> 4.6.3"
   gem "google-analytics-rails", "~> 0.0.4"
+end
+
+group :test, :development, :production do
+  gem "pg", "~> 0.15.1"
 end
 
 gem "rails", "~> 4.0.0"
@@ -64,3 +60,4 @@ gem "uglifier", "~> 2.1.1"
 gem "bootstrap-sass", "~> 2.3.1.3"
 gem "capistrano", "~> 2.15.4"
 gem "rvm-capistrano", "~> 1.3.4"
+gem "octokit", "~> 2.0"
