@@ -1,10 +1,17 @@
 $social-media: github #FFFFFF dark,
                stackoverflow #FF9900 false,
                linkedin #1F88BD false,
+               googleplus #DD4C39 false,
                twitter #00ACEE false;
 
-p.social a {
+@import "social/*.png";
+@include all-social-sprites;
+
+p.social {
   letter-spacing: 0.2em;
+}
+
+p.social a {
   height: 32px;
   width: 32px;
 

@@ -42,6 +42,14 @@ header {
   }
 }
 
+header.aboutme {
+  padding-top: 1em;
+
+  h1 {
+    margin: 0 0 1em 0;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .column-left, .column-right {
     float: none;
@@ -54,5 +62,9 @@ header {
 
   img.avatar {
     display:none;
+  }
+
+  header.aboutme h1 {
+    margin: 0;
   }
 }

@@ -4,10 +4,8 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
 */
-
 @import "_fonts";
 @import "_variables";
-@import "_sprites";
 @import "_typography";
 @import "_base";
 @import "_colour";
