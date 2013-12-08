@@ -16,7 +16,9 @@ defaults: &defaults
       name: Change me in config/application.yml
   analytics:
     id: google-analytics-tracking-id
-
+  auth:
+    devise: SETMEEEE
+    rails: SETMEEE
 
 development:
   <<: *defaults
