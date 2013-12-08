@@ -60,3 +60,5 @@ gem "uglifier", "~> 2.1.1"
 gem "capistrano", "~> 2.15.4"
 gem "rvm-capistrano", "~> 1.3.4"
 gem "octokit", "~> 2.0"
+gem 'compass-rails'
+gem 'oily_png'

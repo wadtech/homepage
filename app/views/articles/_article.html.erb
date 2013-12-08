@@ -1,6 +1,6 @@
 <section role="latest_articles">
 <% @articles.each do |article| %>
-  <article>
+  <article class="article">
     <header>
       <h3 class="article_title media-heading"><%= link_to article.title, article_url(article) %></h3>
       <% if admin_signed_in? %>

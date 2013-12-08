@@ -2,34 +2,40 @@
 <html>
   <head>
     <title><%= title_helper %></title>
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= analytics_init if Rails.env.production? %>
     <%= csrf_meta_tags %>
     <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <!-- Start Header -->
-    <header>
-      <%= render :partial => 'welcome/info' %>
-      <%= render :partial => 'layouts/login_items' %>
-    </header>
-    <!-- End Header -->
     <nav>
       <%= render :partial => 'welcome/links' %>
     </nav>
-    <% flash.each do |name, msg| %>
-      <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-        <a class="close" data-dismiss="alert" href="#">&times;</a>
-        <%= msg  %>
-      </div>
-    <% end %>
+    <section class="column-right">
+      <header class="centre">
+        <%= render :partial => 'welcome/info' %>
+      </header>
+      <article class="centre">
+        <%= render :partial => 'welcome/social' %>
+      </article>
+      <article>
+        <%= render :partial => 'layouts/login_items' %>
+      </article>
+    </section>
+    <section class="column-left">
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+          <a class="close" data-dismiss="alert" href="#">&times;</a>
+          <%= msg  %>
+        </div>
+      <% end %>
 
-    <%= yield %>
-
-    <footer>
-      <%= render :partial => 'shared/footer' %>
-    </footer>
+      <%= yield %>
+      <footer>
+        <%= render :partial => 'shared/footer' %>
+      </footer>
+    </section>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -1,9 +1,9 @@
 body {
-  max-width: 600px;
+  max-width: 1000px;
   margin: auto;
 }
 
-article {
+.article {
   padding: 0.5em;
   margin-bottom: 1em;
 
@@ -25,4 +25,34 @@ header {
 
 .centre {
   text-align: center;
+}
+
+.column-left {
+  width: 60%;
+  float: left;
+}
+
+.column-right {
+  background-color: $nav-bg;
+  width: 40%;
+  float: right;
+
+  article {
+    padding: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .column-left, .column-right {
+    float: none;
+    width: 100%;
+  }
+
+  body {
+    max-width: 600px;
+  }
+
+  img.avatar {
+    display:none;
+  }
 }

@@ -5,14 +5,15 @@ defaults: &defaults
   contact:
     email: changeme@nowhere.com
     full_name: Fred Bloggs
-  twitter:
-    name: Change me in config/application.yml
-  github:
-    name: Change me in config/application.yml
-  linkedin:
-    name: Change me in config/application.yml
-  mailer:
-    from: changeme-from@nowhere.com
+  social:
+    twitter:
+      name: Change me in config/application.yml
+    stackoverflow:
+      id: Change me in config/application.yml
+    github:
+      name: Change me in config/application.yml
+    linkedin:
+      name: Change me in config/application.yml
   analytics:
     id: google-analytics-tracking-id
 
