@@ -32,12 +32,5 @@ FactoryGirl.define do
     permalink 'Permalink'
     content 'Content'
   end
-
-  factory :contact do
-    sequence(:subject) { |n| "Message #{n}" }
-    content "Some random text of sufficient length to account for smart_truncation. This needs to be at least 4 sentences long. Another bloody sentence. One more for luck."
-    source_ip '127.0.0.1'
-    archived false
-  end
 end
 
