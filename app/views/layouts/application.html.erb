@@ -26,7 +26,6 @@
     <section class="column-left">
       <% flash.each do |name, msg| %>
         <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-          <a class="close" data-dismiss="alert" href="#">&times;</a>
           <%= msg  %>
         </div>
       <% end %>
