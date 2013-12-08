@@ -19,9 +19,9 @@ end
 group :test, :development do
   gem "capybara", "~> 2.1.0"
   gem "launchy", "~> 2.3.0"
-  gem "rspec-rails", "~> 2.13.2"
+  gem "rspec-rails", "~> 2.14.0"
   gem "database_cleaner", "~> 1.0.1"
-  gem "factory_girl_rails", "~> 4.2.1"
+  gem "factory_girl_rails", "~> 4.3.0"
   gem "cucumber-rails", "~> 1.3.0", {:require=>false}
   gem "letter_opener", "~> 1.1.1"
   gem "progress_bar", "~> 1.0.0"
@@ -41,7 +41,7 @@ end
 gem "rails", "~> 4.0.0"
 gem "bcrypt-ruby", "~> 3.0.1"
 gem "will_paginate", "~> 3.0.4"
-gem "devise", "~> 3.0.0.rc"
+gem "devise", "~> 3.2.0"
 gem "pygments.rb", {:github=>"tmm1/pygments.rb"}
 gem "redcarpet", "~> 2.3.0"
 gem "jquery-rails", "~> 3.0.1"
@@ -50,9 +50,9 @@ gem "roadie", {:github=>"dmarkow/roadie"}
 gem "twitter", "~> 4.8.1"
 gem "whenever", "~> 0.8.2", {:require=>false}
 gem "paperclip", "~> 3.5.0"
-gem "acts-as-taggable-on", "~> 2.4.1"
+gem "acts-as-taggable-on", "~> 2.4.0"
 gem "settingslogic", "~> 2.0.9"
-gem "pg_search", "~> 0.6.4"
+gem "pg_search", "~> 0.7.0"
 gem "route_downcaser", "~> 0.2.0"
 gem "sass-rails", "~> 4.0.0"
 gem "coffee-rails", "~> 4.0.0"
