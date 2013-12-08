@@ -1,7 +1,3 @@
-guard :bundler do
-  watch 'Gemfile'
-end
-
 guard :rspec, cli: "--color --format documentation --fail-fast", all_on_start: true do
   watch %r{^spec/.+_spec\.rb$}
 

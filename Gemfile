@@ -2,9 +2,8 @@ source "http://rubygems.org"
 ruby "2.0.0"
 
 group :test do
-  gem "guard", "~> 1.8.1"
+  gem "guard", "~> 2.0.0"
   gem "guard-rspec", "~> 3.0.2"
-  gem "guard-bundler", "~> 1.0.0"
   gem "rb-inotify", "~> 0.9.0"
   gem "zeus", "~> 0.13.3"
   gem "simplecov", "~> 0.7.1", {:require=>false}
