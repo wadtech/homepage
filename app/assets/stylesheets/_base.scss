@@ -30,6 +30,10 @@ header {
 .column-left {
   width: 60%;
   float: left;
+
+  article:last-of-type {
+    margin-bottom:0;
+  }
 }
 
 .column-right {
