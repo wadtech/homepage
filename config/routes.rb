@@ -1,9 +1,6 @@
 Homepage::Application.routes.draw do
 
   devise_for :admins
-  devise_scope :admin do
-    get "/login" => "devise/sessions#new"
-  end
 
   resources :projects
   resources :highlights, :except => [:index]

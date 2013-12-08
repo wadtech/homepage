@@ -5,7 +5,7 @@ describe 'auth' do
   context "logged out" do
     describe "Sign in route" do
       it "should contain the login form" do
-        visit '/login'
+        visit '/articles/new'
 
         ['Email', 'Password', 'Sign in'].each do |thing|
           page.should have_content thing
