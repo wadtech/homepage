@@ -7,9 +7,15 @@ describe 'auth' do
       it "should contain the login form" do
         visit '/login'
 
-        page.should have_content 'Email'
-        page.should have_content 'Password'
-        page.should have_content 'Sign in'
+        ['Email', 'Password', 'Sign in'].each do |thing|
+          page.should have_content thing
+        end
+      end
+    end
+
+    describe "Entering valid details" do
+      it "should authenticate the user" do
+        login_admin
       end
     end
   end
@@ -23,14 +29,6 @@ describe 'auth' do
         first(:link, 'Sign out').click
 
         page.should_not have_content 'New Article'
-      end
-    end
-  end
-
-  context "logging on" do
-    describe "Entering valid details" do
-      it "should authenticate the user" do
-        login_admin
       end
     end
   end
