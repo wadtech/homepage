@@ -2,63 +2,39 @@
 <html>
   <head>
     <title><%= title_helper %></title>
-    <%= stylesheet_link_tag    "application" %>
+    <%= stylesheet_link_tag "application" %>
     <%= analytics_init if Rails.env.production? %>
     <%= csrf_meta_tags %>
-    <%= favicon_link_tag %>
+    <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <!-- Start Header -->
-    <div class="header">
-      <div class-"container-fluid">
-        <div class="row-fluid">
-          <div class="span6">
-            <div class="info">
-              <%= render :partial => 'welcome/info' %>
-            </div>
-          </div>
-          <div class="span6">
-            <%= render :partial => 'layouts/login_items' %>
-          </div>
+    <nav>
+      <%= render :partial => 'welcome/links' %>
+    </nav>
+    <section class="column-right">
+      <header class="centre aboutme">
+        <%= render :partial => 'welcome/info' %>
+      </header>
+      <article class="centre">
+        <%= render :partial => 'welcome/social' %>
+      </article>
+      <article>
+        <%= render :partial => 'layouts/login_items' %>
+      </article>
+    </section>
+    <section class="column-left">
+      <% flash.each do |name, msg| %>
+        <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
+          <%= msg  %>
         </div>
-      </div>
-    </div>
-    <!-- End Header -->
-    <div class="container-fluid" class="main">
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <div class="navigation">
-            <div class="navlinks">
-              <%= render :partial => 'welcome/links' %>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <%= render :partial => 'welcome/search_box'%>
-        </div>
-      </div>
-      <div class="row-fluid">
-        <div class="span8 offset2">
-          <div>
-            <% flash.each do |name, msg| %>
-              <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
-                <a class="close" data-dismiss="alert" href="#">&times;</a>
-                <%= msg  %>
-              </div>
-            <% end %>
-            <div class="main_content">
-              <%= yield %>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="footer-wrapper">
-      <%= render :partial => 'shared/footer' %>
-    </div>
+      <% end %>
+
+      <%= yield %>
+      <footer>
+        <%= render :partial => 'shared/footer' %>
+      </footer>
+    </section>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

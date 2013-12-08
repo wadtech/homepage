@@ -1,26 +1,16 @@
-<div class="row-fluid">
-  <div class="span6 offset3">
-    <div class="auth-form well">
-      <h2>Sign in</h2>
-        <%= form_for resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'} do |f| %>
-        <div class="control-group">
-          <%= f.label :email, :class => 'control-label' %>
-          <div class="controls">
-            <%= f.email_field :email, :autofocus => true %>
-          </div>
-        </div>
-        <div class="control-group">
-          <%= f.label :password, :class => 'control-label' %>
-          <div class="controls">
-            <%= f.password_field :password %>
-          </div>
-        </div>
-        <div class="control-group">
-          <div class="controls">
-            <%= f.submit "Sign in", :class => 'btn' %>
-          </div>
-        </div>
-        <% end %>
-    </div>
-  </div>
-</div>
+<article class="article">
+  <header>
+    <h3>Sign in</h3>
+  </header>
+
+  <%= form_for resource, :as => resource_name, :url => session_path(resource_name), :html => {:class => 'form-horizontal'} do |f| %>
+
+  <%= f.label :email %>
+  <%= f.email_field :email, :autofocus => true %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %>
+
+  <%= f.submit "Sign in", :class => 'btn' %>
+  <% end %>
+</article>

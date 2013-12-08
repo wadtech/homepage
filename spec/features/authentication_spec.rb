@@ -1,17 +1,21 @@
 require 'spec_helper'
 include AdminHelper
 
-describe "Signing in links" do
+describe 'auth' do
   context "logged out" do
-    describe "Sign in link" do
-      it "should show the login form when clicked" do
-        visit root_url
+    describe "Sign in route" do
+      it "should contain the login form" do
+        visit '/articles/new'
 
-        first(:link, 'Sign in').click
+        ['Email', 'Password', 'Sign in'].each do |thing|
+          page.should have_content thing
+        end
+      end
+    end
 
-        page.should have_content 'Email'
-        page.should have_content 'Password'
-        page.should have_content 'Sign in'
+    describe "Entering valid details" do
+      it "should authenticate the user" do
+        login_admin
       end
     end
   end
@@ -24,17 +28,8 @@ describe "Signing in links" do
         page.should have_content 'Sign out'
         first(:link, 'Sign out').click
 
-        page.should have_content 'Sign in'
-      end
-    end
-  end
-
-  context "logging on" do
-    describe "Entering valid details" do
-      it "should authenticate the user" do
-        login_admin
+        page.should_not have_content 'New Article'
       end
     end
   end
 end
-

@@ -3,16 +3,12 @@ module WelcomeHelper
     pages = Page.all.sort
     links = Array.new
 
-    linkto = {:link_text => "Home", :path => root_url}
-    links << linkto
+    links << { :link_text => "Blog", :path => root_url }
+    links << { :link_text => "Projects", :path => projects_path }
     pages.each do |page|
-      linkto = {:link_text => page.permalink, :path => page_path(page.permalink)}
-      links << linkto
+      links << { :link_text => page.permalink.titleize, :path => page_path(page.permalink) }
     end unless pages.nil?
 
-    linkto = {:link_text => "Projects", :path => projects_path}
-    links << linkto
-    linkto = {:link_text => "Contact", :path => new_contact_path}
-    links << linkto
+    links
   end
 end

@@ -2,10 +2,6 @@ Homepage::Application.routes.draw do
 
   devise_for :admins
 
-  resources :contacts, :except => [:edit]
-  post '/contacts/:id/archive' => 'contacts#archive', as: :archive
-  get '/contacts/' => 'contacts#index', as: :messages
-
   resources :projects
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] do

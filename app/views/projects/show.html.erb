@@ -1,56 +1,11 @@
-<div class="project_nav">
-  <%= link_to "Projects", projects_path %>
-</div>
-<div class="display_project">
-  <h1 class="project_title"><%= @project.title %></h1>
-  <div class="project_image_wrapper">
-    <%= image_tag @project.image.url(:large), :class => "project_image" %>
-  </div>
-  <div class="highlight_links">
-  <% if !@project.source_repository.empty? %>
-  <small><%= link_to "Source Code", @project.source_repository, :class => "btn btn-primary" %></small>
-  <% end %>
-  <% @project.highlights.each_with_index do | highlight, count | %>
-    <%= link_to "#{highlight.title}", '#', :class => "highlight-link btn btn-success", :id => "#{highlight.id}" %>
-  <% end unless @project.highlights.empty? %>
-  </div>
-  <% @project.highlights.each_with_index do | highlight, count | %>
-    <%= content_tag :div, :class => "highlight-div", :id => "highlight-div-#{highlight.id}" do -%>
-      <div class="row-fluid">
-        <div class="span6">
-          <% if !highlight.code_snippet.nil? && highlight.image.url(:medium) != "/images/medium/missing.png" %>
-          <div class="row-fluid">
-            <div class="span12 highlight-image">
-              <%= image_tag highlight.image.url(:medium) %>
-            </div>
-          </div>
-          <div class="row-fluid">
-            <div class="span12">
-              <h4>Code Snippet</h4>
-              <p><%= markdown highlight.code_snippet %></p>
-            </div>
-          </div>
-        <% elsif highlight.code_snippet.nil? %>
-          <div class="highlight-image">
-            <%= image_tag highlight.image.url(:medium) %>
-          </div>
-        <% else %>
-          <h4>Code Snippet</h4>
-          <p><%= markdown highlight.code_snippet %></p>
-        <% end %>
-        </div>
-        <div class="span6">
-          <h4>Description</h4>
-          <p><%= markdown highlight.description %></p>
-        </div>
-      </div>
-    <% end -%>
-  <% end unless @project.highlights.empty? %>
-  <div class="project_body">
+<article role="display_project" class="article">
+  <header class="project">
+    <h2 class="project_title"><%= @project.title %></h2>
+    <%= link_to 'Edit', edit_project_path(@project) if admin_signed_in? %>
+    <%= image_tag @project.image.url(:large), :class => "project_image" if @project.image.exists? %>
+    <%= link_to "View On Github", "http://github.com/#{@project.github}" unless @project.github.blank? %>
+  </header>
+  <p>
     <%= markdown(@project.description) %>
-  </div>
-
-<% if admin_signed_in? %> |
-<%= link_to 'Edit', edit_project_path(@project) %>
-<% end %>
-</div>
+  </p>
+</article>

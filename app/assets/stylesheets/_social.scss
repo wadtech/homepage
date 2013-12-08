@@ -1,0 +1,38 @@
+$social-media: github #FFFFFF dark,
+               stackoverflow #FF9900 false,
+               linkedin #1F88BD false,
+               googleplus #DD4C39 false,
+               twitter #00ACEE false;
+
+@import "social/*.png";
+@include all-social-sprites;
+
+p.social {
+  letter-spacing: 0.2em;
+}
+
+p.social a {
+  height: 32px;
+  width: 32px;
+
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 32px;
+  line-height: 32px;
+
+  @each $service in $social-media {
+    $class: nth($service,1);
+    $colour: nth($service, 2);
+    $dark: nth($service, 3);
+
+    &.#{$class} {
+      background-color: $colour;
+
+      @if $dark {
+        @extend .social-#{$class}-32-black;
+      } @else {
+        @extend .social-#{$class}-32;
+      }
+    }
+  }
+}
