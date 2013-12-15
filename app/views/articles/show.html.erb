@@ -1,11 +1,14 @@
 <div class="display_article">
-  <div class="article_title_wrapper">
-    <%= render :partial => 'articles/author_card', :locals => {:article => @article} %>
-  </div>
-  <div class="article_body">
+  <article class="article">
+    <header>
+      <h3 class="article_title media-heading"><%= link_to @article.title, article_url(@article) %></h3>
+      <% if admin_signed_in? %>
+      <%= link_to "edit", edit_article_path(@article) %>
+      <% end %>
+    </header>
+    <aside><%= list_tags(@article) %></aside>
     <%= markdown(@article.content) %>
-  </div>
-
+  </article>
   <% if admin_signed_in? %>
   <p>
     <b>Published?</b> (Click to toggle.)<br />
