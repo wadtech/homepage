@@ -23,4 +23,7 @@ Homepage::Application.configure do
 
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :letter_opener
+
+  # silence deprecation message, don't use locales
+  config.i18n.enforce_available_locales = false
 end
