@@ -37,27 +37,27 @@ group :test, :development, :production do
   gem "pg", "~> 0.15.1"
 end
 
-gem "rails", "~> 4.0.0"
+gem "rails", "~> 4.0.2"
 gem "bcrypt-ruby", "~> 3.0.1"
 gem "will_paginate", "~> 3.0.4"
-gem "devise", "~> 3.2.0"
+gem "devise", "~> 3.2.2"
 gem "pygments.rb", {:github=>"tmm1/pygments.rb"}
 gem "redcarpet", "~> 2.3.0"
-gem "jquery-rails", "~> 3.0.1"
-gem "jquery-ui-rails", "~> 4.0.3"
+gem "jquery-rails", "~> 3.0.4"
+gem "jquery-ui-rails", "~> 4.1.1"
 gem "roadie", {:github=>"dmarkow/roadie"}
 gem "twitter", "~> 4.8.1"
 gem "whenever", "~> 0.8.2", {:require=>false}
-gem "paperclip", "~> 3.5.0"
-gem "acts-as-taggable-on", "~> 2.4.0"
+gem "paperclip", "~> 3.5.2"
+gem "acts-as-taggable-on", "~> 2.4.1"
 gem "settingslogic", "~> 2.0.9"
-gem "pg_search", "~> 0.7.0"
+gem "pg_search", "~> 0.7.2"
 gem "route_downcaser", "~> 0.2.0"
-gem "sass-rails", "~> 4.0.0"
-gem "coffee-rails", "~> 4.0.0"
+gem "sass-rails", "~> 4.0.1"
+gem "coffee-rails", "~> 4.0.1"
 gem "uglifier", "~> 2.1.1"
 gem "capistrano", "~> 2.15.4"
 gem "rvm-capistrano", "~> 1.3.4"
 gem "octokit", "~> 2.0"
-gem 'compass-rails'
+gem 'compass-rails', "= 1.1.2"
 gem 'oily_png'

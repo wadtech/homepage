@@ -42,4 +42,7 @@ Homepage::Application.configure do
 
   # Google analytics
   GA.tracker = Settings.analytics.id
+
+  # silence deprecation message, don't use locales
+  config.i18n.enforce_available_locales = false
 end

@@ -1,4 +1,3 @@
-
 body {
   background-color: $body-bg;
   color: $body-colour;
@@ -39,4 +38,12 @@ nav li {
 }
 .alert-error {
   background-color: #83202C;
+}
+
+code {
+  background-color: #fff;
+}
+
+div.highlight {
+  background-color: #fff;
 }

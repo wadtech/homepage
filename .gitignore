@@ -13,3 +13,4 @@ public/assets/*
 coverage
 config/application.yml
 config/database.yml
+.ruby-gemset

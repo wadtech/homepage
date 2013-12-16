@@ -21,3 +21,8 @@ function getParameterByName(name) {
     return decodeURIComponent(results[1].replace(/\+/g, " "));
   }
 }
+
+// magic-grow textareas
+$("textarea").each(function() {
+  $(this).height($(this)[0].scrollHeight);
+});
