@@ -22,11 +22,16 @@
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
-  <div class="field">
-    <%= image_tag @project.image.url(:thumb) unless !@project.image.exists? %><br />
-    <%= f.label :image, "Project Logo or Screenshot" %>
-    <%= f.file_field :image %>
-  </div>
+  <fieldset>
+    <div class="field">
+      <% if @project.image.exists? %>
+        <%= image_tag @project.image.url(:thumb) %><br />
+      <% end %>
+
+      <%= f.label :image, "Project Logo or Screenshot" %>
+      <%= f.file_field :image %>
+    </div>
+  </fieldset>
   <div class="field">
     <%= f.label :summary, "Project Summary" %>
     <p>Projects should have a short summary for the 'My Projects' page, it should introduce the project and outline its purpose.</p>

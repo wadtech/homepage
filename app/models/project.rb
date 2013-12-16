@@ -26,19 +26,22 @@ class Project < ActiveRecord::Base
     input.to_i == 0 ? where("title ILIKE ?", input.gsub("-", " ")).first : super
   end
 
-private
-
   def fetch_from_github
     if self.github
       begin
         set_parameters_by Octokit.repo self.github
-      rescue *[Octokit::NotFound, Octokit::TooManyRequests] => e
+      rescue Octokit::NotFound => e
         errors[:base] << "No such Github repository found."
+        false
+      rescue Octokit::TooManyRequests => e
+        errors[:base] << "Could not fetch details from Github, please try again later."
+        logger.error "Github API Limit Reached."
         false
       end
     end
   end
 
+private
   def set_parameters_by(repo)
     self.title       = repo.name
     self.summary     = repo.description

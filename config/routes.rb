@@ -2,7 +2,9 @@ Homepage::Application.routes.draw do
 
   devise_for :admins
 
-  resources :projects
+  resources :projects do
+    get 'refresh', to: 'projects#refresh'
+  end
   resources :highlights, :except => [:index]
   resources :pages, :except => [:show, :index] do
     delete ':id', to: 'pages#destroy'

@@ -51,6 +51,19 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def refresh
+    @project = Project.find(params[:project_id])
+    @project.fetch_from_github
+
+    respond_to do |format|
+      if @project.save
+        format.html { redirect_to @project, notice: "Project metadata fetched from Github."}
+      else
+        format.html { redirect_to @project, error: "Could not refresh project metadata." }
+      end
+    end
+  end
+
   private
   def project_params
     params.require(:project).permit(:title, :image, :github, :description, :summary, :source_repository, :highlights_attributes => [:code_snippet, :image, :description, :project, :title])
