@@ -36,6 +36,11 @@ nav {
   }
 }
 
+header p {
+  margin: 0;
+  padding: 1em;
+}
+
 @media (min-width: 0px) {
   body { font-size: 14px; }
 }
