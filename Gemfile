@@ -27,7 +27,6 @@ group :test, :development do
   gem "thin", "~> 1.5.1"
 end
 
-
 group :production do
   gem "unicorn", "~> 4.6.3"
   gem "google-analytics-rails", "~> 0.0.4"
