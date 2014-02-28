@@ -36,7 +36,7 @@ group :test, :development, :production do
   gem "pg", "~> 0.15.1"
 end
 
-gem "rails", "~> 4.0.2"
+gem "rails", "~> 4.0.3"
 gem "bcrypt-ruby", "~> 3.0.1"
 gem "will_paginate", "~> 3.0.4"
 gem "devise", "~> 3.2.2"
