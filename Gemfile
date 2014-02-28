@@ -5,7 +5,6 @@ group :test do
   gem "guard", "~> 2.0.0"
   gem "guard-rspec", "~> 3.0.2"
   gem "rb-inotify", "~> 0.9.0"
-  gem "zeus", "~> 0.13.3"
   gem "simplecov", "~> 0.7.1", {:require=>false}
 end
 
@@ -46,7 +45,6 @@ gem "jquery-rails", "~> 3.0.4"
 gem "jquery-ui-rails", "~> 4.1.1"
 gem "roadie", {:github=>"dmarkow/roadie"}
 gem "twitter", "~> 4.8.1"
-gem "whenever", "~> 0.8.2", {:require=>false}
 gem "paperclip", "~> 3.5.2"
 gem "acts-as-taggable-on", "~> 2.4.1"
 gem "settingslogic", "~> 2.0.9"
