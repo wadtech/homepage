@@ -34,10 +34,10 @@
       <% end %>
 
       <%= yield %>
-      <footer>
-        <%= render :partial => 'shared/footer' %>
-      </footer>
     </section>
+    <footer class="main-footer">
+      <%= render :partial => 'shared/footer' %>
+    </footer>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

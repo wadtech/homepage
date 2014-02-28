@@ -31,5 +31,8 @@ Homepage::Application.configure do
   # Print deprecation notices to the stderr
   config.active_support.deprecation = :stderr
 
+  # silence deprecation message, don't use locales
+  config.i18n.enforce_available_locales = false
+
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 end
