@@ -4,7 +4,7 @@ body {
 }
 
 .article {
-  padding: 0.5em;
+  padding: 0.5em 1em;
   margin-bottom: 1em;
 
   .highlight {
@@ -28,7 +28,7 @@ header {
 }
 
 .column-left {
-  width: 60%;
+  width: 62%;
   float: left;
 
   article:last-of-type {
@@ -37,7 +37,7 @@ header {
 }
 
 .column-right {
-  width: 40%;
+  width: 38%;
   float: right;
 
   article {
@@ -72,7 +72,7 @@ footer.main-footer {
   }
 
   img.avatar {
-    display:none;
+    display: none;
   }
 
   header.aboutme h1 {

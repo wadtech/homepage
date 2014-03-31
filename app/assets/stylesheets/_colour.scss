@@ -13,8 +13,8 @@ body {
   }
 }
 
-footer {
-  background-color: $footer-bg;
+footer.main-footer {
+  color: $link-colour;
 }
 
 a, a:hover, a:visited {
