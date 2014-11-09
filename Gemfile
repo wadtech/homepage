@@ -1,5 +1,4 @@
 source "http://rubygems.org"
-ruby "2.0.0"
 
 group :test do
   gem "guard", "~> 2.0.0"
@@ -12,6 +11,7 @@ group :development do
   gem "better_errors", "~> 0.8.0"
   gem "binding_of_caller", "~> 0.7.2"
   gem "meta_request", "~> 0.2.7"
+  gem 'spring'
 end
 
 group :test, :development do
@@ -35,7 +35,7 @@ group :test, :development, :production do
   gem "pg", "~> 0.15.1"
 end
 
-gem "rails", "~> 4.0.3"
+gem "rails", "~> 4.1.0"
 gem "bcrypt-ruby", "~> 3.0.1"
 gem "will_paginate", "~> 3.0.4"
 gem "devise", "~> 3.2.2"
