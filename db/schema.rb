@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20131119232831) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "admins", force: true do |t|
     t.string   "email",               default: "", null: false
     t.string   "encrypted_password",  default: "", null: false
@@ -22,8 +25,8 @@ ActiveRecord::Schema.define(version: 20131119232831) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                       null: false
-    t.datetime "updated_at",                       null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true, using: :btree
@@ -32,8 +35,8 @@ ActiveRecord::Schema.define(version: 20131119232831) do
     t.text     "content"
     t.boolean  "published"
     t.string   "author"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
     t.string   "title"
   end
 
@@ -41,9 +44,9 @@ ActiveRecord::Schema.define(version: 20131119232831) do
     t.text     "subject"
     t.text     "content"
     t.string   "source_ip"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.boolean  "archived"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.boolean  "archived",   default: false
   end
 
   create_table "highlights", force: true do |t|
@@ -60,8 +63,8 @@ ActiveRecord::Schema.define(version: 20131119232831) do
   create_table "pages", force: true do |t|
     t.string   "permalink"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "pages", ["permalink"], name: "index_pages_on_permalink", using: :btree
@@ -70,8 +73,8 @@ ActiveRecord::Schema.define(version: 20131119232831) do
     t.text     "content"
     t.integer  "searchable_id"
     t.string   "searchable_type"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "projects", force: true do |t|
@@ -108,8 +111,8 @@ ActiveRecord::Schema.define(version: 20131119232831) do
   create_table "twitter_feeds", force: true do |t|
     t.integer  "tweet_id",   limit: 8
     t.text     "content"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end
