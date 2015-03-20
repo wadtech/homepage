@@ -11,6 +11,7 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :highlights, allow_destroy: true
 
   has_attached_file :image, styles: { large: "400x400>", medium: "300x300>", thumb: "200x200>" }
+  validates_attachment :image, content_type: { content_type: ["image/jpg", "image/jpeg", "image/png", "image/gif"] }
 
   validates :title, :description, presence: true
   validates :github, uniqueness: { allow_nil: true, allow_blank: true, message: "repository has already been added." }

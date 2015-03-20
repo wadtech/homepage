@@ -2,13 +2,13 @@ require 'spec_helper'
 include AdminHelper
 
 describe 'auth' do
-  context "logged out" do
-    describe "Sign in route" do
+  context "with no session" do
+    describe "visiting the 'sign in' route" do
       it "should contain the login form" do
         visit '/articles/new'
 
         ['Email', 'Password', 'Sign in'].each do |thing|
-          page.should have_content thing
+          expect(page).to have_content thing
         end
       end
     end
@@ -20,15 +20,15 @@ describe 'auth' do
     end
   end
 
-  context "logged in" do
-    describe "Sign out link" do
+  context "with active sesssion" do
+    describe "clicking the 'sign out' link" do
       it "should log the user out when clicked" do
         login_admin
 
-        page.should have_content 'Sign out'
+        expect(page).to have_content 'Sign out'
         first(:link, 'Sign out').click
 
-        page.should_not have_content 'New Article'
+        expect(page).not_to have_content 'New Article'
       end
     end
   end

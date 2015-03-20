@@ -1,60 +1,71 @@
 source "http://rubygems.org"
+ruby "2.1.2"
+
+def is_mac?
+  RUBY_PLATFORM.downcase.include?("darwin")
+end
+
+def is_linux?
+  RUBY_PLATFORM.downcase.include?("linux")
+end
 
 group :test do
-  gem "guard", "~> 2.0.0"
-  gem "guard-rspec", "~> 3.0.2"
-  gem "rb-inotify", "~> 0.9.0"
-  gem "simplecov", "~> 0.7.1", {:require=>false}
+  gem "guard", "~> 2.10"
+  gem "guard-rspec", "~> 4.5"
+  gem "guard-bundler"
+  gem "guard-migrate"
+  gem "rb-inotify", "~> 0.9" if is_linux?
+  gem "rb-fsevent", "~> 0.9" if is_mac?
+  gem "simplecov", "~> 0.7", :require => false
 end
 
 group :development do
-  gem "better_errors", "~> 0.8.0"
+  gem "better_errors", "~> 2.0"
   gem "binding_of_caller", "~> 0.7.2"
-  gem "meta_request", "~> 0.2.7"
-  gem 'spring'
+  gem "meta_request", "~> 0.3"
 end
 
 group :test, :development do
-  gem "capybara", "~> 2.1.0"
-  gem "launchy", "~> 2.3.0"
-  gem "rspec-rails", "~> 2.14.0"
-  gem "database_cleaner", "~> 1.0.1"
-  gem "factory_girl_rails", "~> 4.3.0"
-  gem "cucumber-rails", "~> 1.3.0", {:require=>false}
-  gem "letter_opener", "~> 1.1.1"
+  gem "faker"
+  gem "spring"
+  gem "capybara", "~> 2.4"
+  gem "launchy", "~> 2.4"
+  gem "rspec-rails", "~> 3.0"
+  gem "database_cleaner", "~> 1.3"
+  gem "factory_girl_rails", "~> 4.5"
+  gem "letter_opener", "~> 1.3"
   gem "progress_bar", "~> 1.0.0"
-  gem "thin", "~> 1.5.1"
+  gem "thin", "~> 1.6"
 end
 
 group :production do
-  gem "unicorn", "~> 4.6.3"
-  gem "google-analytics-rails", "~> 0.0.4"
+  gem "unicorn", "~> 4.8"
+  gem "google-analytics-rails", "~> 0.0.6"
 end
 
-group :test, :development, :production do
-  gem "pg", "~> 0.15.1"
-end
+gem "pg", "~> 0.17"
 
-gem "rails", "~> 4.1.0"
-gem "bcrypt-ruby", "~> 3.0.1"
-gem "will_paginate", "~> 3.0.4"
-gem "devise", "~> 3.2.2"
-gem "pygments.rb", {:github=>"tmm1/pygments.rb"}
-gem "redcarpet", "~> 2.3.0"
-gem "jquery-rails", "~> 3.0.4"
-gem "jquery-ui-rails", "~> 4.1.1"
-gem "roadie", {:github=>"dmarkow/roadie"}
-gem "twitter", "~> 4.8.1"
-gem "paperclip", "~> 3.5.2"
-gem "acts-as-taggable-on", "~> 2.4.1"
+gem "rails", "~> 4.2"
+gem "bcrypt", "~> 3.1"
+gem "will_paginate", "~> 3.0"
+gem "devise", "~> 3.4"
+gem "pygments.rb", "~> 0.6"
+gem "redcarpet", "~> 3.2"
+gem "jquery-rails", "~> 4.0"
+gem "jquery-ui-rails", "~> 5.0"
+gem "roadie", "~> 3.0"
+gem "roadie-rails", github: 'sgringwe/roadie-rails'
+gem "twitter", "~> 5.13"
+gem "paperclip", "~> 4.2"
+gem "acts-as-taggable-on", "~> 3.4"
 gem "settingslogic", "~> 2.0.9"
-gem "pg_search", "~> 0.7.2"
-gem "route_downcaser", "~> 0.2.0"
-gem "sass-rails", "~> 4.0.1"
-gem "coffee-rails", "~> 4.0.1"
-gem "uglifier", "~> 2.1.1"
-gem "capistrano", "~> 2.15.4"
-gem "rvm-capistrano", "~> 1.3.4"
-gem "octokit", "~> 2.0"
-gem 'compass-rails', "= 1.1.2"
-gem 'oily_png'
+gem "pg_search", "~> 0.7"
+gem "route_downcaser", "~> 0.2"
+gem "sass-rails"
+gem "coffee-rails", "~> 4.1"
+gem "uglifier", "~> 2.6"
+gem "capistrano", "~> 3.3"
+gem "rvm-capistrano", "~> 1.5"
+gem "octokit", "~> 3.7"
+gem 'compass-rails'
+gem 'oily_png', '~> 1.1'

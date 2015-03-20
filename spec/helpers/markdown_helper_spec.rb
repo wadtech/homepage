@@ -18,7 +18,7 @@ describe MarkdownHelper do
 
       result = markdown input
 
-      result.should eq expected_html
+      expect(result).to eq expected_html
     end
   end
 
@@ -30,19 +30,19 @@ describe MarkdownHelper do
     it "defaults to 12 words" do
       result = smart_truncate @paragraph
 
-      result.should eq "This is a paragraph with a word count far exceeding twelve. In..."
+      expect(result).to eq "This is a paragraph with a word count far exceeding twelve. In..."
     end
 
     it "accepts a words parameter to adjust it to 12 words" do
       result = smart_truncate @paragraph, words: 5
 
-      result.should eq "This is a paragraph with..."
+      expect(result).to eq "This is a paragraph with..."
     end
 
     it "adds an ellipsis to indicate truncation" do
       result = smart_truncate @paragraph
 
-      result.should match /\.\.\.$/
+      expect(result).to match /\.\.\.$/
     end
 
     it "accepts sentences instead of words" do
@@ -50,7 +50,7 @@ describe MarkdownHelper do
 
       result = smart_truncate paragraph, sentences: 3
 
-      result.should eq "This paragraph. Is made up of. Arbitrarily short."
+      expect(result).to eq "This paragraph. Is made up of. Arbitrarily short."
     end
   end
 end
