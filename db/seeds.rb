@@ -49,7 +49,7 @@ Page.delete_all
 
 rand(2..5).times do
   Page.create! do | page |
-    page.permalink = Faker::Internet.url
+    page.permalink = Faker::Lorem.word
     page.content = Faker::Lorem.paragraph
   end
 end
