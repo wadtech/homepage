@@ -12,6 +12,8 @@ end
 group :test do
   gem "guard", "~> 2.10"
   gem "guard-rspec", "~> 4.5"
+  gem "guard-bundler"
+  gem "guard-migrate"
   gem "rb-inotify", "~> 0.9" if is_linux?
   gem "rb-fsevent", "~> 0.9" if is_mac?
   gem "simplecov", "~> 0.7", :require => false
@@ -24,6 +26,7 @@ group :development do
 end
 
 group :test, :development do
+  gem "faker"
   gem "spring"
   gem "capybara", "~> 2.4"
   gem "launchy", "~> 2.4"
@@ -40,9 +43,7 @@ group :production do
   gem "google-analytics-rails", "~> 0.0.6"
 end
 
-group :test, :development, :production do
-  gem "pg", "~> 0.17"
-end
+gem "pg", "~> 0.17"
 
 gem "rails", "~> 4.2"
 gem "bcrypt", "~> 3.1"
