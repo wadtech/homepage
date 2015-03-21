@@ -3,7 +3,7 @@
     <header>
       <h3 class="article_title media-heading"><%= link_to @article.title, article_url(@article) %></h3>
       <% if admin_signed_in? %>
-      <%= link_to "edit", edit_article_path(@article) %>
+      <%= link_to "edit", edit_dashboard_article_path(@article) %>
       <% end %>
     </header>
     <aside><%= list_tags(@article) %></aside>
@@ -15,7 +15,7 @@
     <%= render :partial => "publish_toggle", :locals => { :article => @article } %>
   </p>
 
-  <%= link_to 'Edit', edit_article_path(@article) %> |
+  <%= link_to 'Edit', edit_dashboard_article_path(@article) %> |
   <% end %>
   <%= link_to 'Home', root_url %>
 </div>

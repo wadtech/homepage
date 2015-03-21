@@ -1,0 +1,39 @@
+<section class="dashboard">
+  <h2>Index of Articles</h2>
+
+  <table class="article_table">
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Created<br />(Last Modified)</th>
+      <th>Author</th>
+      <th>Published</th>
+      <th>Actions</th>
+    </tr>
+
+  <% @articles.each do |article| %>
+    <tr class="<%= cycle("even", "odd") %>">
+      <td><b><%= article.title %></b></td>
+      <td><%= markdown(smart_truncate(article.content, :sentences => 1)) %></td>
+
+      <td>
+        <%= article.created_at.strftime("%m/%d/%Y at %I:%M%p") %>
+        <% if article.created_at != article.updated_at %>
+         <span> (<%= article.updated_at.strftime("%m/%d/%Y at %I:%M%p") %>)</span>
+        <% end %>
+      </td>
+      <td><%= article.author %></td>
+      <td>
+      <%= render :partial => 'dashboard/articles/publish_toggle', :locals => { :article => article } %>
+      </td>
+      <td>
+        <%= link_to 'View', article %> |
+        <%= link_to 'Edit', edit_dashboard_article_path(article) %><br />
+        <%= link_to 'Delete', article, confirm: 'Are you sure? This is final!', method: :delete %>
+      </td>
+    </tr>
+  <% end %>
+  </table>
+
+  <%= link_to 'New Article', new_dashboard_article_path, class: ['new', 'button'] %>
+</section>

@@ -8,22 +8,8 @@
     <%= favicon_link_tag 'favicon.ico' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
-  <body class="main">
-    <nav>
-      <%= render :partial => 'welcome/links' %>
-    </nav>
-    <section class="column-right">
-      <header class="centre aboutme">
-        <%= render :partial => 'welcome/info' %>
-      </header>
-      <article class="centre">
-        <%= render :partial => 'welcome/social' %>
-      </article>
-      <article>
-        <%= render :partial => 'layouts/login_items' %>
-      </article>
-    </section>
-    <section class="column-left">
+  <body>
+    <section>
       <% flash.each do |name, msg| %>
         <div class="alert alert-<%= name == :notice ? "success" : "error" %>">
           <%= msg  %>
@@ -32,9 +18,6 @@
 
       <%= yield %>
     </section>
-    <footer class="main-footer">
-      <%= render :partial => 'shared/footer' %>
-    </footer>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
