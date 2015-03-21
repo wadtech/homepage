@@ -1,4 +1,4 @@
-guard :rspec, cmd: "bundle exec rspec --color --format documentation --fail-fast", all_on_start: true do
+guard :rspec, cmd: "bundle exec bin/rspec --color --format documentation", all_on_start: true do
   watch %r{^spec/.+_spec\.rb$}
 
   watch %r{^lib/(.+)\.rb$} do |m|
