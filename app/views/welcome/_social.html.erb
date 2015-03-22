@@ -1,5 +1,5 @@
-<p class="social">
+<ul class="social">
   <% Settings.social.each do |social_account, details| %>
-    <%= link_to details['name'], details['profile_url'], class: social_account %>
+    <li><%= link_to details['name'], details['profile_url'], class: social_account %></li>
   <% end %>
-</p>
+</ul>

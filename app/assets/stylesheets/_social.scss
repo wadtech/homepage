@@ -7,11 +7,17 @@ $social-media: github #FFFFFF dark,
 @import "social/*.png";
 @include all-social-sprites;
 
-p.social {
+.social {
   letter-spacing: 0.2em;
+  list-style: none;
+  padding: 0;
 }
 
-p.social a {
+.social > li {
+  display: inline-block;
+}
+
+.social a {
   height: 32px;
   width: 32px;
 
