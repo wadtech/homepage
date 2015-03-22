@@ -1,5 +1,5 @@
 <p class="social">
-  <% Settings.social.each do |account| %>
-    <%= link_to account[1]['name'], account[1]['profile_url'], class: account[0] %>
+  <% Settings.social.each do |social_account, details| %>
+    <%= link_to details['name'], details['profile_url'], class: social_account %>
   <% end %>
 </p>
