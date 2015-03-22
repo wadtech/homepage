@@ -8,12 +8,16 @@ defaults: &defaults
   social:
     twitter:
       name: Change me in config/application.yml
+      profile_url: some-linky
     stackoverflow:
       id: Change me in config/application.yml
+      profile_url: some-linky
     github:
       name: Change me in config/application.yml
+      profile_url: some-linky
     linkedin:
       name: Change me in config/application.yml
+      profile_url: some-linky
   analytics:
     id: google-analytics-tracking-id
   auth:
