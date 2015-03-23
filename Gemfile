@@ -67,7 +67,7 @@ gem "sass-rails"
 gem "coffee-rails", "~> 4.1"
 gem "uglifier", "~> 2.6"
 gem "capistrano", "~> 2.15.4"
-gem "rvm-capistrano", "~> 1.5.6"
+gem "rvm-capistrano", "~> 1.5.6", require: false
 gem "octokit", "~> 3.7"
 gem 'compass-rails'
 gem 'oily_png', '~> 1.1'
