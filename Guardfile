@@ -1,4 +1,4 @@
-guard :rspec, cmd: "bundle exec bin/rspec --color --format documentation", all_on_start: true do
+guard :rspec, cmd: "spring rspec --color --format documentation", all_on_start: true, all_after_pass: true do
   watch %r{^spec/.+_spec\.rb$}
 
   watch %r{^lib/(.+)\.rb$} do |m|
