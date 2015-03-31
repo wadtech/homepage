@@ -16,3 +16,4 @@ config/database.yml
 .ruby-gemset
 bin/
 db/sampleimages
+.env

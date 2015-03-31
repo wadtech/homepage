@@ -11,16 +11,6 @@ require 'rspec/rails'
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
 RSpec.configure do |config|
-
-  # Disabling garbage collection for the duration of tests is a terrible idea! Works though.
-  config.before :each do
-    GC.disable
-  end
-
-  config.after :each do
-    GC.enable
-  end
-
   config.fail_fast = true
   config.use_transactional_fixtures = true
   config.infer_base_class_for_anonymous_controllers = false

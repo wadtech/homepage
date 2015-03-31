@@ -10,6 +10,9 @@ class WelcomeController < ApplicationController
       @articles = default_article_scope
     end
 
+    @repositories = github.repositories
+    @activity     = github.public_activity
+
     respond_to do |format|
       format.html
     end
@@ -50,5 +53,11 @@ class WelcomeController < ApplicationController
       flash[:notice] = "Articles tagged with '#{params[:tag]}'."
       articles
     end
+  end
+
+  private
+
+  def github
+    @github ||= Github.new
   end
 end
