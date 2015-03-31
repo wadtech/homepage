@@ -8,7 +8,7 @@ describe Github do
       resp = subject.public_activity
       expect(resp.size).to eq(30)
 
-      expect(resp.first[:type]).to eq('IssueCommentEvent')
+      expect(resp.first[:type]).to eq('PushEvent')
     end
   end
 
