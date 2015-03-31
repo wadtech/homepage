@@ -5,7 +5,7 @@ class Github
 
   def repositories
     return github.repositories.reject do |repo|
-      repo[:owner][:login] != 'wadtech' || repo[:fork]
+      repo[:owner][:login] != Settings.github.login || repo[:fork]
     end
   end
 
