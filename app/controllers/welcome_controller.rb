@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+  helper GithubEvent
+
   def index
     clear_flash
 

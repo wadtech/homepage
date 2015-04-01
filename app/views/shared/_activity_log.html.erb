@@ -1,11 +1,10 @@
 <% if @activity %>
-<ul class="article">
-  <% @activity.each do |act| %>
-    <li>
-      <i class="fa fa-bicycle"></i>
-      <%= act.to_h %>
-      <%= act[:payload][:action] %> <%= act[:type] %>
-    </li>
-  <% end %>
-</ul>
+<article class="article">
+  <h4>Github Latest</h4>
+  <ul class="fa-ul">
+    <% @activity.each do |act| %>
+      <%= event_to_list_item(act) %>
+    <% end %>
+  </ul>
+</article>
 <% end %>
