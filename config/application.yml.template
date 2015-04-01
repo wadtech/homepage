@@ -27,7 +27,7 @@ defaults: &defaults
     devise: SETMEEEE
     rails: SETMEEE
   github:
-    login:        Change me in config/application.yml
+    login:        wadtech
     access_token: Change me in config/application.yml
 
 development:
