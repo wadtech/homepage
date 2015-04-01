@@ -9,13 +9,16 @@ defaults: &defaults
     twitter:
       name: Change me in config/application.yml
       profile_url: some-linky
-    stackoverflow:
-      id: Change me in config/application.yml
-      profile_url: some-linky
     github:
       name: Change me in config/application.yml
       profile_url: some-linky
+    stackoverflow:
+      id: Change me in config/application.yml
+      profile_url: some-linky
     linkedin:
+      name: Change me in config/application.yml
+      profile_url: some-linky
+    googleplus:
       name: Change me in config/application.yml
       profile_url: some-linky
   analytics:
@@ -23,6 +26,9 @@ defaults: &defaults
   auth:
     devise: SETMEEEE
     rails: SETMEEE
+  github:
+    login: blahblah
+    access_token: faaaaakkkeee
 
 development:
   <<: *defaults
