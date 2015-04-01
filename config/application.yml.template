@@ -18,11 +18,17 @@ defaults: &defaults
     linkedin:
       name: Change me in config/application.yml
       profile_url: some-linky
+    googleplus:
+      name: Change me in config/application.yml
+      profile_url: some-linky
   analytics:
     id: google-analytics-tracking-id
   auth:
     devise: SETMEEEE
     rails: SETMEEE
+  github:
+    login:        Change me in config/application.yml
+    access_token: Change me in config/application.yml
 
 development:
   <<: *defaults
