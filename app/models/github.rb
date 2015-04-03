@@ -1,6 +1,6 @@
 class Github
   def public_activity
-    return github.user_public_events(Settings.github.login)
+    return github.user_public_events(Settings.github.login, per_page: 10)
   end
 
   def repositories

@@ -11,13 +11,15 @@ module GithubEvent
       return
     end
 
-    content_tag(:li, fa_icon("#{item[:icon]} li", class: item[:name], text: raw(item[:friendly])))
+    content_tag(:li, fa_icon("#{item[:icon]} li", class: item[:name], text: content_tag(:p, raw(item[:friendly]))))
   end
 
   private
 
   def render_item(event)
     case event[:type]
+    when 'CreateEvent'
+      create_event(event)
     when 'CommitCommentEvent'
       commit_comment(event)
     when 'PushEvent'
@@ -33,7 +35,7 @@ module GithubEvent
     {
       name: 'commit comment',
       url: event['comment']['html_url'],
-      friendly: "#{Settings.github.login} commented on a commit: #{shortened}",
+      friendly: "Commented on a commit: #{shortened}",
       icon: 'comment'
     }
   end
@@ -44,7 +46,7 @@ module GithubEvent
     {
       name: 'push',
       url: url,
-      friendly: "#{Settings.github.login} pushed #{pluralize(payload[:size], 'commit')} to #{link_to(event[:repo][:name], url)}",
+      friendly: "Pushed #{pluralize(payload[:size], 'commit')} to #{link_to(event[:repo][:name], url)}",
       icon: 'cloud-upload'
     }
   end
@@ -55,8 +57,33 @@ module GithubEvent
     {
       name: 'starred',
       url: url,
-      friendly: "#{Settings.github.login} starred #{link_to(event[:repo][:name], url)}",
+      friendly: "Starred #{link_to(event[:repo][:name], url)}",
       icon: 'star'
+    }
+  end
+
+  def create_event(event)
+    payload = event[:payload]
+
+    url = "#{GITHUB_URL}/#{event[:repo][:name]}"
+
+    friendly = case payload[:ref_type]
+    when 'repository'
+      "Created #{link_to(event[:repo][:name], url)}"
+    when 'tag'
+      "Tagged #{payload[:ref]} on #{link_to(event[:repo][:name], url)}"
+    when 'branch'
+      return
+    else
+      puts event.to_h
+      return # return nil to hide this entry
+    end
+
+    {
+      name: 'created',
+      url: url,
+      friendly: friendly,
+      icon: 'plus'
     }
   end
 end
