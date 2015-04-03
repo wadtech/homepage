@@ -1,0 +1,10 @@
+<% if @activity %>
+<article class="article">
+  <h4>Recent Github Activity</h4>
+  <ul class="fa-ul github-activity">
+    <% @activity.each do |act| %>
+      <%= event_to_list_item(act) %>
+    <% end %>
+  </ul>
+</article>
+<% end %>

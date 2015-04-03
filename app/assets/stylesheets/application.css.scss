@@ -4,6 +4,9 @@
  * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
 */
+@import "pygments";
+@import "font-awesome";
+
 @import "_fonts";
 @import "_variables";
 @import "_typography";
@@ -15,4 +18,4 @@
 @import "_code";
 @import "_form";
 @import "_dashboard";
-@import "pygments";
+@import "_github-activity";

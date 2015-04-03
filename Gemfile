@@ -17,6 +17,8 @@ group :test do
   gem "rb-inotify", "~> 0.9" if is_linux?
   gem "rb-fsevent", "~> 0.9" if is_mac?
   gem "simplecov", "~> 0.7", :require => false
+  gem "vcr"
+  gem "webmock"
 end
 
 group :development do
@@ -37,14 +39,14 @@ group :test, :development do
   gem "factory_girl_rails", "~> 4.5"
   gem "letter_opener", "~> 1.3"
   gem "progress_bar", "~> 1.0.0"
-  gem "thin", "~> 1.6"
 end
 
 group :production do
-  gem "unicorn", "~> 4.8"
   gem "google-analytics-rails", "~> 0.0.6"
 end
 
+gem "foreman"
+gem "puma"
 gem "pg", "~> 0.17"
 
 gem "rails", "~> 4.2"
@@ -67,7 +69,10 @@ gem "sass-rails"
 gem "coffee-rails", "~> 4.1"
 gem "uglifier", "~> 2.6"
 gem "capistrano", "~> 2.15.4"
-gem "rvm-capistrano", "~> 1.5.6"
-gem "octokit", "~> 3.7"
+gem "rvm-capistrano", "~> 1.5.6", require: false
 gem 'compass-rails'
 gem 'oily_png', '~> 1.1'
+gem "font-awesome-rails"
+
+gem 'faraday-http-cache'
+gem "octokit", "~> 3.7"

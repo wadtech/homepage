@@ -1,0 +1,101 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/wadtech/events/public?per_page=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 3.8.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <API TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 03 Apr 2015 16:24:47 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4989'
+      X-Ratelimit-Reset:
+      - '1428081665'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Fri, 03 Apr 2015 09:21:04 GMT
+      Etag:
+      - W/"56303ce2a675d2d86b70663e819ae892"
+      X-Poll-Interval:
+      - '60'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - repo
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/user/1141692/events/public?per_page=10&page=2>; rel="next",
+        <https://api.github.com/user/1141692/events/public?per_page=10&page=30>; rel="last"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - BC27F65B:503C:21D32B5:551EBECF
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - 01d096e6cfe28f8aea352e988c332cd3
+    body:
+      encoding: UTF-8
+      string: '[{"id":"2699351016","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":622389851,"size":5,"distinct_size":2,"ref":"refs/heads/gh-activity","head":"60e2573b342bab43f810558a091791cbf9ecc003","before":"54b77c34599939a95829c929c41c195b87e0525a","commits":[{"sha":"4523504a6292b2a91f3389ae0ad3dcf0cc837def","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"don''t need to auto require this","distinct":false,"url":"https://api.github.com/repos/wadtech/homepage/commits/4523504a6292b2a91f3389ae0ad3dcf0cc837def"},{"sha":"2f0c5cac400ccdee00f5f53acb4d45ce739d05d1","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"stop spring from doubling the watch task for whatever
+        reason it does that","distinct":false,"url":"https://api.github.com/repos/wadtech/homepage/commits/2f0c5cac400ccdee00f5f53acb4d45ce739d05d1"},{"sha":"4c15d0c13aad04e63afd73344746a12111e84069","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"missing keys added to template","distinct":false,"url":"https://api.github.com/repos/wadtech/homepage/commits/4c15d0c13aad04e63afd73344746a12111e84069"},{"sha":"615ad28a6d1da6a44118671846e9eb18ecfb174c","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"github activity stream","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/615ad28a6d1da6a44118671846e9eb18ecfb174c"},{"sha":"60e2573b342bab43f810558a091791cbf9ecc003","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"Merge branch ''develop'' into gh-activity\n\nConflicts:\n\tGemfile\n\tconfig/application.yml.template","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/60e2573b342bab43f810558a091791cbf9ecc003"}]},"public":true,"created_at":"2015-04-03T16:21:04Z"},{"id":"2698864510","type":"CreateEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":33361451,"name":"wadtech/resq","url":"https://api.github.com/repos/wadtech/resq"},"payload":{"ref":"master","ref_type":"branch","master_branch":"master","description":"Goworker/Resque
+        thing for playing.","pusher_type":"user"},"public":true,"created_at":"2015-04-03T12:03:14Z"},{"id":"2698864253","type":"CreateEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":33361451,"name":"wadtech/resq","url":"https://api.github.com/repos/wadtech/resq"},"payload":{"ref":null,"ref_type":"repository","master_branch":"master","description":"Goworker/Resque
+        thing for playing.","pusher_type":"user"},"public":true,"created_at":"2015-04-03T12:03:04Z"},{"id":"2696176497","type":"WatchEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":33275357,"name":"chrislabarge/typing-calculator","url":"https://api.github.com/repos/chrislabarge/typing-calculator"},"payload":{"action":"started"},"public":true,"created_at":"2015-04-02T12:23:23Z"},{"id":"2694721183","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":620531859,"size":1,"distinct_size":1,"ref":"refs/heads/gh-activity","head":"54b77c34599939a95829c929c41c195b87e0525a","before":"a527762dcc2470f5eb105e162aff7f46dbe247f8","commits":[{"sha":"54b77c34599939a95829c929c41c195b87e0525a","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"renders github event stream sort of","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/54b77c34599939a95829c929c41c195b87e0525a"}]},"public":true,"created_at":"2015-04-01T21:56:55Z"},{"id":"2694478972","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":620436277,"size":1,"distinct_size":1,"ref":"refs/heads/gh-activity","head":"a527762dcc2470f5eb105e162aff7f46dbe247f8","before":"c8be9aef34c04807bbe49dfb91d07ed4be622f84","commits":[{"sha":"a527762dcc2470f5eb105e162aff7f46dbe247f8","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"use my real login here","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/a527762dcc2470f5eb105e162aff7f46dbe247f8"}]},"public":true,"created_at":"2015-04-01T20:31:19Z"},{"id":"2694453833","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":620426128,"size":1,"distinct_size":1,"ref":"refs/heads/gh-activity","head":"c8be9aef34c04807bbe49dfb91d07ed4be622f84","before":"9575e414a87edfb6ef4f33a5c591d4b762f43fbf","commits":[{"sha":"c8be9aef34c04807bbe49dfb91d07ed4be622f84","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"use the probably unwise but super convenient vcr rspec
+        config snippet","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/c8be9aef34c04807bbe49dfb91d07ed4be622f84"}]},"public":true,"created_at":"2015-04-01T20:22:59Z"},{"id":"2694375466","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":620394582,"size":1,"distinct_size":1,"ref":"refs/heads/develop","head":"4c15d0c13aad04e63afd73344746a12111e84069","before":"2f0c5cac400ccdee00f5f53acb4d45ce739d05d1","commits":[{"sha":"4c15d0c13aad04e63afd73344746a12111e84069","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"missing keys added to template","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/4c15d0c13aad04e63afd73344746a12111e84069"}]},"public":true,"created_at":"2015-04-01T19:55:59Z"},{"id":"2693819357","type":"WatchEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":9394642,"name":"kristopolous/BOOTSTRA.386","url":"https://api.github.com/repos/kristopolous/BOOTSTRA.386"},"payload":{"action":"started"},"public":true,"created_at":"2015-04-01T16:45:26Z"},{"id":"2692285513","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":619569088,"size":1,"distinct_size":1,"ref":"refs/heads/gh-activity","head":"9575e414a87edfb6ef4f33a5c591d4b762f43fbf","before":"fe0a8b3c6c1a6e34e63ca7d0e77998b85498d288","commits":[{"sha":"9575e414a87edfb6ef4f33a5c591d4b762f43fbf","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"add missing keys to config template","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/9575e414a87edfb6ef4f33a5c591d4b762f43fbf"}]},"public":true,"created_at":"2015-04-01T06:20:36Z"}]'
+    http_version: 
+  recorded_at: Fri, 03 Apr 2015 16:24:47 GMT
+recorded_with: VCR 2.9.3
