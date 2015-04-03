@@ -16,6 +16,8 @@ Homepage::Application.routes.draw do
     resources :articles, :except => [:show] do
       get 'toggle_publish', :on => :member
     end
+
+    get '/' => "dashboard#index"
   end
 
   get 'tags/:tag', :to => 'welcome#index', :as => :tag

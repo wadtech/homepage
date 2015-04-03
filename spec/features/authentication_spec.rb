@@ -5,7 +5,7 @@ describe 'auth' do
   context "with no session" do
     describe "visiting the 'sign in' route" do
       it "should contain the login form" do
-        visit '/articles/new'
+        visit '/admins/sign_in'
 
         ['Email', 'Password', 'Sign in'].each do |thing|
           expect(page).to have_content thing
