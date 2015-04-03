@@ -5,7 +5,7 @@ describe Github do
 
   it "lists public activity" do
     resp = subject.public_activity
-    expect(resp.size).to eq(30)
+    expect(resp.size).to eq(10)
 
     expect(resp.first[:type]).to eq('PushEvent')
   end

@@ -6,4 +6,4 @@ Octokit.middleware = Faraday::RackBuilder.new do |builder|
 
   builder.use Octokit::Response::RaiseError
   builder.adapter Faraday.default_adapter
-end
+end unless Rails.env.test?
