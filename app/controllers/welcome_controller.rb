@@ -9,7 +9,7 @@ class WelcomeController < ApplicationController
     elsif params[:tag]
       @articles = check_article_tag
     else
-      @articles = default_article_scope
+      @articles = paged_articles
     end
 
     @repositories = github.repositories
@@ -29,16 +29,16 @@ class WelcomeController < ApplicationController
   end
 
   protected
-  def default_article_scope
-    Article.where(:published => true).page(params[:page]).order('created_at desc')
+  def paged_articles
+    Article.published.page(params[:page]).order('created_at desc')
   end
 
   def check_article_search
-    articles = Article.where(:published => true).search(params[:search]).page(params[:page]).order('created_at desc')
+    articles = Article.published.search(params[:search]).page(params[:page]).order('created_at desc')
 
     if articles.empty?
       flash[:alert] = "No results for '#{params[:search]}' found."
-      default_article_scope
+      paged_articles
     else
       flash[:notice] = "Search results for '#{params[:search]}'."
       articles
@@ -46,11 +46,11 @@ class WelcomeController < ApplicationController
   end
 
   def check_article_tag
-    articles = Article.where(:published => true).tagged_with(params[:tag]).page(params[:page]).order('created_at desc')
+    articles = Article.published.tagged_with(params[:tag]).page(params[:page]).order('created_at desc')
 
     if articles.empty?
       flash[:alert] = "No results for '#{params[:tag]}' found."
-      default_article_scope
+      paged_articles
     else
       flash[:notice] = "Articles tagged with '#{params[:tag]}'."
       articles

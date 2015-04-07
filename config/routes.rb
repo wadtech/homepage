@@ -4,7 +4,7 @@ Homepage::Application.routes.draw do
   resources :highlights, :except => [:index]
 
   namespace :dashboard do
-    resources :projects do
+    resources :projects, :except => [:index, :show] do
       get 'refresh', to: 'projects#refresh'
     end
 
@@ -19,12 +19,14 @@ Homepage::Application.routes.draw do
     root to: "dashboard#index"
   end
 
+  resources :projects, only: [:index, :show]
+
   get 'tags/:tag', :to => 'welcome#index', :as => :tag
 
   resources :articles, only: [:show, :index]
 
-  get 'pages/:id', to: 'pages#show', as: :page
   put 'pages/:id', to: 'pages#update'
+  get '/:id', to: 'pages#show', as: :page
 
   root :to => "welcome#index"
 end

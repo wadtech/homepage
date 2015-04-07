@@ -4,6 +4,8 @@ module Dashboard
       "dashboard"
     end
 
+    before_action :authenticate_admin!
+
     # GET /dashboard
     def index
       respond_to :html

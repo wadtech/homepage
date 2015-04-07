@@ -11,6 +11,8 @@ class Article < ActiveRecord::Base
   validates :content, :author, :title, :presence => true
   validates :published, :inclusion => {:in => [true, false]}
 
+  scope :published, -> { where(:published => true) }
+
   def created_month
     created_at.strftime("%B %Y")
   end
