@@ -3,11 +3,11 @@ def random_hex
 end
 
 namespace :homepage do
-  require "open-uri"
-  require "faker"
-
   desc "Generates random test images for seeding the database"
   task :capture_test_images do
+    require "open-uri"
+    require "faker"
+
     sample_path = File.join(Rails.root, "db", "sampleimages")
     if Dir.glob(File.join(sample_path, '*.png')).length != 0
       puts "Images already generated? Check #{sample_path}"
