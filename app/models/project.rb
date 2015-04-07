@@ -24,7 +24,7 @@ class Project < ActiveRecord::Base
 
   def self.find(input)
     #to_i converts strings that start with a letter to 0
-    input.to_i == 0 ? where("title ILIKE ?", input.gsub("-", " ")).first : super
+    input.to_i == 0 ? where("lower(title) = lower(?)", input.gsub("-", " ")).first : super
   end
 
   def fetch_from_github
