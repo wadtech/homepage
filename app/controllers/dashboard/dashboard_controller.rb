@@ -6,9 +6,7 @@ module Dashboard
 
     # GET /dashboard
     def index
-      respond_to do |format|
-        format.html
-      end
+      respond_to :html
     end
   end
 end
