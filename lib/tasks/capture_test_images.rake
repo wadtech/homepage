@@ -1,11 +1,11 @@
-require "open-uri"
-require "faker"
-
 def random_hex
   "%06x" % (rand * 0xffffff)
 end
 
 namespace :homepage do
+  require "open-uri"
+  require "faker"
+
   desc "Generates random test images for seeding the database"
   task :capture_test_images do
     sample_path = File.join(Rails.root, "db", "sampleimages")
