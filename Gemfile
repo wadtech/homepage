@@ -28,7 +28,7 @@ group :development do
 end
 
 group :test, :development do
-  gem "faker"
+  gem "faker", :require => false
   gem "spring"
   gem "spring-commands-rspec"
   gem "poltergeist"
@@ -69,7 +69,7 @@ gem "sass-rails"
 gem "coffee-rails", "~> 4.1"
 gem "uglifier", "~> 2.6"
 gem "capistrano", "~> 2.15.4"
-gem "rvm-capistrano", "~> 1.5.6", require: false
+gem "capistrano-rbenv", "~> 1.0.5", require: false
 gem 'compass-rails'
 gem 'oily_png', '~> 1.1'
 gem "font-awesome-rails"
