@@ -12,7 +12,6 @@ class WelcomeController < ApplicationController
       @articles = paged_articles
     end
 
-    @repositories = github.repositories
     @activity     = github.public_activity
 
     respond_to do |format|
