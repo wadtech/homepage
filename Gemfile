@@ -1,5 +1,5 @@
 source "http://rubygems.org"
-ruby "2.1.2"
+ruby "2.2.1"
 
 def is_mac?
   RUBY_PLATFORM.downcase.include?("darwin")

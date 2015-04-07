@@ -1,6 +1,6 @@
 language: ruby
 rvm:
-  - "2.1.2"
+  - "2.2.1"
 before_script:
   - cp config/database.example.yml config/database.yml
   - cp config/application.yml.template config/application.yml
