@@ -11,7 +11,6 @@ environment ENV['RACK_ENV'] || 'development'
 
 pidfile "#{ENV['RAILS_ROOT']}/tmp/puma/pid"
 state_path "#{ENV['RAILS_ROOT']}/tmp/puma/state"
-activate_control_app
 
 on_worker_boot do
   # Worker specific setup for Rails 4.1+

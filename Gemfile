@@ -68,11 +68,17 @@ gem "route_downcaser", "~> 0.2.2"
 gem "sass-rails"
 gem "coffee-rails", "~> 4.1"
 gem "uglifier", "~> 2.6"
-gem "capistrano", "~> 2.15.4"
-gem "capistrano-rbenv", "~> 1.0.5", require: false
 gem 'compass-rails'
 gem 'oily_png', '~> 1.1'
 gem "font-awesome-rails"
 
 gem 'faraday-http-cache'
 gem "octokit", "~> 3.7"
+
+group :development do
+  gem 'capistrano', '~> 3.1'
+  gem 'capistrano-bundler', '~> 1.1.2'
+  gem 'capistrano-rbenv', '~> 2.0'
+  gem 'capistrano-rails', '~> 1.1'
+  gem 'capistrano-puma'
+end
