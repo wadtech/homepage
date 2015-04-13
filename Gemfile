@@ -28,7 +28,7 @@ group :development do
 end
 
 group :test, :development do
-  gem "faker", :require => false
+  gem "faker"
   gem "spring"
   gem "spring-commands-rspec"
   gem "poltergeist"
