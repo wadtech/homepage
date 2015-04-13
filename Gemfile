@@ -47,11 +47,11 @@ end
 
 gem "foreman"
 gem "puma"
-gem "pg", "~> 0.17"
+gem "pg"
 
 gem "rails", "~> 4.2"
-gem "bcrypt", "~> 3.1"
-gem "will_paginate", "~> 3.0"
+gem "bcrypt"
+gem "will_paginate"
 gem "devise", "~> 3.4"
 gem "pygments.rb", "~> 0.6"
 gem "redcarpet", "~> 3.2"
@@ -63,13 +63,13 @@ gem "twitter", "~> 5.13"
 gem "paperclip", "~> 4.2"
 gem "acts-as-taggable-on", "~> 3.4"
 gem "settingslogic", "~> 2.0.9"
-gem "pg_search", "~> 0.7"
-gem "route_downcaser", "~> 0.2.2"
+gem "pg_search"
+gem "route_downcaser", "~> 1.1.0"
 gem "sass-rails"
-gem "coffee-rails", "~> 4.1"
-gem "uglifier", "~> 2.6"
+gem "coffee-rails"
+gem "uglifier"
 gem 'compass-rails'
-gem 'oily_png', '~> 1.1'
+gem 'oily_png'
 gem "font-awesome-rails"
 
 gem 'faraday-http-cache'
