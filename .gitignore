@@ -14,7 +14,6 @@ coverage
 config/application.yml
 config/database.yml
 .ruby-gemset
-bin/
 db/sampleimages
 .env
 *.rdb
