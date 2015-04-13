@@ -6,7 +6,7 @@ threads threads_count, threads_count
 preload_app!
 
 rackup      DefaultRackup
-environment ENV['RACK_ENV'] || 'development'
+environment ENV['RAILS_ENV'] || 'development'
 
 bind "unix://#{ENV['RAILS_ROOT']}/tmp/puma/sock"
 pidfile "#{ENV['RAILS_ROOT']}/tmp/puma/pid"
