@@ -75,10 +75,4 @@ gem "font-awesome-rails"
 gem 'faraday-http-cache'
 gem "octokit", "~> 3.7"
 
-group :development do
-  gem 'capistrano', '~> 3.1'
-  gem 'capistrano-bundler', '~> 1.1.2'
-  gem 'capistrano-rbenv', '~> 2.0'
-  gem 'capistrano-rails', '~> 1.1'
-  gem 'capistrano-puma'
-end
+gem 'rails_12factor', group: :production
