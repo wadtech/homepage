@@ -1,0 +1,199 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/users/wadtech/events/public?per_page=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 3.8.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <API TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 29 May 2015 20:13:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4963'
+      X-Ratelimit-Reset:
+      - '1432931000'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Fri, 29 May 2015 12:38:25 GMT
+      Etag:
+      - W/"8c425bcab899fe75ee69e79289ece333"
+      X-Poll-Interval:
+      - '60'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - repo
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/user/1141692/events/public?per_page=10&page=2>; rel="next",
+        <https://api.github.com/user/1141692/events/public?per_page=10&page=30>; rel="last"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - BC27F65B:301C:13B436F:5568C866
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - c6c65e5196703428e7641f7d1e9bc353
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"2847907455","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":679413771,"size":3,"distinct_size":2,"ref":"refs/heads/master","head":"38283282d5e4139e1ecb9f5c64acccf46ecf0387","before":"37c620b523ac26eacd3e0f2302233bb37732458d","commits":[{"sha":"77bbeeb3a286b9fd5eef2d64ee14dc799042f65b","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"more deployment tweaks","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/77bbeeb3a286b9fd5eef2d64ee14dc799042f65b"},{"sha":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"switching to heroku","distinct":false,"url":"https://api.github.com/repos/wadtech/homepage/commits/263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c"},{"sha":"38283282d5e4139e1ecb9f5c64acccf46ecf0387","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"Merge branch ''develop''","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/38283282d5e4139e1ecb9f5c64acccf46ecf0387"}]},"public":true,"created_at":"2015-05-29T19:38:25Z"},{"id":"2847906382","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":679413410,"size":1,"distinct_size":1,"ref":"refs/heads/develop","head":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","before":"adfa73847c53dc79449bff68ec500828c2961890","commits":[{"sha":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"switching to heroku","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c"}]},"public":true,"created_at":"2015-05-29T19:38:03Z"},{"id":"2847050347","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":679110915,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"fd570f85b5b176887e211e197a1d440df6ed1d70","before":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","commits":[{"sha":"fd570f85b5b176887e211e197a1d440df6ed1d70","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"get the other party in a pending request","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/fd570f85b5b176887e211e197a1d440df6ed1d70"}]},"public":true,"created_at":"2015-05-29T14:58:33Z"},{"id":"2846703866","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678985756,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","before":"4d6f1b8597f1ff2392c344dad014ac2499710426","commits":[{"sha":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"sloppy","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/73563eb6c0b7532c5850d1a3ff7283975062ccf2"}]},"public":true,"created_at":"2015-05-29T13:15:04Z"},{"id":"2846698700","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678983946,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"4d6f1b8597f1ff2392c344dad014ac2499710426","before":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","commits":[{"sha":"4d6f1b8597f1ff2392c344dad014ac2499710426","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"I can''t type","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/4d6f1b8597f1ff2392c344dad014ac2499710426"}]},"public":true,"created_at":"2015-05-29T13:13:22Z"},{"id":"2846695514","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678982835,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","before":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","commits":[{"sha":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"add unique composite key to friendships and make the
+        send() method a bit safer","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/ae1f684eb5aceed7506f5fee4462fb914b516d9a"}]},"public":true,"created_at":"2015-05-29T13:12:20Z"},{"id":"2846609562","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678950263,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","before":"15f743641e62e691365199fbec89fc3e4568e54b","commits":[{"sha":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"implement deniedfrienships method","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/8edc3769115eb62b7c54197b6d1bfdb6ab240f80"}]},"public":true,"created_at":"2015-05-29T12:41:17Z"},{"id":"2846464279","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678896950,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"15f743641e62e691365199fbec89fc3e4568e54b","before":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","commits":[{"sha":"15f743641e62e691365199fbec89fc3e4568e54b","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"group where on findFromDb correctly so that chained wheres
+        are ''and'' instead of appended to last ''or'' clause","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/15f743641e62e691365199fbec89fc3e4568e54b"}]},"public":true,"created_at":"2015-05-29T11:41:51Z"},{"id":"2846301658","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678837863,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","before":"c744c55d5b440137925aa4b9020f8250db44590c","commits":[{"sha":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"on reflection that method was a terrible idea","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/32ae77c8ca89358467e39a64d49a59ded5a2d20a"}]},"public":true,"created_at":"2015-05-29T10:32:26Z"},{"id":"2846297505","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678836385,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"c744c55d5b440137925aa4b9020f8250db44590c","before":"bb57cebe717b8b37b8bf9c08a24cd041559acdd0","commits":[{"sha":"c744c55d5b440137925aa4b9020f8250db44590c","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"refactor db lookup code into private method","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/c744c55d5b440137925aa4b9020f8250db44590c"}]},"public":true,"created_at":"2015-05-29T10:30:46Z"}]'
+    http_version: 
+  recorded_at: Fri, 29 May 2015 20:13:27 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/wadtech/events/public?per_page=10
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/vnd.github.v3+json
+      User-Agent:
+      - Octokit Ruby Gem 3.8.0
+      Content-Type:
+      - application/json
+      Authorization:
+      - token <API TOKEN>
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - GitHub.com
+      Date:
+      - Fri, 29 May 2015 20:13:27 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Status:
+      - 200 OK
+      X-Ratelimit-Limit:
+      - '5000'
+      X-Ratelimit-Remaining:
+      - '4962'
+      X-Ratelimit-Reset:
+      - '1432931000'
+      Cache-Control:
+      - private, max-age=60, s-maxage=60
+      Last-Modified:
+      - Fri, 29 May 2015 12:38:25 GMT
+      Etag:
+      - W/"8c425bcab899fe75ee69e79289ece333"
+      X-Poll-Interval:
+      - '60'
+      X-Oauth-Scopes:
+      - gist, repo, user
+      X-Accepted-Oauth-Scopes:
+      - repo
+      Vary:
+      - Accept, Authorization, Cookie, X-GitHub-OTP
+      - Accept-Encoding
+      X-Github-Media-Type:
+      - github.v3; format=json
+      Link:
+      - <https://api.github.com/user/1141692/events/public?per_page=10&page=2>; rel="next",
+        <https://api.github.com/user/1141692/events/public?per_page=10&page=30>; rel="last"
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Frame-Options:
+      - deny
+      Content-Security-Policy:
+      - default-src 'none'
+      Access-Control-Allow-Credentials:
+      - 'true'
+      Access-Control-Expose-Headers:
+      - ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset,
+        X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+      Access-Control-Allow-Origin:
+      - "*"
+      X-Github-Request-Id:
+      - BC27F65B:301B:1247361:5568C867
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains; preload
+      X-Content-Type-Options:
+      - nosniff
+      X-Served-By:
+      - a6882e5cd2513376cb9481dbcd83f3a2
+    body:
+      encoding: ASCII-8BIT
+      string: '[{"id":"2847907455","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":679413771,"size":3,"distinct_size":2,"ref":"refs/heads/master","head":"38283282d5e4139e1ecb9f5c64acccf46ecf0387","before":"37c620b523ac26eacd3e0f2302233bb37732458d","commits":[{"sha":"77bbeeb3a286b9fd5eef2d64ee14dc799042f65b","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"more deployment tweaks","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/77bbeeb3a286b9fd5eef2d64ee14dc799042f65b"},{"sha":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"switching to heroku","distinct":false,"url":"https://api.github.com/repos/wadtech/homepage/commits/263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c"},{"sha":"38283282d5e4139e1ecb9f5c64acccf46ecf0387","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"Merge branch ''develop''","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/38283282d5e4139e1ecb9f5c64acccf46ecf0387"}]},"public":true,"created_at":"2015-05-29T19:38:25Z"},{"id":"2847906382","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":2955304,"name":"wadtech/homepage","url":"https://api.github.com/repos/wadtech/homepage"},"payload":{"push_id":679413410,"size":1,"distinct_size":1,"ref":"refs/heads/develop","head":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","before":"adfa73847c53dc79449bff68ec500828c2961890","commits":[{"sha":"263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c","author":{"email":"pjm@petermellett.co.uk","name":"Peter
+        Mellett"},"message":"switching to heroku","distinct":true,"url":"https://api.github.com/repos/wadtech/homepage/commits/263ecb0ca3ce7c16bfa0d53978d8d489853c1b6c"}]},"public":true,"created_at":"2015-05-29T19:38:03Z"},{"id":"2847050347","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":679110915,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"fd570f85b5b176887e211e197a1d440df6ed1d70","before":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","commits":[{"sha":"fd570f85b5b176887e211e197a1d440df6ed1d70","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"get the other party in a pending request","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/fd570f85b5b176887e211e197a1d440df6ed1d70"}]},"public":true,"created_at":"2015-05-29T14:58:33Z"},{"id":"2846703866","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678985756,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","before":"4d6f1b8597f1ff2392c344dad014ac2499710426","commits":[{"sha":"73563eb6c0b7532c5850d1a3ff7283975062ccf2","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"sloppy","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/73563eb6c0b7532c5850d1a3ff7283975062ccf2"}]},"public":true,"created_at":"2015-05-29T13:15:04Z"},{"id":"2846698700","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678983946,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"4d6f1b8597f1ff2392c344dad014ac2499710426","before":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","commits":[{"sha":"4d6f1b8597f1ff2392c344dad014ac2499710426","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"I can''t type","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/4d6f1b8597f1ff2392c344dad014ac2499710426"}]},"public":true,"created_at":"2015-05-29T13:13:22Z"},{"id":"2846695514","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678982835,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","before":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","commits":[{"sha":"ae1f684eb5aceed7506f5fee4462fb914b516d9a","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"add unique composite key to friendships and make the
+        send() method a bit safer","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/ae1f684eb5aceed7506f5fee4462fb914b516d9a"}]},"public":true,"created_at":"2015-05-29T13:12:20Z"},{"id":"2846609562","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678950263,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","before":"15f743641e62e691365199fbec89fc3e4568e54b","commits":[{"sha":"8edc3769115eb62b7c54197b6d1bfdb6ab240f80","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"implement deniedfrienships method","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/8edc3769115eb62b7c54197b6d1bfdb6ab240f80"}]},"public":true,"created_at":"2015-05-29T12:41:17Z"},{"id":"2846464279","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678896950,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"15f743641e62e691365199fbec89fc3e4568e54b","before":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","commits":[{"sha":"15f743641e62e691365199fbec89fc3e4568e54b","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"group where on findFromDb correctly so that chained wheres
+        are ''and'' instead of appended to last ''or'' clause","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/15f743641e62e691365199fbec89fc3e4568e54b"}]},"public":true,"created_at":"2015-05-29T11:41:51Z"},{"id":"2846301658","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678837863,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","before":"c744c55d5b440137925aa4b9020f8250db44590c","commits":[{"sha":"32ae77c8ca89358467e39a64d49a59ded5a2d20a","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"on reflection that method was a terrible idea","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/32ae77c8ca89358467e39a64d49a59ded5a2d20a"}]},"public":true,"created_at":"2015-05-29T10:32:26Z"},{"id":"2846297505","type":"PushEvent","actor":{"id":1141692,"login":"wadtech","gravatar_id":"","url":"https://api.github.com/users/wadtech","avatar_url":"https://avatars.githubusercontent.com/u/1141692?"},"repo":{"id":36495155,"name":"wadtech/friendship-management","url":"https://api.github.com/repos/wadtech/friendship-management"},"payload":{"push_id":678836385,"size":1,"distinct_size":1,"ref":"refs/heads/master","head":"c744c55d5b440137925aa4b9020f8250db44590c","before":"bb57cebe717b8b37b8bf9c08a24cd041559acdd0","commits":[{"sha":"c744c55d5b440137925aa4b9020f8250db44590c","author":{"email":"peter@mymedialab.co.uk","name":"Peter
+        Mellett"},"message":"refactor db lookup code into private method","distinct":true,"url":"https://api.github.com/repos/wadtech/friendship-management/commits/c744c55d5b440137925aa4b9020f8250db44590c"}]},"public":true,"created_at":"2015-05-29T10:30:46Z"}]'
+    http_version: 
+  recorded_at: Fri, 29 May 2015 20:13:27 GMT
+recorded_with: VCR 2.9.3

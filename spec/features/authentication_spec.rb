@@ -1,7 +1,8 @@
 require 'spec_helper'
-include AdminHelper
 
-describe 'auth' do
+describe 'auth', type: :request do
+  let(:admin ) { FactoryGirl.create :admin }
+
   context "with no session" do
     describe "visiting the 'sign in' route" do
       it "should contain the login form" do
@@ -15,16 +16,17 @@ describe 'auth' do
 
     describe "Entering valid details" do
       it "should authenticate the user" do
-        login_admin
+        login_as admin, scope: :admin
       end
     end
   end
 
-  context "with active sesssion" do
+  context "with active session" do
     describe "clicking the 'sign out' link" do
       it "should log the user out when clicked" do
-        login_admin
+        login_as admin, scope: :admin
 
+        visit root_path
         expect(page).to have_content 'Sign out'
         first(:link, 'Sign out').click
 
