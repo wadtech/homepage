@@ -1,5 +1,5 @@
 <ul class="social">
-  <% %w(twitter linkedin googleplus github stackoverflow).map(&:upcase).each do |social_account, details| %>
-    <li><%= link_to (ENV[social_account + '_NAME'] || ''), (ENV[social_account + '_PROFILE_URL'] || ''), class: social_account %></li>
+  <% %w(twitter linkedin googleplus github stackoverflow).map(&:upcase).each do |social_account| %>
+    <li><%= link_to (ENV[social_account + '_NAME'] || ''), (ENV[social_account + '_PROFILE_URL'] || ''), class: social_account.downcase %></li>
   <% end %>
 </ul>
