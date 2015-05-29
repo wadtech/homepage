@@ -62,7 +62,6 @@ gem "roadie-rails", github: 'sgringwe/roadie-rails'
 gem "twitter", "~> 5.13"
 gem "paperclip", "~> 4.2"
 gem "acts-as-taggable-on", "~> 3.4"
-gem "settingslogic", "~> 2.0.9"
 gem "pg_search"
 gem "route_downcaser", "~> 1.1.0"
 gem "sass-rails"
