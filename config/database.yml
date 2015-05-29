@@ -1,0 +1,17 @@
+default: &default
+  host: localhost
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  user: postgres
+
+development:
+  <<: *default
+  database: homepage_development
+
+test:
+  <<: *default
+  database: homepage_test
+
+production:
+   url: <%= ENV['DATABASE_URL'] %>
