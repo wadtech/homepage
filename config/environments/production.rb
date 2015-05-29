@@ -40,10 +40,10 @@ Homepage::Application.configure do
   config.active_support.deprecation = :notify
 
   # Update this for real host.
-  config.action_mailer.default_url_options = { :host => Settings.mailer.domain }
+  config.action_mailer.default_url_options = { :host => env['MAILER_DOMAIN'] || '' }
 
   # Google analytics
-  GA.tracker = Settings.analytics.id
+  GA.tracker = env['GOOGLE_ANALYTICS'] || ''
 
   # silence deprecation message, don't use locales
   config.i18n.enforce_available_locales = false

@@ -12,5 +12,5 @@ Devise.setup do |config|
 
   config.sign_out_via = :delete
 
-  config.secret_key = Settings.auth.devise
+  config.secret_key = ENV['DEVISE_SECRET'] || 'blah blah blah'
 end

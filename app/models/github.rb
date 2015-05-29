@@ -1,17 +1,17 @@
 class Github
   def public_activity
-    return github.user_public_events(Settings.github.login, per_page: 10)
+    return github.user_public_events((ENV['GITHUB_NAME'] || 'wadtech'), per_page: 10)
   end
 
   def repositories
     return github.repositories.reject do |repo|
-      repo[:owner][:login] != Settings.github.login || repo[:fork]
+      (repo[:owner][:login] != (ENV['GITHUB_NAME'] || 'wadtech')) || repo[:fork]
     end
   end
 
   private
 
   def github
-    @github ||= Octokit::Client.new(access_token: Settings.github['access_token'])
+    @github ||= Octokit::Client.new(access_token: ENV['GITHUB_ACCESS_TOKEN'])
   end
 end

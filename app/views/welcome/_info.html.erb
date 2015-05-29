@@ -1,2 +1,2 @@
-<h1 class="info-text"><%= link_to Settings.about.welcome, root_url %></h1>
+<h1 class="info-text"><%= link_to (ENV['ABOUT_WELCOME'] || 'Homepage'), root_url %></h1>
 <%= image_tag 'avatar.png', alt: "Stylised cartoon of me with glasses on.", width: 166, height: 221, class: "avatar" %>

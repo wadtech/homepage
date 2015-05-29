@@ -6,7 +6,7 @@ module TitleHelper
     else
       extra = " - #{current_controller} - #{current_id}"
     end
-    Settings.about.site_title + extra
+    (ENV['ABOUT_SITE_TITLE'] || 'My Homepage') + extra
   end
 
   def current_controller
