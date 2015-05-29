@@ -31,8 +31,6 @@ group :test, :development do
   gem "faker"
   gem "spring"
   gem "spring-commands-rspec"
-  gem "poltergeist"
-  gem "capybara", "~> 2.4"
   gem "launchy", "~> 2.4"
   gem "rspec-rails", "~> 3.0"
   gem "database_cleaner", "~> 1.3"
